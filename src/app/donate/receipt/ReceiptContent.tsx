@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, AlertCircle, ArrowUpRight, Printer } from "lucide-react";
-import { APP_INFO } from "@/data/content";
+import { APP_INFO } from "../../../data/content";
 
 export default function ReceiptContent() {
   const searchParams = useSearchParams();

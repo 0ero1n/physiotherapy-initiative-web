@@ -12,8 +12,8 @@ import {
   RefreshCw,
   ChevronDown,
 } from "lucide-react";
-import Hero from "@/components/Hero";
-import { APP_INFO } from "@/data/content";
+import Hero from "../../components/Hero";
+import { APP_INFO } from "../../data/content";
 
 type Currency = "TZS" | "USD";
 type PaymentMethod = "mobile" | "card";

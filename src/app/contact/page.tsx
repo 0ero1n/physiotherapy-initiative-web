@@ -3,8 +3,8 @@
 import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Send, CheckCircle2, ArrowUpRight } from "lucide-react";
-import Hero from "@/components/Hero";
-import { APP_INFO } from "@/data/content";
+import Hero from "../../components/Hero";
+import { APP_INFO } from "../../data/content";
 
 export default function Contact() {
   return (

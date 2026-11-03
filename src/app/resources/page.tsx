@@ -18,7 +18,7 @@ import {
   LucideIcon,
   ArrowUpRight,
 } from "lucide-react";
-import { PUBLICATIONS, ResourceCategory, ResourceDocument } from "@/data/content";
+import { PUBLICATIONS, ResourceCategory, ResourceDocument } from "../../data/content";
 
 interface CategoryMeta {
   label: ResourceCategory;
