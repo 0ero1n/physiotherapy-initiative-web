@@ -9,7 +9,6 @@ const links = [
   ["/", "Home"],
   ["/about", "About"],
   ["/approach", "Our Approach"],
-  ["/initiatives", "Activities & Projects"],
   ["/resources", "Resources"],
   ["/partners", "Partners"],
   ["/contact", "Contact"],
@@ -77,8 +76,16 @@ export default function NavigationHeader() {
           ))}
         </nav>
 
-        {/* Action button on desktop */}
+        {/* Action buttons on desktop (World Vision header style) */}
         <div className="nav-actions" suppressHydrationWarning>
+          <Link
+            className="nav-btn nav-btn-outline"
+            href="/initiatives"
+            aria-label="Get involved with our initiatives"
+            suppressHydrationWarning
+          >
+            Get Involved
+          </Link>
           <Link
             className="nav-btn nav-btn-white"
             href="/donate"
@@ -115,6 +122,26 @@ export default function NavigationHeader() {
           }}
         >
           <div className="mobile-nav-inner">
+            {/* Action buttons at the TOP of mobile menu (Get Involved & Donate) */}
+            <div className="mobile-nav-top-actions">
+              <Link
+                className="mobile-btn-secondary"
+                href="/initiatives"
+                onClick={() => setOpen(false)}
+              >
+                Get Involved
+              </Link>
+              <Link
+                className="mobile-btn-primary"
+                href="/donate"
+                onClick={() => setOpen(false)}
+              >
+                <Heart size={15} strokeWidth={2.5} fill="#4a450b" aria-hidden="true" />
+                <span>Donate</span>
+              </Link>
+            </div>
+
+            {/* Navigation links below the top actions */}
             <div className="mobile-nav-links">
               {links.map(([href, label]) => {
                 const isActive = path === href;
@@ -131,24 +158,6 @@ export default function NavigationHeader() {
                   </Link>
                 );
               })}
-            </div>
-
-            <div className="mobile-nav-actions">
-              <Link
-                className="mobile-btn-secondary"
-                href="/initiatives"
-                onClick={() => setOpen(false)}
-              >
-                Get Involved
-              </Link>
-              <Link
-                className="mobile-btn-primary"
-                href="/donate"
-                onClick={() => setOpen(false)}
-              >
-                <Heart size={16} strokeWidth={2.5} fill="#4a450b" aria-hidden="true" />
-                <span>Donate</span>
-              </Link>
             </div>
 
             <div className="mobile-nav-footer">

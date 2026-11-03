@@ -486,14 +486,21 @@ li + li {
   color: #d4af37;
 }
 
-/* Actions in mobile drawer */
-.mobile-nav-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
+/* Action buttons placed at the top of mobile drawer (World Vision style) */
+.mobile-nav-top-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+@media (max-width: 360px) {
+  .mobile-nav-top-actions {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 }
 
 .mobile-btn-secondary {
@@ -501,21 +508,22 @@ li + li {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 48px;
-  padding: 12px 24px;
-  font-size: 15.5px;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 14.5px;
   font-weight: 600;
   color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   border: 1.5px solid rgba(255, 255, 255, 0.65);
   border-radius: 9999px;
   text-decoration: none;
   transition: all 0.2s ease;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .mobile-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.2);
   border-color: #ffffff;
   color: #ffffff !important;
 }
@@ -524,11 +532,11 @@ li + li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
-  min-height: 48px;
-  padding: 12px 24px;
-  font-size: 16px;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 14.5px;
   font-weight: 700;
   color: #4a450b !important; /* CRITICAL: High-contrast rich olive text on white */
   background: #ffffff !important; /* Crisp pure white pill */
@@ -538,6 +546,7 @@ li + li {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .mobile-btn-primary:hover {

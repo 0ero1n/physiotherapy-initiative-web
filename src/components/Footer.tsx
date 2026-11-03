@@ -135,7 +135,7 @@ export default function Footer() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About Our Mission</Link></li>
             <li><Link href="/approach">Our Approach</Link></li>
-            <li><Link href="/initiatives">Activities & Projects</Link></li>
+            <li><Link href="/initiatives">Get Involved</Link></li>
             <li><Link href="/resources">Publications & Resources</Link></li>
             <li><Link href="/partners">Strategic Partners</Link></li>
             <li><Link href="/contact">Contact</Link></li>
