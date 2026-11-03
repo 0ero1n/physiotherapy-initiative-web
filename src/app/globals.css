@@ -3263,40 +3263,39 @@ h3,
 
 /* ==========================================================================
    BUTTONS: EXACTLY LIKE MSICHANA INITIATIVE
-   [ Download PDF ] on left + [ ↗ ] ExternalLink on right
+   [ Download PDF ] on left + [ ↗ ] pure icon on right
    ========================================================================== */
 .pub-card-actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(41, 46, 32, 0.09);
+  padding-top: 12px;
+  margin-top: auto;
 }
 
 .pub-download-btn {
-  flex: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 7px;
   background: var(--olive);
-  color: var(--white);
-  font-family: var(--display);
-  font-size: 13.5px;
+  color: #ffffff;
+  font-family: var(--sans);
+  font-size: 13px;
   font-weight: 600;
-  padding: 10px 18px;
+  padding: 8px 16px;
   border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 6px rgba(105, 97, 18, 0.25);
+  box-shadow: 0 1px 3px rgba(41, 46, 32, 0.12);
 }
 
 .pub-download-btn:hover {
   background: #504a0e;
-  color: var(--white);
-  box-shadow: 0 4px 14px rgba(105, 97, 18, 0.35);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(105, 97, 18, 0.28);
   transform: translateY(-1px);
 }
 
@@ -3305,15 +3304,15 @@ h3,
 }
 
 .pub-preview-btn {
-  width: 40px;
-  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 34px;
+  height: 34px;
   border-radius: 8px;
-  border: 1.5px solid rgba(41, 46, 32, 0.16);
+  border: none;
+  background: transparent;
   color: var(--olive);
-  background: var(--white);
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -3321,9 +3320,8 @@ h3,
 }
 
 .pub-preview-btn:hover {
+  color: #504a0e;
   background: rgba(105, 97, 18, 0.08);
-  border-color: var(--olive);
-  color: var(--ink);
   transform: translateY(-1px);
 }
 

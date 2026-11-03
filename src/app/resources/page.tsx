@@ -191,7 +191,7 @@ export default function ResourcesPage() {
                       )}
                     </div>
 
-                    {/* Action Row: [Download PDF] button + [↗] external view icon button */}
+                    {/* Action Row: [Download PDF] pill on left + [↗] pure icon on right (Exact Msichana style) */}
                     <div className="pub-card-actions">
                       <a
                         href={doc.downloadUrl}
@@ -199,7 +199,7 @@ export default function ResourcesPage() {
                         className="pub-download-btn"
                         title={`Download ${doc.title} (${doc.fileSize})`}
                       >
-                        <Download size={16} aria-hidden="true" />
+                        <Download size={15} strokeWidth={2.2} aria-hidden="true" />
                         <span>Download PDF</span>
                       </a>
 
@@ -208,10 +208,10 @@ export default function ResourcesPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="pub-preview-btn"
-                        title="View document in new tab"
+                        title="Open document in new tab"
                         aria-label={`Open ${doc.title} in new tab`}
                       >
-                        <ExternalLink size={16} aria-hidden="true" />
+                        <ExternalLink size={18} strokeWidth={2.2} aria-hidden="true" />
                       </a>
                     </div>
                   </div>
