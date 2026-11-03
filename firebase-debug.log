@@ -1,0 +1,107 @@
+[debug] [2026-11-03T09:53:21.416Z] ----------------------------------------------------------------------
+[debug] [2026-11-03T09:53:21.427Z] Command:       /usr/local/Cellar/node/26.5.0/bin/node /usr/local/bin/firebase login:list
+[debug] [2026-11-03T09:53:21.428Z] CLI Version:   15.24.0
+[debug] [2026-11-03T09:53:21.428Z] Platform:      darwin
+[debug] [2026-11-03T09:53:21.429Z] Node Version:  v26.5.0
+[debug] [2026-11-03T09:53:21.429Z] Detected Agent: antigravity
+[debug] [2026-11-03T09:53:21.430Z] Time:          Tue Nov 03 2026 12:53:21 GMT+0300 (East Africa Time)
+[debug] [2026-11-03T09:53:21.430Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-11-03T09:53:21.468Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] Logged in as alexandertillya01@gmail.com
+[debug] [2026-11-03T09:53:30.679Z] ----------------------------------------------------------------------
+[debug] [2026-11-03T09:53:30.687Z] Command:       /usr/local/Cellar/node/26.5.0/bin/node /usr/local/bin/firebase projects:list
+[debug] [2026-11-03T09:53:30.688Z] CLI Version:   15.24.0
+[debug] [2026-11-03T09:53:30.688Z] Platform:      darwin
+[debug] [2026-11-03T09:53:30.688Z] Node Version:  v26.5.0
+[debug] [2026-11-03T09:53:30.689Z] Detected Agent: antigravity
+[debug] [2026-11-03T09:53:30.689Z] Time:          Tue Nov 03 2026 12:53:30 GMT+0300 (East Africa Time)
+[debug] [2026-11-03T09:53:30.689Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-11-03T09:53:30.734Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-11-03T09:53:30.813Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-03T09:53:30.814Z] > authorizing via signed-in user (alexandertillya01@gmail.com)
+[debug] [2026-11-03T09:53:30.816Z] Checked if tokens are valid: false, expires at: 1793224261959
+[debug] [2026-11-03T09:53:30.817Z] Checked if tokens are valid: false, expires at: 1793224261959
+[debug] [2026-11-03T09:53:30.817Z] > refreshing access token with scopes: []
+[debug] [2026-11-03T09:53:30.822Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-11-03T09:53:30.822Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-11-03T09:53:31.695Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-11-03T09:53:31.695Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-11-03T09:53:31.787Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-11-03T09:53:31.787Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-11-03T09:53:31.832Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-11-03T09:53:33.907Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-11-03T09:53:33.907Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ┌───────────────────────────┬──────────────────────────┬────────────────┬──────────────────────┐
+│ Project Display Name      │ Project ID               │ Project Number │ Resource Location ID │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ Abiz Cargo                │ abiz-cargo               │ 216484640701   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ BME archive               │ bme-archive              │ 143610711118   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ ChuoMarket                │ chuomarket-9827a         │ 879301242160   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ JKM Events                │ jkm-events               │ 811992313948   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ Kariakoo mkononi          │ kariakoo-mkononi         │ 88589281572    │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ Kinywa Salama             │ kinywa-salama            │ 395868664204   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ Makini POS                │ makini-pos-tz            │ 666895734652   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ Moyo Guard                │ moyo-guard               │ 758714465533   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ NexGen Point              │ nexgen-point-iutc        │ 695420137598   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ PadApp                    │ padapp-6a08f             │ 303863661706   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ padsapp                   │ padsapp                  │ 620240310212   │ us-central           │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ Physiotherapy Academy     │ physiotherapy-academy    │ 174173413595   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ Physiotherapy Initiative  │ physiotherapy-initiative │ 976935143527   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ PindiChap                 │ pindichap-6f284          │ 865464498756   │ us-central           │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ Script Coder              │ script-coder             │ 567736736323   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ ShuleSync                 │ shulesync                │ 206756650116   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ SlimFit                   │ slimfit-formula          │ 706867971691   │ [Not specified]      │
+├───────────────────────────┼──────────────────────────┼────────────────┼──────────────────────┤
+│ Work Smart                │ work-smart-a4593         │ 761498231839   │ [Not specified]      │
+└───────────────────────────┴──────────────────────────┴────────────────┴──────────────────────┘
+[info] 
+[info] 18 project(s) total.
+[debug] [2026-11-03T09:54:00.095Z] ----------------------------------------------------------------------
+[debug] [2026-11-03T09:54:00.102Z] Command:       /usr/local/Cellar/node/26.5.0/bin/node /usr/local/bin/firebase apphosting:backends:list --project physiotherapy-initiative
+[debug] [2026-11-03T09:54:00.103Z] CLI Version:   15.24.0
+[debug] [2026-11-03T09:54:00.103Z] Platform:      darwin
+[debug] [2026-11-03T09:54:00.103Z] Node Version:  v26.5.0
+[debug] [2026-11-03T09:54:00.103Z] Detected Agent: antigravity
+[debug] [2026-11-03T09:54:00.104Z] Time:          Tue Nov 03 2026 12:54:00 GMT+0300 (East Africa Time)
+[debug] [2026-11-03T09:54:00.104Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-11-03T09:54:00.125Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-03T09:54:00.125Z] > authorizing via signed-in user (alexandertillya01@gmail.com)
+[debug] [2026-11-03T09:54:00.144Z] Checked if tokens are valid: true, expires at: 1793703210787
+[debug] [2026-11-03T09:54:00.145Z] Checked if tokens are valid: true, expires at: 1793703210787
+[debug] [2026-11-03T09:54:00.147Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/physiotherapy-initiative/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-11-03T09:54:00.147Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/physiotherapy-initiative/services/firebaseapphosting.googleapis.com  x-goog-user-project=physiotherapy-initiative
+[debug] [2026-11-03T09:54:02.743Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/physiotherapy-initiative/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-11-03T09:54:02.744Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/physiotherapy-initiative/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-11-03T09:54:02.745Z] Checked if tokens are valid: true, expires at: 1793703210787
+[debug] [2026-11-03T09:54:02.745Z] Checked if tokens are valid: true, expires at: 1793703210787
+[debug] [2026-11-03T09:54:02.746Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/physiotherapy-initiative/services/firebaseapphosting.googleapis.com:enable [none]
+[debug] [2026-11-03T09:54:02.746Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/physiotherapy-initiative/services/firebaseapphosting.googleapis.com:enable  x-goog-user-project=physiotherapy-initiative
+[debug] [2026-11-03T09:54:03.768Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/physiotherapy-initiative/services/firebaseapphosting.googleapis.com:enable 200
+[debug] [2026-11-03T09:54:03.768Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/physiotherapy-initiative/services/firebaseapphosting.googleapis.com:enable [omitted]
+[debug] [2026-11-03T09:54:13.806Z] Checked if tokens are valid: true, expires at: 1793703210787
+[debug] [2026-11-03T09:54:13.806Z] Checked if tokens are valid: true, expires at: 1793703210787
+[debug] [2026-11-03T09:54:13.807Z] >>> [apiv2][query] GET https://firebaseapphosting.googleapis.com/v1beta/projects/physiotherapy-initiative/locations/-/backends 
+[debug] [2026-11-03T09:54:15.728Z] <<< [apiv2][status] GET https://firebaseapphosting.googleapis.com/v1beta/projects/physiotherapy-initiative/locations/-/backends 200
+[debug] [2026-11-03T09:54:15.728Z] <<< [apiv2][body] GET https://firebaseapphosting.googleapis.com/v1beta/projects/physiotherapy-initiative/locations/-/backends {}
+[info] ┌─────────┬────────────┬─────┬────────────────┬──────┬─────────┬──────────────┐
+│ Backend │ Repository │ URL │ Primary Region │ ABIU │ Runtime │ Updated Date │
+└─────────┴────────────┴─────┴────────────────┴──────┴─────────┴──────────────┘

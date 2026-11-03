@@ -1,0 +1,70 @@
+import Image from "next/image";
+import Link from "next/link";
+import Hero from "@/components/Hero";
+import TrainingGallery from "@/components/TrainingGallery";
+import GoniometerSimulator from "@/components/GoniometerSimulator";
+import JoinSection from "@/components/JoinSection";
+import { PROGRAMS } from "@/data/content";
+const names = [
+  "Physiotherapy Academy",
+  "Summer School",
+  "International Exchange",
+  "Innovation Incubation",
+];
+export const metadata = {
+  title: "Our programs | Tanzania Physiotherapy Initiative",
+};
+export default function Approach() {
+  return (
+    <>
+      <Hero
+        title="Learn. Put It into Practice."
+        description="Four comprehensive pathways connecting clinical knowledge, practical skills, and the healthcare professionals shaping physiotherapy in Tanzania."
+        actionHref="#programs"
+        actionLabel="View All 4 Programs"
+        secondaryHref="/initiatives"
+        secondaryLabel="Active Initiatives"
+      />
+      <nav className="frame program-jump" aria-label="Jump to a program">
+        {PROGRAMS.map((p, i) => (
+          <a key={p.id} href={`#${p.id}`}>
+            {names[i]}
+          </a>
+        ))}
+      </nav>
+      <div className="frame program-details">
+        {PROGRAMS.map((p, i) => (
+          <section key={p.id} id={p.id} className="program-row">
+            <figure>
+              <Image
+                src={`/images/training/training_${[5, 3, 6, 7][i]}.jpeg`}
+                alt="Collaborative learning at a TPI workshop"
+                width={1000}
+                height={800}
+                sizes="(max-width:760px) 100vw, 48vw"
+              />
+            </figure>
+            <div>
+              <h2>{names[i]}</h2>
+              <p>{p.description}</p>
+              <ul>
+                {p.features.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
+              <Link
+                className="button"
+                href={`/contact?subject=${encodeURIComponent(p.title)}`}
+              >
+                Ask about this program
+              </Link>
+            </div>
+          </section>
+        ))}
+      </div>
+      <GoniometerSimulator />
+      <TrainingGallery />
+      <JoinSection />
+    </>
+  );
+}

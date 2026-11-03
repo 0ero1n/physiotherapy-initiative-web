@@ -1,0 +1,2109 @@
+{
+ "url": "http://localhost:3000/initiatives",
+ "at": "2026-10-25T20:03:28.820Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.61,
+    0.9,
+    0.96,
+    1
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2878,
+     "screens": 3.2,
+     "words": 315,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 6,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Inclusion in action.",
+     "words": 3,
+     "chars": 20,
+     "lines": 2,
+     "size": 72,
+     "vw": 5,
+     "font": "Panchang",
+     "weight": 700,
+     "tracking": -0.045,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.48,
+     "top": 172,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Inclusion in action.",
+     "words": 3,
+     "lines": 2,
+     "size": 72,
+     "font": "Panchang"
+    },
+    "headings": [
+     {
+      "text": "Inclusion in action.",
+      "words": 3,
+      "chars": 20,
+      "lines": 2,
+      "size": 72,
+      "vw": 5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 172,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Our priorities",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 529,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Move for Disability 2026",
+      "words": 4,
+      "chars": 24,
+      "lines": 2,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Panchang",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 734,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "50+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.22,
+      "top": 912,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "100+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.22,
+      "top": 912,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "200+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.22,
+      "top": 1003,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "300+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.22,
+      "top": 1003,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "5KM",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.12,
+      "top": 1049,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Physiotherapy Career Fair",
+      "words": 3,
+      "chars": 25,
+      "lines": 2,
+      "size": 37.4,
+      "vw": 2.6,
+      "font": "Panchang",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.45,
+      "top": 1263,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Be part of the progress.",
+      "words": 5,
+      "chars": 24,
+      "lines": 2,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 2100,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Moving forward.",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 95,
+      "vw": 6.6,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 2596,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 4,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Panchang",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      16,
+      20,
+      24,
+      32,
+      37,
+      43,
+      48,
+      50,
+      72,
+      95
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.4
+     },
+     "measureChars": 69,
+     "max": {
+      "size": 95,
+      "vw": 6.6,
+      "font": "Panchang",
+      "text": "Moving forward."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fafbf7",
+     "bodyBgHsl": {
+      "h": 75,
+      "s": 0.33,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#eceee2",
+       "top": 410,
+       "hsl": {
+        "h": 70,
+        "s": 0.26,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#e4eca5",
+       "top": 1984,
+       "hsl": {
+        "h": 67,
+        "s": 0.65,
+        "l": 0.79
+       }
+      },
+      {
+       "color": "#272e20",
+       "top": 2327,
+       "hsl": {
+        "h": 90,
+        "s": 0.18,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#292e20",
+       "share": 0.76
+      },
+      {
+       "color": "#fafbf7",
+       "share": 0.15
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.08
+      },
+      {
+       "color": "#696112",
+       "share": 0.01
+      },
+      {
+       "color": "#e4eca5",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#696112",
+      "hsl": {
+       "h": 54,
+       "s": 0.71,
+       "l": 0.24
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 0,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Support our work"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 8,
+     "fixed": false,
+     "height": 104,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "panchang",
+     "switzer",
+     "__nextjs-geist"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2878,
+    "margins": {
+     "left": 32,
+     "right": 71
+    },
+    "sections": [
+     {
+      "sel": "section.page-hero.frame",
+      "tag": "section",
+      "top": 104,
+      "height": 306,
+      "words": 27,
+      "media": 0,
+      "middle": 368,
+      "heading": {
+       "text": "Inclusion in action.",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 106,
+      "textLeft": 32,
+      "textRight": 106,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.initiatives-section.section",
+      "tag": "section",
+      "top": 410,
+      "height": 1574,
+      "words": 233,
+      "media": 0,
+      "middle": 190,
+      "heading": {
+       "text": "Our priorities",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 71,
+      "textLeft": 32,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.join-section",
+      "tag": "section",
+      "top": 1984,
+      "height": 342,
+      "words": 26,
+      "media": 0,
+      "middle": 381,
+      "heading": {
+       "text": "Be part of",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 65,
+      "textLeft": 32,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 2327,
+      "height": 552,
+      "words": 49,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Moving forward.",
+       "size": 95,
+       "tag": "div"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Inclusion in action.",
+      "size": 72,
+      "top": 172,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 761,
+      "n": 6
+     },
+     {
+      "x": 32,
+      "n": 5
+     },
+     {
+      "x": 64,
+      "n": 4
+     },
+     {
+      "x": 833,
+      "n": 1
+     },
+     {
+      "x": 869,
+      "n": 1
+     },
+     {
+      "x": 938,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 18,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.13,
+    "voidBox": {
+     "x": 0,
+     "y": 360,
+     "w": 1440,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": [
+    "Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math"
+   ]
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.7,
+    0.91,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 3199,
+     "screens": 3.1,
+     "words": 305,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 6,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Inclusion in action.",
+     "words": 3,
+     "chars": 20,
+     "lines": 1,
+     "size": 50.7,
+     "vw": 6.6,
+     "font": "Panchang",
+     "weight": 700,
+     "tracking": -0.045,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 136,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Inclusion in action.",
+     "words": 3,
+     "lines": 1,
+     "size": 50.7,
+     "font": "Panchang"
+    },
+    "headings": [
+     {
+      "text": "Inclusion in action.",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 50.7,
+      "vw": 6.6,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 136,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Our priorities",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 455,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Move for Disability 2026",
+      "words": 4,
+      "chars": 24,
+      "lines": 3,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Panchang",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 729,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "50+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 906,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "100+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 906,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "200+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 998,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "300+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 998,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "5KM",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 1007,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Be part of the progress.",
+      "words": 5,
+      "chars": 24,
+      "lines": 2,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 2282,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Moving forward.",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 50.7,
+      "vw": 6.6,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 2966,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 4,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Panchang",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      20,
+      24,
+      28,
+      30,
+      32,
+      48,
+      51
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.4
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 50.7,
+      "vw": 6.6,
+      "font": "Panchang",
+      "text": "Inclusion in action."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fafbf7",
+     "bodyBgHsl": {
+      "h": 75,
+      "s": 0.33,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#eceee2",
+       "top": 383,
+       "hsl": {
+        "h": 70,
+        "s": 0.26,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#e4eca5",
+       "top": 2132,
+       "hsl": {
+        "h": 67,
+        "s": 0.65,
+        "l": 0.79
+       }
+      },
+      {
+       "color": "#272e20",
+       "top": 2499,
+       "hsl": {
+        "h": 90,
+        "s": 0.18,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#292e20",
+       "share": 0.76
+      },
+      {
+       "color": "#fafbf7",
+       "share": 0.15
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#696112",
+       "share": 0.01
+      },
+      {
+       "color": "#e4eca5",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#696112",
+      "hsl": {
+       "h": 54,
+       "s": 0.71,
+       "l": 0.24
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 1,
+     "radius": 0,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 88,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "panchang",
+     "switzer",
+     "__nextjs-geist"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 3199,
+    "margins": {
+     "left": 24,
+     "right": 24
+    },
+    "sections": [
+     {
+      "sel": "section.page-hero.frame",
+      "tag": "section",
+      "top": 88,
+      "height": 295,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Inclusion in action.",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 132,
+      "textLeft": 24,
+      "textRight": 132,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.initiatives-section.section",
+      "tag": "section",
+      "top": 383,
+      "height": 1748,
+      "words": 233,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "5KM",
+       "size": 48,
+       "tag": "strong"
+      },
+      "left": 24,
+      "right": 28,
+      "textLeft": 24,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.join-section",
+      "tag": "section",
+      "top": 2132,
+      "height": 367,
+      "words": 26,
+      "media": 0,
+      "middle": 159,
+      "heading": {
+       "text": "Be part of",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 27,
+      "textLeft": 24,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 2499,
+      "height": 701,
+      "words": 49,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Tanzania",
+       "size": 24,
+       "tag": "a"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Inclusion in action.",
+      "size": 51,
+      "top": 136,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 24,
+      "n": 6
+     },
+     {
+      "x": 400,
+      "n": 6
+     },
+     {
+      "x": 48,
+      "n": 4
+     },
+     {
+      "x": 420,
+      "n": 1
+     },
+     {
+      "x": 455,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 18,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": [
+    "Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math"
+   ]
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.67,
+    0.95,
+    0.98,
+    0.86,
+    0.98
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 4019,
+     "screens": 4.8,
+     "words": 305,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 6,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Inclusion in action.",
+     "words": 3,
+     "chars": 20,
+     "lines": 2,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Panchang",
+     "weight": 700,
+     "tracking": -0.045,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 124,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Inclusion in action.",
+     "words": 3,
+     "lines": 2,
+     "size": 32,
+     "font": "Panchang"
+    },
+    "headings": [
+     {
+      "text": "Inclusion in action.",
+      "words": 3,
+      "chars": 20,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 124,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Our priorities",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 492,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Move for Disability 2026",
+      "words": 4,
+      "chars": 24,
+      "lines": 2,
+      "size": 27,
+      "vw": 6.9,
+      "font": "Panchang",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 685,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Inclusion by Design",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 796,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "5KM",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 881,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Movement for everyone",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1055,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "50+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 1382,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "100+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.42,
+      "top": 1382,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "200+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 1474,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "300+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.42,
+      "top": 1474,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "Physiotherapy Career Fair",
+      "words": 3,
+      "chars": 25,
+      "lines": 2,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Panchang",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1799,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Step Into Your Future",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1879,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "More community photographs",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 2553,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Be part of the progress.",
+      "words": 5,
+      "chars": 24,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2856,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Tanzania Physiotherapy Initiative",
+      "words": 3,
+      "chars": 33,
+      "lines": 2,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3240,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Moving forward.",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 29.3,
+      "vw": 7.5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.055,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3822,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 16,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 6,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 0.95,
+       "mono": false
+      },
+      {
+       "family": "Panchang",
+       "share": 0.05,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      20,
+      23,
+      27,
+      28,
+      29,
+      30,
+      32,
+      40
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.4
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 40,
+      "vw": 10.3,
+      "font": "Panchang",
+      "text": "5KM"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fafbf7",
+     "bodyBgHsl": {
+      "h": 75,
+      "s": 0.33,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#eceee2",
+       "top": 428,
+       "hsl": {
+        "h": 70,
+        "s": 0.26,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#696112",
+       "top": 653,
+       "hsl": {
+        "h": 54,
+        "s": 0.71,
+        "l": 0.24
+       }
+      },
+      {
+       "color": "#e4eca5",
+       "top": 2804,
+       "hsl": {
+        "h": 67,
+        "s": 0.65,
+        "l": 0.79
+       }
+      },
+      {
+       "color": "#272e20",
+       "top": 3192,
+       "hsl": {
+        "h": 90,
+        "s": 0.18,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#292e20",
+       "share": 0.76
+      },
+      {
+       "color": "#fafbf7",
+       "share": 0.15
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#696112",
+       "share": 0.01
+      },
+      {
+       "color": "#e4eca5",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#696112",
+      "hsl": {
+       "h": 54,
+       "s": 0.71,
+       "l": 0.24
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 1,
+     "radius": 0,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 88,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "panchang",
+     "switzer",
+     "__nextjs-geist"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 4019,
+    "margins": {
+     "left": 20,
+     "right": 21
+    },
+    "sections": [
+     {
+      "sel": "section.page-hero.frame",
+      "tag": "section",
+      "top": 88,
+      "height": 340,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Inclusion in action.",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 86,
+      "textLeft": 20,
+      "textRight": 86,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.initiatives-section.section",
+      "tag": "section",
+      "top": 428,
+      "height": 2376,
+      "words": 233,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "5KM",
+       "size": 40,
+       "tag": "strong"
+      },
+      "left": 20,
+      "right": 21,
+      "textLeft": 20,
+      "textRight": 21,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.join-section",
+      "tag": "section",
+      "top": 2804,
+      "height": 388,
+      "words": 26,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Be part of",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 29,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 3192,
+      "height": 827,
+      "words": 49,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Tanzania",
+       "size": 23,
+       "tag": "a"
+      },
+      "left": 20,
+      "right": 40,
+      "textLeft": 20,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Inclusion in action.",
+      "size": 32,
+      "top": 124,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 14
+     },
+     {
+      "x": 44,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 18,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": [
+    "Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math"
+   ]
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "11 different font sizes (14, 16, 20, 24, 32, 37, 43, 48, 50, 72, 95).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 32px on the left, 71px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 1440,
+   "message": "The h1 is a bare name (\"Inclusion in action.\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 8 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 768,
+   "message": "1 headline(s) wrap past two lines at 768px: \"Move for Disability 2026\" → 3 lines (4 words, 28px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/initiatives/desktop-fold.jpg",
+   "pages": [
+    "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/initiatives/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/initiatives/tablet-fold.jpg",
+   "pages": [
+    "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/initiatives/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/initiatives/mobile-fold.jpg",
+   "pages": [
+    "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/initiatives/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

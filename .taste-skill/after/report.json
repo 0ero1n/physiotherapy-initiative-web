@@ -1,0 +1,2216 @@
+{
+ "url": "http://localhost:3000",
+ "at": "2026-10-25T18:09:22.676Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.71,
+    0.48,
+    0.66,
+    0.55,
+    0.68,
+    1
+   ],
+   "motion": {
+    "elements": 26,
+    "css": 25,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 5044,
+     "screens": 5.6,
+     "words": 312,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 14,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "image?url=%2Fimages%2Ftraining%2Ftraining_5.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_4.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_7.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_3.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_6.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_1.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Care in the making.",
+     "words": 4,
+     "chars": 19,
+     "lines": 2,
+     "size": 95,
+     "vw": 6.6,
+     "font": "Panchang",
+     "weight": 700,
+     "tracking": -0.045,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.59,
+     "top": 140,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Care in the making.",
+     "words": 4,
+     "lines": 2,
+     "size": 95,
+     "font": "Panchang"
+    },
+    "headings": [
+     {
+      "text": "Care in the making.",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 95,
+      "vw": 6.6,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.59,
+      "top": 140,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Better skills. Better care.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 1101,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Find your next step.",
+      "words": 4,
+      "chars": 20,
+      "lines": 2,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 1649,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Learning, together.",
+      "words": 2,
+      "chars": 19,
+      "lines": 2,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.23,
+      "top": 2468,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Led here. Built together.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.41,
+      "top": 3652,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Be part of the progress.",
+      "words": 5,
+      "chars": 24,
+      "lines": 2,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 4266,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Moving forward.",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 95,
+      "vw": 6.6,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 4762,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Panchang",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      16,
+      24,
+      50,
+      95
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.4
+     },
+     "measureChars": 69,
+     "max": {
+      "size": 95,
+      "vw": 6.6,
+      "font": "Panchang",
+      "text": "Care inthe making."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fafbf7",
+     "bodyBgHsl": {
+      "h": 75,
+      "s": 0.33,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#eceee2",
+       "top": 390,
+       "hsl": {
+        "h": 70,
+        "s": 0.26,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#e4eca5",
+       "top": 4150,
+       "hsl": {
+        "h": 67,
+        "s": 0.65,
+        "l": 0.79
+       }
+      },
+      {
+       "color": "#272e20",
+       "top": 4492,
+       "hsl": {
+        "h": 90,
+        "s": 0.18,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#292e20",
+       "share": 0.7
+      },
+      {
+       "color": "#fafbf7",
+       "share": 0.16
+      },
+      {
+       "color": "#53594b",
+       "share": 0.06
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.04
+      },
+      {
+       "color": "#696112",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#696112",
+      "hsl": {
+       "h": 54,
+       "s": 0.71,
+       "l": 0.24
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 3,
+     "radius": 0,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Support our work",
+      "Explore our programs"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 6,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.59
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": false,
+     "height": 104,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "panchang",
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 5044,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "section.home-hero",
+      "tag": "section",
+      "top": 104,
+      "height": 897,
+      "words": 40,
+      "media": 1,
+      "middle": 186,
+      "heading": {
+       "text": "Care in",
+       "size": 95,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 44,
+      "textLeft": 32,
+      "textRight": 44,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.frame",
+      "tag": "section",
+      "top": 1001,
+      "height": 548,
+      "words": 62,
+      "media": 0,
+      "middle": 303,
+      "heading": {
+       "text": "Better skills.",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.program-section.section",
+      "tag": "section",
+      "top": 1549,
+      "height": 818,
+      "words": 51,
+      "media": 1,
+      "middle": 96,
+      "heading": {
+       "text": "Find your",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 55,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.frame",
+      "tag": "section",
+      "top": 2368,
+      "height": 1152,
+      "words": 54,
+      "media": 3,
+      "middle": 32,
+      "heading": {
+       "text": "Learning,",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 53,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.about-preview.frame",
+      "tag": "section",
+      "top": 3520,
+      "height": 630,
+      "words": 34,
+      "media": 1,
+      "middle": 96,
+      "heading": {
+       "text": "Led here.",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 90,
+      "textLeft": 813,
+      "textRight": 90,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.join-section",
+      "tag": "section",
+      "top": 4150,
+      "height": 342,
+      "words": 26,
+      "media": 0,
+      "middle": 381,
+      "heading": {
+       "text": "Be part of",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 65,
+      "textLeft": 32,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 4492,
+      "height": 552,
+      "words": 49,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Moving forward.",
+       "size": 95,
+       "tag": "div"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Care in the making.",
+      "size": 95,
+      "top": 140,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 10
+     },
+     {
+      "x": 813,
+      "n": 3
+     },
+     {
+      "x": 753,
+      "n": 2
+     },
+     {
+      "x": 938,
+      "n": 2
+     },
+     {
+      "x": 768,
+      "n": 1
+     },
+     {
+      "x": 869,
+      "n": 1
+     },
+     {
+      "x": 968,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 20,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.02,
+    "voidBox": {
+     "x": 480,
+     "y": 120,
+     "w": 480,
+     "h": 60
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.65,
+    0.71,
+    0.7,
+    0.59,
+    1
+   ],
+   "motion": {
+    "elements": 26,
+    "css": 25,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 4887,
+     "screens": 4.8,
+     "words": 303,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 14,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "image?url=%2Fimages%2Ftraining%2Ftraining_5.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_4.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_7.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_3.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_6.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_1.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Care in the making.",
+     "words": 4,
+     "chars": 19,
+     "lines": 2,
+     "size": 72.2,
+     "vw": 9.4,
+     "font": "Panchang",
+     "weight": 700,
+     "tracking": -0.045,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 112,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Care in the making.",
+     "words": 4,
+     "lines": 2,
+     "size": 72.2,
+     "font": "Panchang"
+    },
+    "headings": [
+     {
+      "text": "Care in the making.",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 72.2,
+      "vw": 9.4,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 112,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Better skills. Better care.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1000,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Find your next step.",
+      "words": 4,
+      "chars": 20,
+      "lines": 2,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 1590,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Learning, together.",
+      "words": 2,
+      "chars": 19,
+      "lines": 2,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 2291,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Led here. Built together.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.41,
+      "top": 3382,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Be part of the progress.",
+      "words": 5,
+      "chars": 24,
+      "lines": 2,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 3970,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Moving forward.",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 50.7,
+      "vw": 6.6,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.06,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 4653,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Panchang",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      24,
+      30,
+      51,
+      72
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.4
+     },
+     "measureChars": 69,
+     "max": {
+      "size": 72.2,
+      "vw": 9.4,
+      "font": "Panchang",
+      "text": "Care inthe making."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fafbf7",
+     "bodyBgHsl": {
+      "h": 75,
+      "s": 0.33,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#eceee2",
+       "top": 433,
+       "hsl": {
+        "h": 70,
+        "s": 0.26,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#e4eca5",
+       "top": 3819,
+       "hsl": {
+        "h": 67,
+        "s": 0.65,
+        "l": 0.79
+       }
+      },
+      {
+       "color": "#272e20",
+       "top": 4186,
+       "hsl": {
+        "h": 90,
+        "s": 0.18,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#292e20",
+       "share": 0.7
+      },
+      {
+       "color": "#fafbf7",
+       "share": 0.16
+      },
+      {
+       "color": "#53594b",
+       "share": 0.06
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.04
+      },
+      {
+       "color": "#696112",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#696112",
+      "hsl": {
+       "h": 54,
+       "s": 0.71,
+       "l": 0.24
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 0,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Explore our programs"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 6,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.48
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 88,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "panchang",
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 4887,
+    "margins": {
+     "left": 24,
+     "right": 24
+    },
+    "sections": [
+     {
+      "sel": "section.home-hero",
+      "tag": "section",
+      "top": 88,
+      "height": 840,
+      "words": 40,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Care in",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 64,
+      "textLeft": 24,
+      "textRight": 64,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.frame",
+      "tag": "section",
+      "top": 928,
+      "height": 590,
+      "words": 62,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Better skills.",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.program-section.section",
+      "tag": "section",
+      "top": 1518,
+      "height": 701,
+      "words": 51,
+      "media": 1,
+      "middle": 32,
+      "heading": {
+       "text": "Find your",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 30,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.frame",
+      "tag": "section",
+      "top": 2219,
+      "height": 1016,
+      "words": 54,
+      "media": 3,
+      "middle": 14,
+      "heading": {
+       "text": "Learning,",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.about-preview.frame",
+      "tag": "section",
+      "top": 3235,
+      "height": 584,
+      "words": 34,
+      "media": 1,
+      "middle": 36,
+      "heading": {
+       "text": "Led here.",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 25,
+      "textLeft": 426,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.join-section",
+      "tag": "section",
+      "top": 3819,
+      "height": 367,
+      "words": 26,
+      "media": 0,
+      "middle": 159,
+      "heading": {
+       "text": "Be part of",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 27,
+      "textLeft": 24,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 4186,
+      "height": 701,
+      "words": 49,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Tanzania",
+       "size": 24,
+       "tag": "a"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Care in the making.",
+      "size": 72,
+      "top": 112,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 24,
+      "n": 13
+     },
+     {
+      "x": 420,
+      "n": 5
+     },
+     {
+      "x": 400,
+      "n": 1
+     },
+     {
+      "x": 455,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 20,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.67,
+    0.49,
+    0.98,
+    0.61,
+    0.76,
+    0.52,
+    0.87,
+    1
+   ],
+   "motion": {
+    "elements": 26,
+    "css": 25,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 6374,
+     "screens": 7.6,
+     "words": 303,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 14,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "image?url=%2Fimages%2Ftraining%2Ftraining_5.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_4.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_7.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_3.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_6.jpeg",
+      "image?url=%2Fimages%2Ftraining%2Ftraining_1.jpeg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Care in the making.",
+     "words": 4,
+     "chars": 19,
+     "lines": 2,
+     "size": 39,
+     "vw": 10,
+     "font": "Panchang",
+     "weight": 700,
+     "tracking": -0.05,
+     "leading": 1.12,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 112,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Care in the making.",
+     "words": 4,
+     "lines": 2,
+     "size": 39,
+     "font": "Panchang"
+    },
+    "headings": [
+     {
+      "text": "Care in the making.",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 39,
+      "vw": 10,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 112,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Better skills. Better care.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 881,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A stronger future for rehabilitation starts with the people who provide it.",
+      "words": 12,
+      "chars": 75,
+      "lines": 3,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 979,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "4",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.29,
+      "top": 1256,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "2025",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.27,
+      "top": 1256,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Tanzania",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 1337,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Find your next step.",
+      "words": 4,
+      "chars": 20,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1613,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Physiotherapy Academy",
+      "words": 2,
+      "chars": 21,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1809,
+      "tag": "button",
+      "kind": "heading"
+     },
+     {
+      "text": "Summer School",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1884,
+      "tag": "button",
+      "kind": "heading"
+     },
+     {
+      "text": "International Exchange",
+      "words": 2,
+      "chars": 22,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1959,
+      "tag": "button",
+      "kind": "heading"
+     },
+     {
+      "text": "Innovation Incubation",
+      "words": 2,
+      "chars": 21,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2034,
+      "tag": "button",
+      "kind": "heading"
+     },
+     {
+      "text": "Learning, together.",
+      "words": 2,
+      "chars": 19,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2704,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A shared challenge",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3241,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Room for new ideas",
+      "words": 4,
+      "chars": 18,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3703,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Every voice matters",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4141,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Led here. Built together.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4838,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Be part of the progress.",
+      "words": 5,
+      "chars": 24,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5211,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Tanzania Physiotherapy Initiative",
+      "words": 3,
+      "chars": 33,
+      "lines": 2,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Switzer",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5595,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Moving forward.",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 29.3,
+      "vw": 7.5,
+      "font": "Panchang",
+      "weight": 700,
+      "tracking": -0.055,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 6177,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 19,
+     "maxLines": 3,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Switzer",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Panchang",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      23,
+      29,
+      30,
+      39
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Switzer",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.4
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 39,
+      "vw": 10,
+      "font": "Panchang",
+      "text": "Care inthe making."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fafbf7",
+     "bodyBgHsl": {
+      "h": 75,
+      "s": 0.33,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#eceee2",
+       "top": 395,
+       "hsl": {
+        "h": 70,
+        "s": 0.26,
+        "l": 0.91
+       }
+      },
+      {
+       "color": "#e4eca5",
+       "top": 5159,
+       "hsl": {
+        "h": 67,
+        "s": 0.65,
+        "l": 0.79
+       }
+      },
+      {
+       "color": "#272e20",
+       "top": 5547,
+       "hsl": {
+        "h": 90,
+        "s": 0.18,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#292e20",
+       "share": 0.7
+      },
+      {
+       "color": "#fafbf7",
+       "share": 0.16
+      },
+      {
+       "color": "#53594b",
+       "share": 0.06
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.04
+      },
+      {
+       "color": "#696112",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#696112",
+      "hsl": {
+       "h": 54,
+       "s": 0.71,
+       "l": 0.24
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 2,
+     "radius": 0,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Explore our programs"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 6,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.44
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 88,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "panchang",
+     "switzer"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 6374,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.home-hero",
+      "tag": "section",
+      "top": 88,
+      "height": 729,
+      "words": 40,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Care in",
+       "size": 39,
+       "tag": "h1"
+      },
+      "left": 8,
+      "right": 8,
+      "textLeft": 20,
+      "textRight": 46,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.frame",
+      "tag": "section",
+      "top": 817,
+      "height": 732,
+      "words": 62,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Better skills.",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.program-section.section",
+      "tag": "section",
+      "top": 1549,
+      "height": 1092,
+      "words": 51,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Find your",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.section-heading",
+      "tag": "div",
+      "top": 2704,
+      "height": 164,
+      "words": 18,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Learning,",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 65,
+      "textLeft": 20,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.photo-journal",
+      "tag": "div",
+      "top": 2901,
+      "height": 1326,
+      "words": 32,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "A shared challenge",
+       "size": 23,
+       "tag": "h3"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.about-preview.frame",
+      "tag": "section",
+      "top": 4382,
+      "height": 777,
+      "words": 34,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Led here.",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.join-section",
+      "tag": "section",
+      "top": 5159,
+      "height": 388,
+      "words": 26,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Be part of",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 29,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 5547,
+      "height": 827,
+      "words": 49,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Tanzania",
+       "size": 23,
+       "tag": "a"
+      },
+      "left": 20,
+      "right": 40,
+      "textLeft": 20,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Care in the making.",
+      "size": 39,
+      "top": 112,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 20
+     }
+    ],
+    "leftBlocks": 20,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/after/desktop-fold.jpg",
+   "pages": [
+    "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/after/desktop-page-01.jpg",
+    "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/after/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/after/tablet-fold.jpg",
+   "pages": [
+    "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/after/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/after/mobile-fold.jpg",
+   "pages": [
+    "/Users/mac/Documents/React/physiotherapy-initiative-web/.taste-skill/after/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
