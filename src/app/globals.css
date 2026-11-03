@@ -3263,14 +3263,14 @@ h3,
 
 /* ==========================================================================
    BUTTONS: EXACTLY LIKE MSICHANA INITIATIVE
-   [ Download PDF ] on left + [ ↗ ] pure icon on right
+   [ Download PDF ] rounded-pill on left + [ ↗ ] pure icon on right
    ========================================================================== */
 .pub-card-actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding-top: 12px;
+  padding-top: 14px;
   margin-top: auto;
 }
 
@@ -3284,8 +3284,8 @@ h3,
   font-family: var(--sans);
   font-size: 13px;
   font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 8px;
+  padding: 8px 18px;
+  border-radius: 9999px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -3307,9 +3307,9 @@ h3,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
   border: none;
   background: transparent;
   color: var(--olive);
