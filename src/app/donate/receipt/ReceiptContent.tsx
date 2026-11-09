@@ -310,26 +310,26 @@ export default function ReceiptContent() {
 
           {/* Machine Screen (LCD/OLED Display) */}
           <div className="receipt-screen">
-            <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center justify-between">
               <div>
-                <div className="text-[10px] uppercase tracking-widest text-[#8e9882] mb-1">
-                  SYSTEM STATUS // 000
+                <div className="text-[10px] uppercase tracking-wider text-[#8e9882]">
+                  Status
                 </div>
-                <div className="text-base font-bold text-[#e4eca5] flex items-center gap-2">
+                <div className="text-sm font-bold text-[#e4eca5] flex items-center gap-1.5 mt-0.5">
                   {loading ? (
                     <>
-                      <span className="inline-block w-3.5 h-3.5 border-2 border-[#e4eca5] border-t-transparent rounded-full animate-spin" />
-                      AWAITING CONFIRMATION
+                      <span className="inline-block w-3 h-3 border-2 border-[#e4eca5] border-t-transparent rounded-full animate-spin" />
+                      Checking...
                     </>
                   ) : isComplete ? (
                     <>
-                      <CheckCircle2 size={16} className="text-emerald-400" />
-                      PAYMENT CERTIFIED & LOGGED
+                      <CheckCircle2 size={15} className="text-emerald-400" />
+                      Payment Confirmed
                     </>
                   ) : (
                     <>
-                      <AlertCircle size={16} className="text-amber-400" />
-                      AUTHORIZATION PENDING
+                      <AlertCircle size={15} className="text-amber-400" />
+                      Pending PIN
                     </>
                   )}
                 </div>
@@ -337,21 +337,12 @@ export default function ReceiptContent() {
 
               <div className="text-right">
                 <div className="text-[10px] uppercase tracking-wider text-[#8e9882]">
-                  AMOUNT RECEIVED
+                  Total Paid
                 </div>
-                <div className="text-sm font-bold text-white tracking-tight">
+                <div className="text-sm font-bold text-white tracking-tight mt-0.5">
                   {formattedAmount} {txDetails.currency || "TZS"}
                 </div>
               </div>
-            </div>
-
-            <div className="mt-3 pt-2.5 border-t border-[#1c2417] flex items-center justify-between text-[11px] text-[#a4b574]">
-              <span className="truncate max-w-[240px]">
-                REF: <code className="text-white font-mono">{reference || "TPI_PENDING"}</code>
-              </span>
-              <span className="uppercase text-[9px] tracking-wider text-[#8e9882]">
-                ENCRYPTED TLS 1.3
-              </span>
             </div>
           </div>
 
@@ -360,144 +351,111 @@ export default function ReceiptContent() {
         </div>
 
         {/* ==============================================================================
-            THE THERMAL RECEIPT PAPER (FEEDS OUT OF THE MACHINE SLOT)
+            THE THERMAL RECEIPT PAPER (CLEAN & MINIMAL)
             ============================================================================== */}
         <div className="receipt-output-container">
           <article
             className={`thermal-paper ${isFeeding ? "receipt-paper-animate" : ""}`}
             style={{ clipPath: clipPathStyle }}
           >
-            {/* Top Paper Header Lockup */}
-            <div className="text-center pb-3">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full border border-neutral-300 p-0.5 bg-white shadow-sm flex items-center justify-center">
+            {/* Top Paper Header */}
+            <div className="text-center pb-1">
+              <div className="w-10 h-10 mx-auto mb-2 rounded-full border border-neutral-300 p-0.5 bg-white shadow-xs flex items-center justify-center">
                 <Image
                   src="/images/our-logo.jpeg"
                   alt="TPI Logo"
-                  width={40}
-                  height={40}
+                  width={36}
+                  height={36}
                   className="rounded-full object-cover"
                 />
               </div>
 
-              <h1 className="font-bold text-[15px] tracking-wider uppercase text-[#1a1e16] font-mono leading-tight">
+              <h1 className="font-bold text-sm tracking-wider uppercase text-[#1a1e16] font-mono leading-tight">
                 {APP_INFO.name}
               </h1>
 
-              <div className="text-[10px] tracking-widest uppercase font-bold text-[#696112] mt-0.5">
-                ★ OFFICIAL DONATION RECEIPT ★
-              </div>
-
-              <div className="text-[10.5px] text-[#555] font-mono mt-1 leading-snug">
-                NGO REGISTRATION: {APP_INFO.registrationNumber}
-                <br />
-                {APP_INFO.contact.address}
-                <br />
-                TEL: {APP_INFO.contact.phone} · {APP_INFO.contact.email}
+              <div className="text-xs font-mono text-[#666] mt-0.5">
+                Receipt
               </div>
             </div>
 
-            {/* Thermal Divider Line */}
-            <div className="receipt-dashed-line my-2" aria-hidden="true">
-              ================================================
+            {/* Clean Divider */}
+            <div className="receipt-dashed-line my-2.5" aria-hidden="true">
+              ------------------------------------------------
             </div>
 
-            {/* Receipt Summary Grid */}
-            <div className="space-y-1.5 text-[11.5px] font-mono text-[#24291f]">
+            {/* Core Details */}
+            <div className="space-y-1.5 text-xs font-mono text-[#222]">
               <div className="flex justify-between">
-                <span className="text-[#666]">RECEIPT REF :</span>
-                <span className="font-bold text-[#111]">{reference || "TPI_GIFT_001"}</span>
+                <span className="text-[#777]">Receipt</span>
+                <span className="font-semibold">{reference || "TPI_GIFT_001"}</span>
               </div>
 
-              {txDetails.transactionId && (
-                <div className="flex justify-between">
-                  <span className="text-[#666]">GATEWAY ID  :</span>
-                  <span className="font-semibold text-[#111]">{txDetails.transactionId}</span>
-                </div>
-              )}
-
               <div className="flex justify-between">
-                <span className="text-[#666]">ISSUED DATE :</span>
+                <span className="text-[#777]">Date</span>
                 <span>{txDetails.issuedAt}</span>
               </div>
 
               <div className="flex justify-between">
-                <span className="text-[#666]">CONTRIBUTOR :</span>
-                <span className="font-semibold text-[#111] uppercase truncate max-w-[200px]">
+                <span className="text-[#777]">Donor</span>
+                <span className="font-medium uppercase truncate max-w-[200px]">
                   {txDetails.donor}
                 </span>
               </div>
 
               <div className="flex justify-between">
-                <span className="text-[#666]">DESIGNATION :</span>
-                <span className="truncate max-w-[200px] text-right font-medium">
+                <span className="text-[#777]">Cause</span>
+                <span className="truncate max-w-[200px] text-right">
                   {txDetails.cause}
                 </span>
               </div>
 
               <div className="flex justify-between">
-                <span className="text-[#666]">CHANNEL     :</span>
+                <span className="text-[#777]">Method</span>
                 <span className="truncate max-w-[200px] text-right">
-                  {txDetails.method?.startsWith("mobile")
-                    ? "Mobile Money (Tigo/Vodacom/Airtel)"
-                    : txDetails.method || "Direct Electronic Transfer"}
-                </span>
-              </div>
-
-              <div className="flex justify-between items-center pt-0.5">
-                <span className="text-[#666]">STATUS      :</span>
-                <span className="px-1.5 py-0.5 text-[10px] font-bold uppercase rounded bg-[#e4eca5] text-[#292e20] border border-[#cbd885]">
-                  {isComplete ? "CONFIRMED & RECEIVED" : "PENDING AUTHORIZATION"}
+                  {txDetails.method?.toLowerCase().includes("mobile")
+                    ? "Mobile Money"
+                    : txDetails.method?.toLowerCase().includes("card")
+                    ? "Card Payment"
+                    : txDetails.method || "Direct Transfer"}
                 </span>
               </div>
             </div>
 
-            {/* Thermal Divider Line */}
+            {/* Clean Divider */}
             <div className="receipt-dashed-line my-2.5" aria-hidden="true">
               ------------------------------------------------
             </div>
 
-            {/* Hero Amount Contribution Box */}
-            <div className="border-2 border-dashed border-[#8d9478] bg-[#f2f4e8] p-3 rounded-md text-center">
-              <div className="text-[10px] uppercase tracking-widest text-[#53594b] font-bold">
-                TOTAL CONTRIBUTION AMOUNT
-              </div>
-              <div className="text-2xl md:text-3xl font-black text-[#1a1e16] font-mono tracking-tight my-0.5">
-                {formattedAmount}{" "}
-                <span className="text-base font-bold text-[#696112]">
-                  {txDetails.currency || "TZS"}
+            {/* Total Paid Row */}
+            <div className="py-1">
+              <div className="flex justify-between items-baseline font-mono">
+                <span className="text-xs uppercase text-[#555] font-semibold">Total paid</span>
+                <span className="text-2xl font-bold text-[#111] tracking-tight">
+                  {formattedAmount}{" "}
+                  <span className="text-sm font-semibold">{txDetails.currency || "TZS"}</span>
                 </span>
               </div>
-              <div className="text-[10px] font-bold tracking-wider text-[#4d543f] uppercase">
-                100% TAX-DEDUCTIBLE PHILANTHROPIC GIFT
+              <div className="flex justify-between items-center text-[11px] font-mono text-[#777] mt-1">
+                <span>Status</span>
+                <span className="text-emerald-700 font-semibold flex items-center gap-1">
+                  ✓ {isComplete ? "Completed" : "Pending"}
+                </span>
               </div>
             </div>
 
-            {/* Thermal Divider Line */}
+            {/* Clean Divider */}
             <div className="receipt-dashed-line my-2.5" aria-hidden="true">
               ------------------------------------------------
             </div>
 
-            {/* Barcode Element */}
+            {/* Clean Barcode */}
             <ThermalBarcode code={reference || "TPI1794238661911"} />
 
-            {/* Official Certification Seal / Stamp */}
-            <div className="my-3 text-center">
-              <div className="inline-block border-2 border-[#696112] text-[#4d480f] px-3 py-1 rounded font-mono text-[9.5px] font-bold tracking-wider uppercase rotate-[-1.5deg] bg-white/70 shadow-xs">
-                ★ CERTIFIED OFFICIAL RECEIPT · TPI TANZANIA ★
-              </div>
-            </div>
-
-            {/* Legal Statement */}
-            <p className="text-[9.5px] text-[#5c6352] text-center leading-relaxed font-mono px-1">
-              This electronic receipt acknowledges your voluntary contribution to the
-              Tanzania Physiotherapy Initiative (TPI), a registered non-profit NGO (ooNGO/R/9429).
-              No goods or services were provided in exchange for this contribution.
-              Retain this voucher for tax and records purposes.
-            </p>
-
-            <div className="mt-4 pt-2 border-t border-neutral-300 flex justify-between text-[8.5px] text-[#777] font-mono">
-              <span>SECURITY HASH: 8E16-3DD8-VERIFIED</span>
-              <span>P. 1 / 1</span>
+            {/* Minimal Footer */}
+            <div className="text-center pt-2 font-mono text-xs text-[#555] pb-2">
+              <p>Thanks for your support.</p>
+              <p className="text-[10px] text-[#888] mt-1">physioinitiativetz.org</p>
             </div>
           </article>
         </div>
