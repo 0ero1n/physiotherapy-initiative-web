@@ -52,8 +52,8 @@ export default function Partners() {
                     <Image
                       src={p.logo}
                       alt={`${p.name} logo`}
-                      width={68}
-                      height={68}
+                      width={88}
+                      height={88}
                       className="partner-logo-img"
                     />
                   ) : (

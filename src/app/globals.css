@@ -3754,15 +3754,15 @@ h3,
 }
 
 .partner-logo-wrap {
-  width: 76px;
-  height: 76px;
-  border-radius: 12px;
+  width: 96px;
+  height: 96px;
+  border-radius: 14px;
   background: var(--white);
   border: 1.5px solid rgba(41, 46, 32, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 10px;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(41, 46, 32, 0.04);
 }
@@ -3773,12 +3773,20 @@ h3,
   width: auto;
   height: auto;
   object-fit: contain;
+  filter: grayscale(100%) contrast(1.1);
+  mix-blend-mode: multiply;
+  transition: all 0.25s ease;
+}
+
+.partner-card-row:hover .partner-logo-img {
+  filter: grayscale(100%) contrast(1.25);
+  transform: scale(1.04);
 }
 
 .partner-logo-fallback {
-  width: 76px;
-  height: 76px;
-  border-radius: 12px;
+  width: 96px;
+  height: 96px;
+  border-radius: 14px;
   background: rgba(105, 97, 18, 0.08);
   color: var(--olive);
   display: flex;
@@ -3912,51 +3920,51 @@ h3,
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 190px;
-  height: 84px;
-  padding: 6px 14px;
-  opacity: 0.85;
+  width: 220px;
+  height: 96px;
+  padding: 6px 16px;
+  opacity: 0.9;
   transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
 }
 
 .pure-logo-item:hover {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .pure-logo-img {
-  max-height: 62px;
-  max-width: 155px;
+  max-height: 74px;
+  max-width: 185px;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
-  filter: grayscale(100%);
+  filter: grayscale(100%) contrast(1.1);
   mix-blend-mode: multiply;
-  transition: filter 0.25s ease, opacity 0.25s ease;
+  transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
 }
 
 /* Mobile & Reduced Motion */
 @media (max-width: 768px) {
   .pure-logo-marquee-section {
-    padding: 26px 0;
+    padding: 28px 0;
   }
 
   .pure-logo-track {
-    gap: 40px;
+    gap: 48px;
     animation-duration: 32s;
   }
 
   .pure-logo-item {
-    width: 140px;
-    height: 64px;
-    padding: 4px 8px;
+    width: 160px;
+    height: 72px;
+    padding: 4px 10px;
   }
 
   .pure-logo-img {
-    max-height: 48px;
-    max-width: 115px;
+    max-height: 54px;
+    max-width: 135px;
   }
 }
 
