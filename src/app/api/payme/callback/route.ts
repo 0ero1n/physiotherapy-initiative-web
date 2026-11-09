@@ -12,25 +12,41 @@ export async function POST(req: NextRequest) {
     }
 
     const config = getPaymeConfig();
-    const signature = req.headers.get("x-signature");
+    const signature =
+      req.headers.get("x-middleware-signature") ||
+      req.headers.get("x-signature");
     const timestamp = req.headers.get("x-timestamp");
 
     // Optional verification if signature headers are present
     if (signature && timestamp && config.appSecret) {
-      const expected = generatePaymeSignature(
+      const ts = parseInt(timestamp, 10);
+      const expectedFromRaw = generatePaymeSignature(text, ts, config.appSecret);
+      const expectedFromMinified = generatePaymeSignature(
         JSON.stringify(body),
-        parseInt(timestamp, 10),
+        ts,
         config.appSecret
       );
 
-      if (signature !== expected) {
-        console.warn("Payme webhook signature mismatch:", { signature, expected });
+      const isValid =
+        signature === expectedFromRaw || signature === expectedFromMinified;
+
+      if (!isValid) {
+        console.warn("Payme webhook signature check mismatch:", {
+          receivedSignature: signature,
+          expectedFromRaw,
+          expectedFromMinified,
+        });
       }
     }
 
+    const reference = body.reference || body.trans_id || body.order_id;
+    const paymentStatus =
+      body.payment_status || body.result || body.status || "UNKNOWN";
+
     console.log("Payme webhook notification received:", {
-      reference: body.reference || body.trans_id,
-      status: body.status,
+      reference,
+      status: paymentStatus,
+      transactionId: body.transid || body.transaction_id,
       amount: body.amount,
       msisdn: body.msisdn,
       providerMessage: body.provider_message || body.message,
@@ -38,8 +54,8 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       received: true,
-      reference: body.reference,
-      status: body.status,
+      reference,
+      status: paymentStatus,
     });
   } catch (error: unknown) {
     const message =

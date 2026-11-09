@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { APP_INFO } from "@/data/content";
-import { Mail, Phone, MapPin, Clock, ArrowUp } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 
 function InstagramIcon({ size = 18 }: { size?: number }) {
   return (
@@ -147,8 +147,8 @@ export default function Footer() {
         <div className="footer-col">
           <h3 className="footer-heading">Initiatives</h3>
           <ul className="footer-links">
-            <li><Link href="/initiatives#move-for-disability">Move for Disability 2026</Link></li>
-            <li><Link href="/initiatives#career-fair">Tanzania Career Fair (SUZA)</Link></li>
+            <li><Link href="/initiatives#move-for-disability">Move for Disability</Link></li>
+            <li><Link href="/initiatives#career-fair">Tanzania Physiotherapy Career Fair</Link></li>
             <li><Link href="/initiatives#cycle-g">Cycle G × Saifee Ride</Link></li>
             <li><Link href="/initiatives#community-outreach">Clinical Community Outreach</Link></li>
             <li><Link href="/approach#workforce">Workforce Development</Link></li>
@@ -171,10 +171,6 @@ export default function Footer() {
               <Phone size={16} className="footer-contact-icon" aria-hidden="true" />
               <a href="tel:+255765359305">{APP_INFO.contact.phone}</a>
             </li>
-            <li>
-              <Clock size={16} className="footer-contact-icon" aria-hidden="true" />
-              <span>{APP_INFO.contact.hours}</span>
-            </li>
           </ul>
         </div>
       </div>
@@ -186,7 +182,9 @@ export default function Footer() {
             © 2026 Tanzania Physiotherapy Initiative. All rights reserved.
           </p>
           <div className="footer-bottom-right">
-            <span className="footer-nonprofit-tag">Registered Non-Profit in Tanzania</span>
+            <span className="footer-nonprofit-tag">
+              Registered NGO (Reg. ID: {APP_INFO.registrationNumber})
+            </span>
             <button
               type="button"
               onClick={scrollToTop}

@@ -237,8 +237,8 @@ function DonateForm() {
         <div>
           <figure>
             <Image
-              src="/images/training/training_7.jpeg"
-              alt="Physiotherapy training and clinical collaboration in Tanzania"
+              src="/images/donate/child-in-wheelchair.jpg"
+              alt="A child in a wheelchair receiving compassionate mobility and rehabilitation care"
               width={900}
               height={800}
               priority

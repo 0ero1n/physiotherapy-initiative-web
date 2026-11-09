@@ -14,6 +14,11 @@ export default function ReceiptContent() {
   // Derive initial loading directly without triggering synchronous setState in effect
   const [loading, setLoading] = useState<boolean>(() => Boolean(reference));
   const [status, setStatus] = useState<string>("PENDING");
+  const [txDetails, setTxDetails] = useState<{
+    amount?: number;
+    currency?: string;
+    transactionId?: string;
+  }>({});
 
   useEffect(() => {
     if (!reference) {
@@ -22,10 +27,19 @@ export default function ReceiptContent() {
 
     async function checkStatus() {
       try {
-        const res = await fetch(`/api/payme/query?reference=${encodeURIComponent(reference)}`);
+        const res = await fetch(
+          `/api/payme/query?reference=${encodeURIComponent(reference)}`
+        );
         const data = await res.json();
         if (data.success) {
           setStatus(data.status);
+          if (data.amount || data.transactionId) {
+            setTxDetails({
+              amount: data.amount,
+              currency: data.currency,
+              transactionId: data.transactionId,
+            });
+          }
         }
       } catch (err) {
         console.error("Error querying receipt status:", err);
@@ -36,20 +50,29 @@ export default function ReceiptContent() {
 
     checkStatus();
 
-    // If still pending, poll every 3 seconds up to 6 times
+    // If still pending, poll every 3 seconds up to 25 times (~75 seconds)
     let attempts = 0;
     const interval = setInterval(async () => {
       attempts++;
-      if (attempts > 6) {
+      if (attempts > 25) {
         clearInterval(interval);
         return;
       }
 
       try {
-        const res = await fetch(`/api/payme/query?reference=${encodeURIComponent(reference)}`);
+        const res = await fetch(
+          `/api/payme/query?reference=${encodeURIComponent(reference)}`
+        );
         const data = await res.json();
         if (data.success) {
           setStatus(data.status);
+          if (data.amount || data.transactionId) {
+            setTxDetails({
+              amount: data.amount,
+              currency: data.currency,
+              transactionId: data.transactionId,
+            });
+          }
           if (data.status === "COMPLETED" || data.status === "FAILED") {
             clearInterval(interval);
           }
@@ -96,6 +119,22 @@ export default function ReceiptContent() {
                   {reference || "TPI_ONLINE_PLEDGE"}
                 </span>
               </div>
+              {txDetails.amount ? (
+                <div className="flex justify-between py-1">
+                  <span className="text-[#53594b]">Amount Contributed</span>
+                  <span className="font-bold text-[#292e20]">
+                    {Number(txDetails.amount).toLocaleString()} {txDetails.currency || "TZS"}
+                  </span>
+                </div>
+              ) : null}
+              {txDetails.transactionId ? (
+                <div className="flex justify-between py-1">
+                  <span className="text-[#53594b]">Gateway Transaction ID</span>
+                  <span className="font-mono text-[#53594b]">
+                    {txDetails.transactionId}
+                  </span>
+                </div>
+              ) : null}
               <div className="flex justify-between py-1">
                 <span className="text-[#53594b]">Payment Channel</span>
                 <span className="font-medium text-[#292e20]">

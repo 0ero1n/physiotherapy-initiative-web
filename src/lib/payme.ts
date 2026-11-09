@@ -25,6 +25,8 @@ export interface CardCheckoutParams {
   billingPhone: string;
   billingAddress?: string;
   billingCity?: string;
+  billingState?: string;
+  billingPostcode?: string;
   billingCountry?: string;
 }
 
@@ -45,6 +47,8 @@ export interface PaymeResponse {
   status: "PENDING" | "COMPLETED" | "SUCCESS" | "FAILED" | "CANCELLED" | "ERROR";
   paymentGatewayUrl?: string;
   transactionId?: string;
+  amount?: number;
+  currency?: string;
   message?: string;
   raw?: unknown;
 }
@@ -85,20 +89,19 @@ export function formatPhoneNumber(phone: string, defaultCountryCode = "255"): st
  * Gets the current Payme Africa environment configuration
  */
 export function getPaymeConfig(): PaymeConfig {
-  const appId = process.env.PAYME_APP_ID || "";
-  const appSecret = process.env.PAYME_APP_SECRET || "";
+  const appId = process.env.PAYME_APP_ID || "TPI-DONATIONS";
+  const appSecret =
+    process.env.PAYME_APP_SECRET ||
+    "BSdusQLePNilotTrTuuOaZyISC5ZLtwXpMmOWCLLgPo=";
   const baseUrl =
     process.env.PAYME_BASE_URL || "https://portal.paymeafrica.com/api/v1";
   const isSandbox =
-    process.env.PAYME_SANDBOX === "1" ||
-    process.env.PAYME_SANDBOX === "true" ||
-    !appId ||
-    !appSecret;
+    process.env.PAYME_SANDBOX === "1" || process.env.PAYME_SANDBOX === "true";
 
   const appUrl =
     process.env.NEXT_PUBLIC_APP_URL ||
     process.env.APP_URL ||
-    "https://physioinitiativetz.org";
+    "https://physiotherapy-initiative-web--physiotherapy-initiative.us-east4.hosted.app";
   const callbackUrl = `${appUrl.replace(/\/$/, "")}/api/payme/callback`;
 
   return {
@@ -124,15 +127,26 @@ export function generatePaymeSignature(
 }
 
 export interface RawPaymeData {
-  status?: string;
+  status?: string | number;
+  payment_status?: string;
   transaction_id?: string;
   id?: string;
+  transid?: string;
+  amount?: number | string;
+  currency?: string;
   message?: string;
-  error?: string;
+  error?: string | number;
   payment_gateway_url?: string;
   checkout_url?: string;
   url?: string;
   provider_message?: string;
+  provider_response?: {
+    result?: string;
+    resultcode?: string;
+    message?: string;
+    data?: Array<{ payment_gateway_url?: string; [key: string]: unknown }>;
+    [key: string]: unknown;
+  };
   [key: string]: unknown;
 }
 
@@ -225,13 +239,26 @@ export async function initiateMobileCollection(
     const { status, data } = await sendPaymeRequest("/transact", payload);
 
     if (status >= 200 && status < 300) {
-      const rawStatus = (data.status || "PENDING").toUpperCase();
+      const rawPaymentStatus = String(
+        data.payment_status ||
+        data.status ||
+        "PENDING"
+      ).toUpperCase();
+
       let normalizedStatus: PaymeResponse["status"] = "PENDING";
-      if (rawStatus === "COMPLETED" || rawStatus === "SUCCESS") {
+      if (rawPaymentStatus === "COMPLETED" || rawPaymentStatus === "SUCCESSFUL") {
         normalizedStatus = "COMPLETED";
-      } else if (rawStatus === "FAILED" || rawStatus === "CANCELLED") {
+      } else if (
+        rawPaymentStatus === "FAILED" ||
+        rawPaymentStatus === "CANCELLED" ||
+        rawPaymentStatus === "REJECTED"
+      ) {
         normalizedStatus = "FAILED";
+      } else {
+        normalizedStatus = "PENDING";
       }
+
+      const providerMsg = (data.provider_response as { message?: string })?.message;
 
       return {
         success: true,
@@ -239,6 +266,7 @@ export async function initiateMobileCollection(
         status: normalizedStatus,
         transactionId: data.transaction_id || data.id,
         message:
+          providerMsg ||
           data.message ||
           "Payment push initiated. Please check your handset to authorize with your PIN.",
         raw: data,
@@ -251,7 +279,7 @@ export async function initiateMobileCollection(
       status: "ERROR",
       message:
         data.message ||
-        data.error ||
+        (data.error ? String(data.error) : undefined) ||
         "Could not initiate mobile payment with gateway.",
       raw: data,
     };
@@ -307,17 +335,32 @@ export async function initiateCardCheckout(
     };
   }
 
+  const appUrl =
+    process.env.APP_URL ||
+    process.env.NEXT_PUBLIC_APP_URL ||
+    "https://physiotherapy-initiative-web--physiotherapy-initiative.us-east4.hosted.app";
+
+  const redirectUrl = `${appUrl.replace(/\/$/, "")}/donate/receipt?reference=${encodeURIComponent(
+    params.reference
+  )}`;
+  const cancelUrl = `${appUrl.replace(/\/$/, "")}/donate?cancelled=1`;
+
   const payload: Record<string, unknown> = {
     action: "checkout",
     amount: Math.round(params.amount),
     reference: params.reference,
     callback_url: params.callbackUrl || config.callbackUrl,
+    redirect_url: redirectUrl,
+    cancel_url: cancelUrl,
     billing_firstname: params.billingFirstName,
     billing_lastname: params.billingLastName,
     billing_email: params.billingEmail,
     billing_phone: params.billingPhone,
     billing_address: params.billingAddress || "Dar es Salaam",
+    billing_address_1: params.billingAddress || "Dar es Salaam",
     billing_city: params.billingCity || "Dar es Salaam",
+    billing_state_or_region: params.billingState || "Dar es Salaam",
+    billing_postcode_or_pobox: params.billingPostcode || "11101",
     billing_country: params.billingCountry || "TZ",
   };
 
@@ -325,21 +368,41 @@ export async function initiateCardCheckout(
     const { status, data } = await sendPaymeRequest("/transact", payload);
 
     if (status >= 200 && status < 300) {
-      const rawStatus = (data.status || "PENDING").toUpperCase();
+      const rawPaymentStatus = String(
+        data.payment_status ||
+        data.status ||
+        "PENDING"
+      ).toUpperCase();
+
       let normalizedStatus: PaymeResponse["status"] = "PENDING";
-      if (rawStatus === "COMPLETED" || rawStatus === "SUCCESS") {
+      if (rawPaymentStatus === "COMPLETED" || rawPaymentStatus === "SUCCESSFUL") {
         normalizedStatus = "COMPLETED";
-      } else if (rawStatus === "FAILED" || rawStatus === "CANCELLED") {
+      } else if (
+        rawPaymentStatus === "FAILED" ||
+        rawPaymentStatus === "CANCELLED"
+      ) {
         normalizedStatus = "FAILED";
       }
+
+      // Selcom Hosted Checkout returns checkout_url / payment_gateway_url
+      const providerData = (
+        data.provider_response as {
+          data?: Array<{ payment_gateway_url?: string }>;
+        }
+      )?.data?.[0];
+
+      const gatewayUrl =
+        data.checkout_url ||
+        data.payment_gateway_url ||
+        providerData?.payment_gateway_url ||
+        data.url;
 
       return {
         success: true,
         reference: params.reference,
         status: normalizedStatus,
-        paymentGatewayUrl:
-          data.payment_gateway_url || data.checkout_url || data.url,
-        transactionId: data.transaction_id || data.id,
+        paymentGatewayUrl: gatewayUrl,
+        transactionId: (data.transaction_id || data.id) as string | undefined,
         message: data.message || "Card checkout initialized.",
         raw: data,
       };
@@ -350,7 +413,9 @@ export async function initiateCardCheckout(
       reference: params.reference,
       status: "ERROR",
       message:
-        data.message || data.error || "Could not initialize card checkout.",
+        data.message ||
+        (data.error ? String(data.error) : undefined) ||
+        "Could not initialize card checkout.",
       raw: data,
     };
   } catch (error: unknown) {
@@ -409,34 +474,55 @@ export async function queryTransactionStatus(
     const { status, data } = await sendPaymeRequest("/query", { reference });
 
     if (status >= 200 && status < 300) {
-      const rawStatus = (data.status || "").toUpperCase();
+      // Prioritize payment_status over HTTP status
+      const paymentStatus = String(
+        data.payment_status ||
+        (data.status !== "SUCCESS" ? data.status : "") ||
+        "PENDING"
+      ).toUpperCase();
+
       let normalizedStatus: PaymeResponse["status"] = "PENDING";
 
       if (
-        rawStatus === "COMPLETED" ||
-        rawStatus === "SUCCESS" ||
-        rawStatus === "SUCCESSFUL"
+        paymentStatus === "COMPLETED" ||
+        paymentStatus === "SUCCESS" ||
+        paymentStatus === "SUCCESSFUL"
       ) {
         normalizedStatus = "COMPLETED";
       } else if (
-        rawStatus === "FAILED" ||
-        rawStatus === "REJECTED" ||
-        rawStatus === "EXPIRED"
+        paymentStatus === "FAILED" ||
+        paymentStatus === "REJECTED" ||
+        paymentStatus === "EXPIRED"
       ) {
         normalizedStatus = "FAILED";
-      } else if (rawStatus === "CANCELLED") {
+      } else if (paymentStatus === "CANCELLED") {
         normalizedStatus = "CANCELLED";
+      } else {
+        normalizedStatus = "PENDING";
       }
 
       return {
         success: true,
         reference,
         status: normalizedStatus,
-        transactionId: data.transaction_id || data.id,
+        transactionId: (data.transaction_id || data.id || data.transid) as
+          | string
+          | undefined,
+        amount:
+          typeof data.amount === "number"
+            ? data.amount
+            : data.amount
+            ? parseFloat(String(data.amount))
+            : undefined,
+        currency: (data.currency as string) || "TZS",
         message:
           data.provider_message ||
           data.message ||
-          `Transaction is currently ${normalizedStatus}.`,
+          (normalizedStatus === "COMPLETED"
+            ? "Payment completed successfully."
+            : normalizedStatus === "PENDING"
+            ? "Awaiting authorization on handset..."
+            : `Transaction ${normalizedStatus.toLowerCase()}.`),
         raw: data,
       };
     }

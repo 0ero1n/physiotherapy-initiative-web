@@ -28,10 +28,10 @@ export default function CollaboratorsMarquee() {
               <Image
                 src={item.logo}
                 alt={`${item.name} logo`}
-                width={160}
-                height={50}
+                width={320}
+                height={100}
                 className="pure-logo-img"
-                sizes="(max-width: 640px) 110px, 150px"
+                sizes="(max-width: 640px) 200px, 300px"
               />
             </div>
           ))}

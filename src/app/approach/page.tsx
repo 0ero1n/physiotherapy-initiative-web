@@ -37,8 +37,8 @@ export default function Approach() {
           <section key={p.id} id={p.id} className="program-row">
             <figure>
               <Image
-                src={`/images/training/training_${[5, 3, 6, 7][i]}.jpeg`}
-                alt="Collaborative learning at a TPI workshop"
+                src={p.image || `/images/training/training_${[5, 3, 6, 7][i]}.jpeg`}
+                alt={`${names[i]} session in action`}
                 width={1000}
                 height={800}
                 sizes="(max-width:760px) 100vw, 48vw"

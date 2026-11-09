@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 import ProgramExplorer from "@/components/ProgramExplorer";
 import TrainingGallery from "@/components/TrainingGallery";
 import JoinSection from "@/components/JoinSection";
@@ -63,7 +62,7 @@ export default function HomePage() {
               <span>Pathways to Grow</span>
             </div>
             <div className="mission-fact-card">
-              <strong>100+</strong>
+              <strong>300+</strong>
               <span>Students Reached</span>
             </div>
             <div className="mission-fact-card">
@@ -99,8 +98,8 @@ export default function HomePage() {
       {/* 4. STRATEGIC INITIATIVES: Putting physiotherapy and inclusion into action */}
       <StrategicInitiatives />
 
-      {/* 5. TRAINING IN ACTION: Photo journal with interactive category filtering */}
-      <TrainingGallery />
+      {/* 5. TRAINING IN ACTION: Curated photo gallery with lightbox */}
+      <TrainingGallery limit={3} title="Our Gallery" />
 
       {/* 6. OUR CORE VALUES: Foundational ethos guiding education and clinical care */}
       <section className="values-section section">
@@ -122,38 +121,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. LEADERSHIP PREVIEW: Locally led by dedicated Tanzanian professionals */}
-      <section className="about-preview frame section">
-        <figure>
-          <Image
-            src="/images/training/training_1.jpeg"
-            alt="Members of the Tanzania Physiotherapy Initiative gathered at a workshop"
-            width={1000}
-            height={800}
-            sizes="(max-width:760px) 100vw, 50vw"
-          />
-        </figure>
-        <div>
-          <h2>
-            Led here.
-            <br />
-            Built together.
-          </h2>
-          <p>
-            Progress starts with people who understand the place they call home.
-            Meet the Tanzanian professionals connecting education, clinical
-            practice, and community care.
-          </p>
-          <Link href="/about#team" className="text-link">
-            Meet our people <ArrowUpRight size={18} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
-
-      {/* 8. GLOBAL COLLABORATIONS MARQUEE (JUST LOGOS PASSING) */}
+      {/* 7. GLOBAL COLLABORATIONS MARQUEE (IMMEDIATELY AFTER CORE VALUES) */}
       <CollaboratorsMarquee />
 
-      {/* 9. CALL TO ACTION: Participate & support our mission */}
+      {/* 8. CALL TO ACTION: Participate & support our mission */}
       <JoinSection />
     </>
   );

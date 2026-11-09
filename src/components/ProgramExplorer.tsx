@@ -35,8 +35,8 @@ export default function ProgramExplorer() {
       <div className="program-preview" id="program-detail">
         <figure key={program.id}>
           <Image
-            src={`/images/training/training_${photos[active]}.jpeg`}
-            alt="Physiotherapy professionals exchanging ideas during a workshop"
+            src={program.image || `/images/training/training_${photos[active]}.jpeg`}
+            alt={`${program.title} in action`}
             width={900}
             height={650}
             sizes="(max-width: 760px) 100vw, 48vw"

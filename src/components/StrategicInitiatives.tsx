@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight, MapPin, Users, HeartHandshake, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, HeartHandshake, ExternalLink } from "lucide-react";
 import { STRATEGIC_INITIATIVES, initiativeGalleries } from "@/data/content";
 
 export { initiativeGalleries };
@@ -25,63 +26,49 @@ export default function StrategicInitiatives({
           <h2 id="initiatives-heading">
             {full ? "Activities & Strategic Initiatives" : "Current Initiatives"}
           </h2>
-          <p>
-            From inclusive movement and assistive devices in Dar es Salaam to
-            career fairs in Zanzibar, here is how we put inclusion and physiotherapy into action.
-          </p>
         </div>
 
-        {/* 1. MOVE FOR DISABILITY 2026 */}
+        {/* 1. MOVE FOR DISABILITY (ANNUAL EVENT) */}
         <article className="initiative-feature" id="move-for-disability">
           <div className="initiative-poster">
             <div className="initiative-poster-top">
-              <span className="initiative-badge">Flagship Walkathon & Expo</span>
+              <span className="initiative-badge">Annual Flagship Walkathon & Expo</span>
               <h3>
                 Move for
                 <br />
-                Disability 2026
+                Disability
               </h3>
               <p className="initiative-poster-theme">“{moveInit.theme}”</p>
             </div>
             <div className="initiative-event-facts">
               <div>
-                <strong>{moveInit.distance}</strong>
-                <span>Inclusive 5KM Walkathon</span>
+                <strong>{moveInit.distance || "5KM"}</strong>
+                <span>Inclusive Walkathon</span>
               </div>
               <div className="initiative-fact-divider" aria-hidden="true" />
               <div>
-                <strong>{moveInit.participants}</strong>
-                <span>Participants & Advocates</span>
+                <strong>Annual</strong>
+                <span>Advocacy & Health Expo</span>
               </div>
             </div>
           </div>
 
           <div className="initiative-copy">
-            <div className="initiative-meta-row">
-              <span className="initiative-meta-pill">
-                <MapPin size={14} aria-hidden="true" /> {moveInit.location}
-              </span>
-              <span className="initiative-meta-pill">
-                <Users size={14} aria-hidden="true" /> {moveInit.participants} Participants
-              </span>
+            <div className="initiative-badge-row">
+              <span className="initiative-badge initiative-badge-sub">Annual Event</span>
+              <span className="initiative-badge initiative-badge-outline">Health & Mobility</span>
             </div>
 
             <h3>Movement for everyone</h3>
             <p>
-              <strong>Move for Disability 2026 (“Inclusion by Design”)</strong> is a Dar es Salaam
-              charity walkathon and health expo organized by the Tanzania Physiotherapy Initiative to bridge
-              the country’s mobility gap.
-            </p>
-            <p>
-              Bringing together over 2,000 participants for an inclusive 5KM event, it mobilizes and
-              distributes essential assistive devices—targeting 50+ prosthetics, 100+ wheelchairs,
-              200+ white canes, and 300+ pairs of crutches—while providing free physiotherapy
-              consultations to break disability stigmas.
+              <strong>Move for Disability</strong> is an annual charity walkathon and health expo
+              organized to bridge the country’s mobility gap, mobilizing essential assistive devices
+              and providing free physiotherapy consultations to champion disability inclusion.
             </p>
 
             {moveInit.targets && (
               <div className="initiative-targets-block">
-                <h4>Assistive Device Distribution Targets</h4>
+                <h4>Assistive Device Distribution Goals</h4>
                 <dl className="initiative-targets">
                   {moveInit.targets.map((t) => (
                     <div key={t.label}>
@@ -90,25 +77,22 @@ export default function StrategicInitiatives({
                     </div>
                   ))}
                 </dl>
-                <p className="initiative-note">
-                  Mobilized through donor partnerships, community pledges, and health system alliances.
-                </p>
               </div>
             )}
 
             <div className="initiative-actions">
               <Link
                 className="button"
-                href={`/donate?cause=assistive-devices`}
+                href={`/contact?subject=${encodeURIComponent("Move for Disability Event Registration")}`}
               >
-                Sponsor assistive devices{" "}
+                Register for Next Event{" "}
                 <ArrowUpRight size={18} aria-hidden="true" />
               </Link>
               <Link
                 className="button button-outline"
-                href={`/contact?subject=${encodeURIComponent("Move for Disability 2026 Participation")}`}
+                href={`/donate?cause=assistive-devices`}
               >
-                Register to walk
+                Sponsor assistive devices
               </Link>
               {moveInit.galleryUrl && (
                 <a
@@ -124,37 +108,37 @@ export default function StrategicInitiatives({
           </div>
         </article>
 
-        {/* 2. CAREER FAIR SUZA */}
+        {/* 2. CAREER FAIR (ANNUAL EVENT WITH PICTURE) */}
         <article className="initiative-career" id="career-fair">
-          <div>
-            <span className="initiative-badge initiative-badge-sub">Workforce & Education</span>
+          <div className="initiative-career-visual">
+            <div className="initiative-badge-row">
+              <span className="initiative-badge initiative-badge-sub">Annual Event</span>
+              <span className="initiative-badge initiative-badge-outline">Workforce & Education</span>
+            </div>
             <h3>{careerInit.title}</h3>
             <p className="initiative-theme">“{careerInit.theme}”</p>
-            <div className="initiative-meta-block">
-              <p>
-                <strong>Location:</strong> {careerInit.location}
-              </p>
-              {careerInit.partner && (
-                <p>
-                  <strong>Strategic Partner:</strong> {careerInit.partner}
-                </p>
-              )}
+
+            {/* Career Fair Picture Section */}
+            <div className="initiative-career-image-wrap">
+              <Image
+                src={careerInit.image || "/images/training/training_3.jpeg"}
+                alt="Tanzania Physiotherapy Career Fair"
+                width={600}
+                height={380}
+                className="initiative-career-img"
+              />
             </div>
           </div>
+
           <div className="initiative-copy">
             <p>
-              Held at the State University of Zanzibar in partnership with the APSTA–SUZA Chapter,
-              the <strong>Tanzania Physiotherapy Career Fair (“Step Into Your Future”)</strong> connects
-              students, practitioners, universities, and healthcare employers.
-            </p>
-            <p>
-              The initiative advances regional health development by providing career guidance,
-              mentorship, CV workshops, and innovation showcases to prepare the next generation
-              of Tanzanian physiotherapists.
+              The <strong>Tanzania Physiotherapy Career Fair</strong> is an annual gathering
+              connecting students, clinicians, universities, and healthcare employers to guide,
+              mentor, and inspire the next generation of Tanzanian rehabilitation professionals.
             </p>
             {careerInit.pillars && (
               <div className="initiative-pillars-block">
-                <h4>Core Pillars & Workshop Focus</h4>
+                <h4>Core Focus Areas</h4>
                 <ul className="career-focus">
                   {careerInit.pillars.map((pillar) => (
                     <li key={pillar}>{pillar}</li>
@@ -165,13 +149,13 @@ export default function StrategicInitiatives({
             <div className="initiative-actions">
               <Link
                 className="button"
-                href={`/contact?subject=${encodeURIComponent("Career Fair SUZA Inquiry")}`}
+                href={`/contact?subject=${encodeURIComponent("Tanzania Physiotherapy Career Fair Registration")}`}
               >
-                Inquire or register{" "}
+                Register for Next Event{" "}
                 <ArrowUpRight size={18} aria-hidden="true" />
               </Link>
               <Link
-                className="text-link"
+                className="button button-outline"
                 href={`/contact?subject=${encodeURIComponent("Career Fair Employer Partnership")}`}
               >
                 Partner as healthcare employer

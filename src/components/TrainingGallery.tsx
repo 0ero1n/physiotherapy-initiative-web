@@ -1,14 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useRef } from "react";
-import { ArrowLeft, ArrowRight, X, Maximize2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, X, Maximize2, ArrowUpRight } from "lucide-react";
 
 interface TrainingPhoto {
   n: number;
   category: "Workshops" | "Clinical Skills" | "Outreach";
   title: string;
   caption: string;
+}
+
+interface TrainingGalleryProps {
+  title?: string;
+  subtitle?: string;
+  limit?: number;
+  showExploreLink?: boolean;
 }
 
 const allTrainingPhotos: TrainingPhoto[] = [
@@ -59,7 +67,12 @@ const allTrainingPhotos: TrainingPhoto[] = [
 const categories = ["All", "Workshops", "Clinical Skills", "Outreach"] as const;
 type CategoryFilter = (typeof categories)[number];
 
-export default function TrainingGallery() {
+export default function TrainingGallery({
+  title = "Our Gallery",
+  subtitle = "A look inside our workshops: ideas shared, hands-on clinical skills practiced, and a rehabilitation workforce advancing together.",
+  limit,
+  showExploreLink = true,
+}: TrainingGalleryProps = {}) {
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("All");
   const [activeModalIndex, setActiveModalIndex] = useState<number | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -69,6 +82,8 @@ export default function TrainingGallery() {
     activeCategory === "All"
       ? allTrainingPhotos
       : allTrainingPhotos.filter((p) => p.category === activeCategory);
+
+  const displayedPhotos = limit ? filteredPhotos.slice(0, limit) : filteredPhotos;
 
   const openLightbox = (index: number, e: React.MouseEvent<HTMLButtonElement>) => {
     lastTriggerRef.current = e.currentTarget;
@@ -84,26 +99,19 @@ export default function TrainingGallery() {
 
   const navigateLightbox = (step: number) => {
     if (activeModalIndex === null) return;
-    const total = filteredPhotos.length;
+    const total = displayedPhotos.length;
     setActiveModalIndex((activeModalIndex + step + total) % total);
   };
 
   const currentModalPhoto =
-    activeModalIndex !== null ? filteredPhotos[activeModalIndex] : null;
+    activeModalIndex !== null ? displayedPhotos[activeModalIndex] : null;
 
   return (
     <section className="training-gallery-section section" aria-labelledby="gallery-heading">
       <div className="frame">
         <div className="section-heading">
-          <h2 id="gallery-heading">
-            Learning,
-            <br />
-            together.
-          </h2>
-          <p>
-            A look inside our workshops: ideas shared, hands-on clinical skills practiced, and a
-            rehabilitation workforce advancing together.
-          </p>
+          <h2 id="gallery-heading">{title}</h2>
+          <p>{subtitle}</p>
         </div>
 
         {/* Interactive Category Filter Pills */}
@@ -137,7 +145,7 @@ export default function TrainingGallery() {
 
         {/* Grid of Filtered Photos */}
         <div className="photo-journal">
-          {filteredPhotos.map((photo, idx) => (
+          {displayedPhotos.map((photo, idx) => (
             <figure key={photo.n} className="photo-card">
               <div className="image-wrap">
                 <Image
@@ -169,6 +177,14 @@ export default function TrainingGallery() {
             </figure>
           ))}
         </div>
+
+        {limit && showExploreLink && (
+          <div className="gallery-more-action">
+            <Link href="/approach#gallery" className="button button-outline">
+              Explore full photo gallery <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Lightbox Dialog */}

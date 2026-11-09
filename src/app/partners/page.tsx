@@ -67,6 +67,8 @@ export default function Partners() {
                   <h3>
                     {p.name.startsWith("Association of")
                       ? "Student Association (APSTA)"
+                      : p.name.startsWith("Wizara ya Maendeleo ya Jamii")
+                      ? "Wizara ya Maendeleo ya Jamii"
                       : p.name}
                   </h3>
                   <span className="partner-type">{p.type}</span>
@@ -74,7 +76,7 @@ export default function Partners() {
               </div>
 
               <div className="partner-details-col">
-                {p.name.startsWith("Association of") && (
+                {(p.name.startsWith("Association of") || p.name.startsWith("Wizara ya Maendeleo ya Jamii")) && (
                   <p className="partner-full-name">{p.name}</p>
                 )}
                 <p className="partner-desc">{p.description}</p>

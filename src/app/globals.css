@@ -905,6 +905,11 @@ li + li {
 .training-gallery-section {
   background: var(--pale);
 }
+.gallery-more-action {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
 .gallery-filter-tabs {
   display: flex;
   align-items: center;
@@ -1689,6 +1694,25 @@ li + li {
   margin-top: 32px;
   margin-bottom: 16px;
 }
+.registration-pill-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ground);
+  border: 1px solid rgba(41, 46, 32, 0.14);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 13.5px;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.registration-pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #15803d;
+  flex-shrink: 0;
+}
 .values-section {
   background: #ffffff;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -1715,6 +1739,7 @@ li + li {
 .team-person img {
   width: 100%;
   height: 390px;
+  object-fit: cover;
   object-position: top;
   background: var(--pale);
 }
@@ -3027,6 +3052,15 @@ h3,
 }
 
 /* Initiative enhancements */
+.initiative-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.initiative-badge-row .initiative-badge {
+  margin-bottom: 0;
+}
 .initiative-badge {
   display: inline-block;
   padding: 5px 12px;
@@ -3042,6 +3076,11 @@ h3,
   background: var(--pale);
   color: var(--ink);
 }
+.initiative-badge-outline {
+  background: transparent;
+  border: 1px solid rgba(41, 46, 32, 0.25);
+  color: var(--ink);
+}
 .initiative-badge-health {
   background: var(--lime);
   color: var(--ink);
@@ -3049,6 +3088,30 @@ h3,
 .initiative-badge-care {
   background: var(--pale);
   color: var(--ink);
+}
+.initiative-career-visual {
+  display: flex;
+  flex-direction: column;
+}
+.initiative-career-image-wrap {
+  margin-top: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(41, 46, 32, 0.12);
+  background: var(--ground);
+  aspect-ratio: 16 / 10;
+  position: relative;
+  width: 100%;
+}
+.initiative-career-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.initiative-career-image-wrap:hover .initiative-career-img {
+  transform: scale(1.03);
 }
 .initiative-poster-top {
   display: flex;
@@ -3746,7 +3809,7 @@ h3,
    PURE COLLABORATOR LOGOS PASSING (SEAMLESS INFINITE MARQUEE)
    ========================================================================== */
 .pure-logo-marquee-section {
-  padding: 36px 0;
+  padding: 44px 0;
   background: var(--white);
   border-top: 1px solid rgba(41, 46, 32, 0.08);
   border-bottom: 1px solid rgba(41, 46, 32, 0.08);
@@ -3778,9 +3841,9 @@ h3,
 .pure-logo-track {
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: 80px;
   width: max-content;
-  animation: pureLogoMarquee 42s linear infinite;
+  animation: pureLogoMarquee 48s linear infinite;
   will-change: transform;
 }
 
@@ -3802,25 +3865,29 @@ h3,
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  height: 54px;
-  padding: 0 4px;
+  width: 190px;
+  height: 84px;
+  padding: 6px 14px;
   opacity: 0.85;
-  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
 }
 
 .pure-logo-item:hover {
   opacity: 1;
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .pure-logo-img {
-  max-height: 50px;
-  max-width: 150px;
+  max-height: 62px;
+  max-width: 155px;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  transition: filter 0.25s ease, opacity 0.25s ease;
 }
 
 /* Mobile & Reduced Motion */
@@ -3831,15 +3898,17 @@ h3,
 
   .pure-logo-track {
     gap: 40px;
-    animation-duration: 28s;
+    animation-duration: 32s;
   }
 
   .pure-logo-item {
-    height: 42px;
+    width: 140px;
+    height: 64px;
+    padding: 4px 8px;
   }
 
   .pure-logo-img {
-    max-height: 38px;
+    max-height: 48px;
     max-width: 115px;
   }
 }

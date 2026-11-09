@@ -19,8 +19,8 @@ export default function About() {
       <section className="frame section about-story">
         <figure>
           <Image
-            src="/images/training/training_2.jpeg"
-            alt="TPI workshop participants standing together"
+            src="/images/about/about-story.jpg"
+            alt="Tanzania Physiotherapy Initiative community and advocates gathered together"
             width={1000}
             height={800}
             priority
@@ -31,11 +31,18 @@ export default function About() {
           <p className="statement">
             Good care begins with people who are prepared to give it.
           </p>
+          <div className="registration-pill-banner">
+            <span className="registration-pill-dot" aria-hidden="true" />
+            <span>
+              Officially Registered NGO in Tanzania · <strong>Registration ID: {APP_INFO.registrationNumber}</strong>
+            </span>
+          </div>
           <p>
-            Established in {APP_INFO.establishedYear}, Tanzania Physiotherapy
-            Initiative brings education and clinical practice closer together.
-            We support students and professionals with practical learning,
-            mentorship, and opportunities to collaborate.
+            Established in {APP_INFO.establishedYear}, the Tanzania Physiotherapy
+            Initiative (TPI) is an officially registered non-governmental organization
+            (Registration ID: <strong>{APP_INFO.registrationNumber}</strong>) dedicated to
+            bringing education and clinical practice closer together. We support students and
+            professionals with practical learning, mentorship, and opportunities to collaborate.
           </p>
           <h3>Our mission</h3>
           <p>{APP_INFO.missionStatement}</p>

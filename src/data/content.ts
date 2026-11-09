@@ -18,6 +18,7 @@ export interface Program {
   description: string;
   features: string[];
   icon: "academy" | "summer" | "exchange" | "innovation";
+  image?: string;
 }
 
 export interface Partner {
@@ -39,13 +40,14 @@ export interface Collaborator {
 export const APP_INFO = {
   name: "Tanzania Physiotherapy Initiative",
   shortName: "TPI",
+  registrationNumber: "ooNGO/R/9429",
   tagline: "Shaping the future workforce in physiotherapy within Tanzania",
   missionStatement:
     "In response to the growing demand for quality physiotherapy services, the Tanzania Physiotherapy Initiative aims to develop highly skilled and compassionate physiotherapists who can meet the challenges of the evolving healthcare landscape.",
   quoteAuthor: "Dr. Elia Swai",
   establishedYear: "2025",
   contact: {
-    address: "P.O. BOX 80651, Kinondoni, Dar es Salaam, Tanzania",
+    address: "Mikumi Street, Kinondoni District, Dar es Salaam, Tanzania",
     city: "Dar es Salaam",
     country: "Tanzania",
     email: "info@physioinitiativetz.org",
@@ -56,7 +58,7 @@ export const APP_INFO = {
   socials: {
     instagram: "https://www.instagram.com/ptinitiativetz?srtk=MXIzbTJ1MXljYng1aA==",
     youtube: "https://youtube.com/@physioinitiativetz?si=NEYNbbLF9bMHfeDO",
-    linkedin: "https://www.linkedin.com/in/emmanuel-jacob-6a7432b7?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    linkedin: "https://www.linkedin.com/company/tanzania-physiotherapy-initiative/",
     facebook: "https://facebook.com/tanzaniaphysiotherapy",
     twitter: "https://twitter.com/tanzaniaphysio",
   },
@@ -99,6 +101,12 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     bio: "Directing executive coordination, institutional partnerships, and day-to-day administrative excellence.",
   },
   {
+    name: "Estom Uvambe",
+    position: "Assistant Secretary General",
+    photo: "/images/leadership/estom_uvambe.jpg",
+    bio: "Serving as Assistant Secretary General, bringing dedication and strong organizational leadership to advancing the profession, expanding community rehabilitation outreach, and supporting clinical education across Tanzania.",
+  },
+  {
     name: "Daniel Materu",
     position: "Financial Manager",
     photo: "/images/leadership/materu1.png",
@@ -132,6 +140,7 @@ export const PROGRAMS: Program[] = [
       "Certification of Continuing Professional Development",
     ],
     icon: "academy",
+    image: "/images/programs/academy-learning.jpg",
   },
   {
     id: "summer-school",
@@ -146,6 +155,7 @@ export const PROGRAMS: Program[] = [
       "Community health clinic outreach days",
     ],
     icon: "summer",
+    image: "/images/training/training_3.jpeg",
   },
   {
     id: "exchange",
@@ -160,6 +170,7 @@ export const PROGRAMS: Program[] = [
       "Exposure to specialized rehabilitation measurement technology",
     ],
     icon: "exchange",
+    image: "/images/programs/international-exchange.jpg",
   },
   {
     id: "incubation",
@@ -174,23 +185,17 @@ export const PROGRAMS: Program[] = [
       "Testing in local community clinics",
     ],
     icon: "innovation",
+    image: "/images/training/training_7.jpeg",
   },
 ];
 
 export const PARTNERS: Partner[] = [
   {
-    name: "Association of Physiotherapist Students in Tanzania",
-    type: "Local Partner",
-    logo: "/images/patners/APSTA.jpeg",
-    description: "Student-led organization promoting physiotherapy education and professional development across university campuses in Tanzania.",
-    focusAreas: ["Student Development", "Professional Networking", "Educational Programs"],
-  },
-  {
-    name: "Kilimanjaro Christian Medical University",
-    type: "Academic Institution",
-    logo: "/images/patners/KCMC.jpg",
-    description: "Leading medical university in Moshi providing accredited university physiotherapy education, research programs, and clinical practice facilities.",
-    focusAreas: ["Academic Training", "Clinical Research", "Clinical Practice"],
+    name: "Wizara ya Maendeleo ya Jamii, Jinsia, Wanawake na Makundi Maalum",
+    type: "Government Ministry",
+    logo: "/images/patners/maendeleo-ya-jamii.jpeg",
+    description: "Tanzanian government ministry leading national social welfare development, disability inclusion, and empowerment of special groups across the nation.",
+    focusAreas: ["Disability Inclusion", "Special Groups Empowerment", "Community Welfare"],
   },
   {
     name: "Muhimbili University of Health & Allied Sciences",
@@ -200,46 +205,40 @@ export const PARTNERS: Partner[] = [
     focusAreas: ["Higher Education", "Clinical Research", "Professional Development"],
   },
   {
-    name: "Bugando Medical Center",
-    type: "Healthcare Facility",
-    logo: "/images/patners/BUGANDO MEDICAL CENTRE.jpeg",
-    description: "Zonal referral and teaching hospital in Mwanza providing extensive practical experience, trauma rehabilitation, and patient care.",
-    focusAreas: ["Clinical Training", "Patient Rehabilitation", "Practical Experience"],
+    name: "Association of Physiotherapist Students in Tanzania",
+    type: "Local Partner",
+    logo: "/images/patners/APSTA.jpeg",
+    description: "Student-led organization promoting physiotherapy education and professional development across university campuses in Tanzania.",
+    focusAreas: ["Student Development", "Professional Networking", "Educational Programs"],
   },
   {
-    name: "AMREF International",
-    type: "International NGO",
-    logo: "/images/patners/AMREF.png",
-    description: "Africa’s leading health NGO supporting community-based physiotherapy initiatives, disability awareness, and primary healthcare capacity.",
-    focusAreas: ["Community Health", "Capacity Building", "Sustainable Development"],
+    name: "ElevenLabs",
+    type: "Technology & AI Partner",
+    logo: "/images/collab/eleven-labs.webp",
+    description: "Global AI and audio technology pioneer advancing voice accessibility, AI tools, and inclusive digital communication in rehabilitation healthcare.",
+    focusAreas: ["Voice Accessibility", "AI Technology", "Digital Health"],
+  },
+  {
+    name: "Circleg",
+    type: "Assistive Technology & Mobility",
+    logo: "/images/collab/circleg.jpeg",
+    description: "Pioneering high-quality, durable prosthetic systems and holistic rehabilitation mobility solutions tailored for low- and middle-income regions.",
+    focusAreas: ["Prosthetics", "Mobility Solutions", "Community Rehabilitation"],
   },
   {
     name: "VALD",
-    type: "International Organization",
+    type: "Clinical Technology Partner",
     logo: "/images/patners/vald_logo.jpeg",
     description: "Global pioneer in human movement assessment and musculoskeletal measurement technologies, supporting modern diagnostics.",
     focusAreas: ["Clinical Tools", "Outcome Measurement", "Objective Assessment"],
-  },
-  {
-    name: "Physiopedia",
-    type: "International Organization",
-    logo: "/images/patners/PHYSIOPEDIA.png",
-    description: "The world’s largest evidence-based physiotherapy open-knowledge portal, providing access to continuing professional development courses.",
-    focusAreas: ["Knowledge Sharing", "Continuing Education", "Evidence-Based Practice"],
-  },
-  {
-    name: "Rhema Workshop",
-    type: "Furniture & Medical Equipment Workshop",
-    description: "Full-service production of hospital examination beds, rehabilitation parallel bars, and ergonomic furniture in Dar es Salaam.",
-    focusAreas: ["Hospital Furniture", "Rehabilitation Equipment", "Local Manufacturing"],
   },
 ];
 
 export const COLLABORATORS: Collaborator[] = [
   {
-    name: "The United Republic of Tanzania",
-    role: "Government & Health Authority",
-    logo: "/images/collab/united-repub.jpg",
+    name: "Wizara ya Maendeleo ya Jamii",
+    role: "Government & Social Welfare Authority",
+    logo: "/images/collab/maendeleo-ya-jamii.jpeg",
   },
   {
     name: "Google for Nonprofits",
@@ -338,21 +337,22 @@ export interface StrategicInitiative {
   pillars?: string[];
   galleryUrl?: string;
   badge?: string;
+  image?: string;
 }
 
 export const STRATEGIC_INITIATIVES: StrategicInitiative[] = [
   {
     id: "move-for-disability",
-    title: "Move for Disability 2026",
+    title: "Move for Disability",
     theme: "Inclusion by Design",
-    tagline: "Dar es Salaam Charity Walkathon & Health Expo",
-    location: "Dar es Salaam, Tanzania",
+    tagline: "Annual Charity Walkathon & Health Expo",
+    location: "Tanzania",
     distance: "5KM",
-    participants: "2,000+",
+    participants: "Annual Event",
     summary:
-      "A Dar es Salaam charity walkathon and health expo organized by the Tanzania Physiotherapy Initiative to bridge the country’s mobility gap.",
+      "An annual charity walkathon and health expo organized to bridge the country's mobility gap.",
     description:
-      "Move for Disability 2026 (“Inclusion by Design”) is a Dar es Salaam charity walkathon and health expo organized by the Tanzania Physiotherapy Initiative to bridge the country’s mobility gap. Bringing together over 2,000 participants for an inclusive 5KM event, it mobilizes and distributes essential assistive devices—targeting 50+ prosthetics, 100+ wheelchairs, 200+ white canes, and 300+ pairs of crutches—while providing free physiotherapy consultations to break disability stigmas.",
+      "Move for Disability is an annual charity walkathon and health expo organized by the Tanzania Physiotherapy Initiative to bridge the country’s mobility gap, mobilizing assistive devices and free physiotherapy consultations to champion disability inclusion.",
     targets: [
       { label: "Prosthetics", count: "50+" },
       { label: "Wheelchairs", count: "100+" },
@@ -361,26 +361,26 @@ export const STRATEGIC_INITIATIVES: StrategicInitiative[] = [
     ],
     galleryUrl:
       "https://ibrapixcel90.pixieset.com/movefordisabilityinclusionbydesign26/",
-    badge: "Flagship Event",
+    badge: "Annual Flagship Event",
   },
   {
     id: "career-fair",
     title: "Tanzania Physiotherapy Career Fair",
     theme: "Step Into Your Future",
     tagline: "Connecting Students, Clinicians & Healthcare Employers",
-    location: "State University of Zanzibar (SUZA), Zanzibar",
-    partner: "APSTA–SUZA Chapter",
+    location: "Tanzania",
     summary:
-      "Held at the State University of Zanzibar in partnership with the APSTA–SUZA Chapter to connect students, practitioners, universities, and healthcare employers.",
+      "An annual gathering connecting students, clinicians, universities, and healthcare employers to prepare the next generation of physiotherapists.",
     description:
-      "Held at the State University of Zanzibar in partnership with the APSTA–SUZA Chapter, the Tanzania Physiotherapy Career Fair (“Step Into Your Future”) connects students, practitioners, universities, and healthcare employers. The initiative advances regional health development by providing career guidance, mentorship, CV workshops, and innovation showcases to prepare the next generation of Tanzanian physiotherapists.",
+      "The Tanzania Physiotherapy Career Fair connects students, clinicians, universities, and healthcare employers through mentorship, career guidance, and clinical innovation.",
     pillars: [
-      "Career guidance and clinical pathways into modern practice",
-      "One-on-one mentorship with experienced physiotherapy specialists",
-      "CV & interview workshops with leading healthcare employers",
-      "Innovation showcases presenting modern rehabilitation ideas",
+      "Career guidance and clinical pathways",
+      "Specialist mentorship for young clinicians",
+      "CV & interview readiness workshops",
+      "Modern rehabilitation innovation showcases",
     ],
-    badge: "Workforce & Education",
+    badge: "Annual Event",
+    image: "/images/initiatives/career-fair.jpg",
   },
   {
     id: "cycle-g-saifee",
@@ -485,28 +485,28 @@ export interface InitiativePhotoItem {
 export const INITIATIVE_PHOTOS: InitiativePhotoItem[] = [
   {
     id: "move-1",
-    src: "/images/training/training_1.jpeg",
-    fallbackSrc: "/images/training/training_1.jpeg",
-    alt: "Move for Disability 2026 participants and organizers in Dar es Salaam",
+    src: "/images/initiatives/move-for-disability-walk.jpg",
+    fallbackSrc: "/images/initiatives/move-for-disability-walk.jpg",
+    alt: "Move for Disability participants and advocates walking for inclusion in Tanzania",
     title: "Inclusion by Design Walkathon",
     category: "Move for Disability 2026",
-    caption: "5KM inclusive charity walkathon mobilizing over 2,000 participants in Dar es Salaam.",
+    caption: "Inclusive charity walkathon mobilizing thousands of advocates across Tanzania.",
     pixiesetUrl: "https://ibrapixcel90.pixieset.com/movefordisabilityinclusionbydesign26/",
   },
   {
     id: "move-2",
-    src: "/images/training/training_4.jpeg",
-    fallbackSrc: "/images/training/training_4.jpeg",
-    alt: "Assistive devices and physical therapy consultations in Dar es Salaam",
+    src: "/images/initiatives/assistive-distribution.jpg",
+    fallbackSrc: "/images/initiatives/assistive-distribution.jpg",
+    alt: "Assistive devices and wheelchairs ready for community distribution",
     title: "Assistive Device Distribution",
     category: "Move for Disability 2026",
-    caption: "Targeting 50+ prosthetics, 100+ wheelchairs, 200+ white canes, and 300+ pairs of crutches.",
+    caption: "Mobilizing wheelchairs, prosthetics, white canes, and crutches for persons with disabilities.",
     pixiesetUrl: "https://ibrapixcel90.pixieset.com/movefordisabilityinclusionbydesign26/",
   },
   {
     id: "move-3",
-    src: "/images/training/training_2.jpeg",
-    fallbackSrc: "/images/training/training_2.jpeg",
+    src: "/images/initiatives/consultation.jpg",
+    fallbackSrc: "/images/initiatives/consultation.jpg",
     alt: "Free physical therapy consultations with community members",
     title: "Free Physiotherapy Consultations",
     category: "Move for Disability 2026",
@@ -515,9 +515,9 @@ export const INITIATIVE_PHOTOS: InitiativePhotoItem[] = [
   },
   {
     id: "cycle-1",
-    src: "/images/training/training_5.jpeg",
-    fallbackSrc: "/images/training/training_5.jpeg",
-    alt: "Cycle G × Saifee community health cycling initiative",
+    src: "/images/initiatives/cycle-g-saifee.jpg",
+    fallbackSrc: "/images/initiatives/cycle-g-saifee.jpg",
+    alt: "Cycle G × Saifee community health cycling and mobility initiative",
     title: "Cycle G × Saifee Health Ride",
     category: "Cycle G × Saifee",
     caption: "Promoting physical fitness, cardiovascular health, and preventative mobility care.",
@@ -525,21 +525,21 @@ export const INITIATIVE_PHOTOS: InitiativePhotoItem[] = [
   },
   {
     id: "career-1",
-    src: "/images/training/training_3.jpeg",
-    fallbackSrc: "/images/training/training_3.jpeg",
-    alt: "State University of Zanzibar Physiotherapy Career Fair",
+    src: "/images/initiatives/career-fair.jpg",
+    fallbackSrc: "/images/initiatives/career-fair.jpg",
+    alt: "Tanzania Physiotherapy Career Fair connecting students and employers",
     title: "Step Into Your Future Career Fair",
     category: "Career Fair SUZA",
-    caption: "Connecting students and healthcare employers in partnership with APSTA–SUZA Chapter.",
+    caption: "Connecting students and healthcare employers for mentorship and professional growth.",
   },
   {
     id: "community-1",
-    src: "/images/training/training_7.jpeg",
-    fallbackSrc: "/images/training/training_7.jpeg",
-    alt: "Physiotherapy clinicians and students collaborating in Tanzania",
+    src: "/images/initiatives/community-outreach.jpg",
+    fallbackSrc: "/images/initiatives/community-outreach.jpg",
+    alt: "Physiotherapy community outreach clinic caring for children with disabilities",
     title: "Advancing Regional Rehabilitation",
     category: "Community Outreach",
-    caption: "Bridging the national mobility gap through hands-on leadership and clinical solidarity.",
+    caption: "Bridging the national mobility gap through hands-on pediatric and community rehabilitation.",
   },
 ];
 
