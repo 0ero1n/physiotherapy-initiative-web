@@ -214,7 +214,7 @@ export const PARTNERS: Partner[] = [
   {
     name: "ElevenLabs",
     type: "Technology & AI Partner",
-    logo: "/images/collab/eleven-labs.webp",
+    logo: "/images/collab/11-labs.jpeg",
     description: "Global AI and audio technology pioneer advancing voice accessibility, AI tools, and inclusive digital communication in rehabilitation healthcare.",
     focusAreas: ["Voice Accessibility", "AI Technology", "Digital Health"],
   },
@@ -243,12 +243,12 @@ export const COLLABORATORS: Collaborator[] = [
   {
     name: "Google for Nonprofits",
     role: "Cloud & Digital Infrastructure",
-    logo: "/images/collab/google-for-non-profit.jpg",
+    logo: "/images/collab/google-non-profit.jpeg",
   },
   {
     name: "ElevenLabs",
     role: "AI & Voice Accessibility Tech",
-    logo: "/images/collab/eleven-labs.webp",
+    logo: "/images/collab/11-labs.jpeg",
   },
   {
     name: "Ability Network",
@@ -263,12 +263,12 @@ export const COLLABORATORS: Collaborator[] = [
   {
     name: "Benevity",
     role: "Global Corporate Giving",
-    logo: "/images/collab/benevity2.png",
+    logo: "/images/collab/benevity.jpeg",
   },
   {
     name: "Goodstack",
     role: "Philanthropic Rail & Verification",
-    logo: "/images/collab/goodstack.png",
+    logo: "/images/collab/good-stack.jpeg",
   },
   {
     name: "New Now",
