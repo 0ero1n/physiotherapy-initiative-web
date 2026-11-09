@@ -3420,6 +3420,24 @@ h3,
   top: 12px;
   right: 12px;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pub-cover-drive-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  letter-spacing: 0.04em;
 }
 
 .pub-cover-pdf-badge {
@@ -3431,6 +3449,35 @@ h3,
   font-weight: 700;
   border-radius: 4px;
   letter-spacing: 0.05em;
+}
+
+.pub-hero-action-row {
+  margin-top: 22px;
+}
+
+.pub-hero-drive-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.24);
+  border-radius: 9999px;
+  color: var(--white);
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pub-hero-drive-btn:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
 }
 
 .pub-cover-center-icon {

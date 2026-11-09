@@ -17,8 +17,10 @@ import {
   FileText,
   LucideIcon,
   ArrowUpRight,
+  FolderOpen,
+  Cloud,
 } from "lucide-react";
-import { PUBLICATIONS, ResourceCategory, ResourceDocument } from "../../data/content";
+import { PUBLICATIONS, GOOGLE_DRIVE_FOLDER_URL, ResourceCategory, ResourceDocument } from "../../data/content";
 
 interface CategoryMeta {
   label: ResourceCategory;
@@ -66,6 +68,19 @@ export default function ResourcesPage() {
             Evidence-based clinical guidelines, strategic campaign roadmaps, policy briefs,
             and field toolkits published by the Tanzania Physiotherapy Initiative.
           </p>
+          <div className="pub-hero-action-row">
+            <a
+              href={GOOGLE_DRIVE_FOLDER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pub-hero-drive-btn"
+              title="Open Google Drive Shared Folder"
+            >
+              <FolderOpen size={16} aria-hidden="true" />
+              <span>Browse Google Drive Archive</span>
+              <ArrowUpRight size={15} aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -151,6 +166,12 @@ export default function ResourcesPage() {
                     </div>
 
                     <div className="pub-cover-top-right">
+                      {doc.isDriveSource && (
+                        <span className="pub-cover-drive-badge" title="Hosted on Google Drive Cloud Repository">
+                          <Cloud size={10} aria-hidden="true" />
+                          <span>Drive</span>
+                        </span>
+                      )}
                       <span className="pub-cover-pdf-badge">{doc.format}</span>
                     </div>
 
@@ -195,7 +216,9 @@ export default function ResourcesPage() {
                     <div className="pub-card-actions">
                       <a
                         href={doc.downloadUrl}
-                        download
+                        download={doc.downloadUrl.startsWith("http") ? undefined : true}
+                        target={doc.downloadUrl.startsWith("http") ? "_blank" : undefined}
+                        rel={doc.downloadUrl.startsWith("http") ? "noopener noreferrer" : undefined}
                         className="pub-download-btn"
                         title={`Download ${doc.title} (${doc.fileSize})`}
                       >
@@ -204,11 +227,11 @@ export default function ResourcesPage() {
                       </a>
 
                       <a
-                        href={doc.downloadUrl}
+                        href={doc.previewUrl || doc.driveUrl || doc.downloadUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="pub-preview-btn"
-                        title="Open document in new tab"
+                        title={doc.driveUrl ? "View document on Google Drive" : "Open document in new tab"}
                         aria-label={`Open ${doc.title} in new tab`}
                       >
                         <ExternalLink size={18} strokeWidth={2.2} aria-hidden="true" />
@@ -240,7 +263,17 @@ export default function ResourcesPage() {
         {/* Footer Collaboration Callout */}
         <div className="pub-collab-note">
           <p>
-            Need hard copies for your hospital library or seeking research collaboration?{" "}
+            Looking to explore our raw document repository or need research collaboration?{" "}
+            <a
+              href={GOOGLE_DRIVE_FOLDER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pub-collab-link"
+              style={{ marginRight: "16px" }}
+            >
+              <span>Explore Google Drive Archive</span>
+              <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
             <Link href="/contact" className="pub-collab-link">
               <span>Contact our coordination desk</span>
               <ArrowUpRight size={14} aria-hidden="true" />

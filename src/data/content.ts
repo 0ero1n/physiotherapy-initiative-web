@@ -561,6 +561,9 @@ export interface ResourceDocument {
   fileSize: string;
   format: "PDF";
   downloadUrl: string;
+  previewUrl?: string;
+  driveUrl?: string;
+  isDriveSource?: boolean;
   description: string;
   pages: number;
   author: string;
@@ -568,7 +571,109 @@ export interface ResourceDocument {
   tags?: string[];
 }
 
+export const GOOGLE_DRIVE_FOLDER_URL = "https://drive.google.com/drive/folders/1P8-0bhOQfAD8dXqDsyqAVrzVD7A1CE9f?usp=drive_link";
+
 export const PUBLICATIONS: ResourceDocument[] = [
+  {
+    id: "physical-therapy-equipment-checklist",
+    title: "Physical Therapy Equipment Checklist",
+    subtitle: "Essential Clinical Modalities, Rehabilitation Devices & Clinic Setup Standards",
+    category: "Toolkits & Manuals",
+    date: "November 2026",
+    year: "2026",
+    fileSize: "74 KB",
+    format: "PDF",
+    downloadUrl: "/documents/physical-therapy-equipment-checklist.pdf",
+    previewUrl: "https://drive.google.com/file/d/179Ev8PHql15DKZzmkTIV3C4Sgv-4EN5p/view?usp=sharing",
+    driveUrl: "https://drive.google.com/file/d/179Ev8PHql15DKZzmkTIV3C4Sgv-4EN5p/view?usp=sharing",
+    isDriveSource: true,
+    description:
+      "Standard operational inventory checklist for physical therapy units and clinics, detailing core modalities (hydrocollators, cryotherapy, electrotherapy, traction units), fitness apparatus, parallel bars, balance boards, and diagnostic accessories.",
+    pages: 2,
+    author: "Clinical Facilities & Operations Directorate",
+    featured: true,
+    tags: ["Equipment", "Clinic Setup", "Inventory Checklist", "Modalities"],
+  },
+  {
+    id: "move-for-disability-report-2026",
+    title: "Move for Disability Report 2026",
+    subtitle: "Strategic Campaign Blueprint, Walkathon Impact & Assistive Distribution Report",
+    category: "Strategic Plans",
+    date: "March 2026",
+    year: "2026",
+    fileSize: "28 MB",
+    format: "PDF",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1Gnhb_0FNuwjbKF-NJVdamoWdSzQ9NBmF",
+    previewUrl: "https://drive.google.com/file/d/1Gnhb_0FNuwjbKF-NJVdamoWdSzQ9NBmF/view?usp=sharing",
+    driveUrl: "https://drive.google.com/file/d/1Gnhb_0FNuwjbKF-NJVdamoWdSzQ9NBmF/view?usp=sharing",
+    isDriveSource: true,
+    description:
+      "Official comprehensive documentation and outcome dossier for the national Move for Disability campaign, detailing inclusive walkathons, public disability sensitization, multi-disciplinary screenings, and assistive device mobilization across Tanzania.",
+    pages: 9,
+    author: "National Organizing Committee & APSTA Alliance",
+    featured: true,
+    tags: ["Walkathon", "Assistive Devices", "Advocacy", "Impact Report"],
+  },
+  {
+    id: "neurology-in-africa",
+    title: "Neurology in Africa: Clinical Practice Textbook",
+    subtitle: "Practical Diagnostic Protocols and Neurorehabilitation in Resource-Limited Settings",
+    category: "Clinical Guidelines",
+    date: "2025",
+    year: "2025",
+    fileSize: "50.3 MB",
+    format: "PDF",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1YahKutXZwJw_IUgI9HR69rkfK8P6s6KX",
+    previewUrl: "https://drive.google.com/file/d/1YahKutXZwJw_IUgI9HR69rkfK8P6s6KX/view?usp=sharing",
+    driveUrl: "https://drive.google.com/file/d/1YahKutXZwJw_IUgI9HR69rkfK8P6s6KX/view?usp=sharing",
+    isDriveSource: true,
+    description:
+      "Extensive clinical textbook and reference work specifically tailored to neurological disease diagnosis, neurorehabilitation, stroke management, neuropathies, and infection-related neurological care adapted for African medical facilities.",
+    pages: 480,
+    author: "Clinical Neurology Working Group",
+    featured: true,
+    tags: ["Neurology", "Clinical Guidelines", "Stroke Rehabilitation", "Neuroscience"],
+  },
+  {
+    id: "the-physiotherapists-pocketbook",
+    title: "The Physiotherapist’s Pocketbook (3rd Edition)",
+    subtitle: "Essential Quick-Reference Guide for Respiratory, Neurological & Musculoskeletal Assessment",
+    category: "Toolkits & Manuals",
+    date: "2025",
+    year: "2025",
+    fileSize: "37.1 MB",
+    format: "PDF",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1y692AcGVYtxxjB8fHttDWAbcSBqm2hMH",
+    previewUrl: "https://drive.google.com/file/d/1y692AcGVYtxxjB8fHttDWAbcSBqm2hMH/view?usp=sharing",
+    driveUrl: "https://drive.google.com/file/d/1y692AcGVYtxxjB8fHttDWAbcSBqm2hMH/view?usp=sharing",
+    isDriveSource: true,
+    description:
+      "The premier on-ward reference handbook for physiotherapists and students. Features instant clinical measurement norms, neurological examination charts, cardiopulmonary values, joint mobilization protocols, and drug reference lists.",
+    pages: 412,
+    author: "Clinical Education Advisory Board",
+    featured: true,
+    tags: ["Pocketbook", "Assessment", "Musculoskeletal", "Quick Reference"],
+  },
+  {
+    id: "pain-textbook",
+    title: "Comprehensive Pain Textbook & Clinical Science",
+    subtitle: "Mechanisms, Evidence-Based Assessment, and Multidisciplinary Pain Rehabilitation",
+    category: "Clinical Guidelines",
+    date: "2025",
+    year: "2025",
+    fileSize: "121 MB",
+    format: "PDF",
+    downloadUrl: "https://drive.google.com/file/d/1Wy3fo00-0oSXNMjDAiW1a0VPAQwIOgrC/view?usp=sharing",
+    previewUrl: "https://drive.google.com/file/d/1Wy3fo00-0oSXNMjDAiW1a0VPAQwIOgrC/view?usp=sharing",
+    driveUrl: "https://drive.google.com/file/d/1Wy3fo00-0oSXNMjDAiW1a0VPAQwIOgrC/view?usp=sharing",
+    isDriveSource: true,
+    description:
+      "Authoritative clinical textbook examining neurobiology, pain taxonomy, chronic pain syndromic management, physical modality interventions, and exercise rehabilitation for acute and chronic musculoskeletal pain.",
+    pages: 620,
+    author: "International & Regional Pain Rehabilitation Consortium",
+    featured: true,
+    tags: ["Pain Management", "Clinical Science", "Neurophysiology", "Musculoskeletal"],
+  },
   {
     id: "tpi-annual-report-2025",
     title: "TPI Annual Impact Report 2025",
@@ -587,23 +692,6 @@ export const PUBLICATIONS: ResourceDocument[] = [
     tags: ["Annual Report", "Workforce", "Clinical Milestones"],
   },
   {
-    id: "move-for-disability-2026-blueprint",
-    title: "Move for Disability 2026: Inclusion by Design",
-    subtitle: "Strategic Campaign Blueprint & Assistive Device Distribution Framework",
-    category: "Strategic Plans",
-    date: "January 2026",
-    year: "2026",
-    fileSize: "1.8 MB",
-    format: "PDF",
-    downloadUrl: "/documents/move-for-disability-2026-blueprint.pdf",
-    description:
-      "Strategic roadmap for the 5KM inclusive walkathon in Dar es Salaam, mobilizing 650+ assistive devices (wheelchairs, prosthetics, white canes, crutches) and providing free community health screenings.",
-    pages: 24,
-    author: "National Organizing Committee & APSTA Alliance",
-    featured: true,
-    tags: ["Walkathon", "Assistive Devices", "Advocacy"],
-  },
-  {
     id: "clinical-guidelines-musculoskeletal-2025",
     title: "Clinical Practice Guidelines: Musculoskeletal Rehabilitation",
     subtitle: "Evidence-Based Protocols for Primary & Secondary Health Facilities in Tanzania",
@@ -617,7 +705,6 @@ export const PUBLICATIONS: ResourceDocument[] = [
       "Standardized rehabilitation protocols for low-back pain, spinal rehabilitation, and joint mobility adapted for Tanzanian referral hospitals and district healthcare centers.",
     pages: 48,
     author: "Clinical Education Advisory Board",
-    featured: true,
     tags: ["Protocols", "Musculoskeletal", "Primary Care"],
   },
   {
