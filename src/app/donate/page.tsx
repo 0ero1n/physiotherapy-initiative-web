@@ -134,7 +134,17 @@ function DonateForm() {
           setPaymentStatus("COMPLETED");
           setStatusMessage("Payment received successfully! Thank you for your support.");
           setTimeout(() => {
-            router.push(`/donate/receipt?reference=${encodeURIComponent(activeReference)}`);
+            const causeLabel =
+              causes.find((c) => c.id === cause)?.label || "General Fund";
+            const params = new URLSearchParams({
+              reference: activeReference,
+              donor: name,
+              cause: causeLabel,
+              method: paymentMethod,
+              amount: String(amount),
+              curr: currency,
+            });
+            router.push(`/donate/receipt?${params.toString()}`);
           }, 1800);
         } else if (data.status === "FAILED" || data.status === "CANCELLED") {
           clearInterval(interval);
@@ -202,6 +212,27 @@ function DonateForm() {
 
       setActiveReference(data.reference);
 
+      if (typeof window !== "undefined") {
+        try {
+          sessionStorage.setItem(
+            `tpi_receipt_${data.reference}`,
+            JSON.stringify({
+              reference: data.reference,
+              donor: name,
+              email,
+              phone,
+              cause: causes.find((c) => c.id === cause)?.label || "General Fund",
+              method: paymentMethod,
+              amount: parseFloat(amount),
+              currency,
+              createdAt: Date.now(),
+            })
+          );
+        } catch {
+          // ignore
+        }
+      }
+
       if (paymentMethod === "mobile") {
         setPaymentStatus("AWAITING_PIN");
         setStatusMessage(
@@ -212,7 +243,17 @@ function DonateForm() {
         if (data.paymentGatewayUrl) {
           window.location.href = data.paymentGatewayUrl;
         } else {
-          router.push(`/donate/receipt?reference=${encodeURIComponent(data.reference)}`);
+          const causeLabel =
+            causes.find((c) => c.id === cause)?.label || "General Fund";
+          const params = new URLSearchParams({
+            reference: data.reference,
+            donor: name,
+            cause: causeLabel,
+            method: paymentMethod,
+            amount: String(amount),
+            curr: currency,
+          });
+          router.push(`/donate/receipt?${params.toString()}`);
         }
       }
     } catch (err: unknown) {
