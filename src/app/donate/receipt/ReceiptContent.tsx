@@ -79,8 +79,16 @@ function ThermalBarcode({ code }: { code: string }) {
 
 export default function ReceiptContent() {
   const searchParams = useSearchParams();
-  const reference = searchParams.get("reference") || "";
+  const rawReference = searchParams.get("reference") || "";
   const isSimulated = searchParams.get("simulated") === "1";
+  const isSample =
+    searchParams.get("sample") === "1" ||
+    isSimulated ||
+    rawReference === "SAMPLE" ||
+    rawReference.startsWith("SAMPLE_") ||
+    !rawReference;
+
+  const reference = rawReference || (isSample ? "TPI_SAMPLE_78942" : "");
 
   // URL fallbacks
   const donorFromUrl = searchParams.get("donor") || "";
@@ -89,9 +97,9 @@ export default function ReceiptContent() {
   const amountFromUrl = searchParams.get("amount") || "";
   const currFromUrl = searchParams.get("curr") || "TZS";
 
-  const [loading, setLoading] = useState<boolean>(() => Boolean(reference));
-  const [status, setStatus] = useState<string>("PENDING");
-  const [stage, setStage] = useState<ReceiptStage>("processing");
+  const [loading, setLoading] = useState<boolean>(() => Boolean(rawReference) && !isSample);
+  const [status, setStatus] = useState<string>(isSample ? "COMPLETED" : "PENDING");
+  const [stage, setStage] = useState<ReceiptStage>(isSample ? "complete" : "processing");
   const [isFeeding, setIsFeeding] = useState<boolean>(false);
 
   const [txDetails, setTxDetails] = useState<{
@@ -103,11 +111,16 @@ export default function ReceiptContent() {
     method?: string;
     issuedAt?: string;
   }>({
-    donor: donorFromUrl || "Valued Supporter",
-    cause: causeFromUrl || "General Fund",
-    method: methodFromUrl || "Encrypted Electronic Transfer",
-    amount: amountFromUrl || undefined,
+    donor: donorFromUrl || (isSample ? "Dr. Alexander Tillya" : "Valued Supporter"),
+    cause: causeFromUrl || (isSample ? "Pediatric Mobility & Rehabilitation Care" : "General Fund"),
+    method:
+      methodFromUrl ||
+      (isSample
+        ? "Mobile Money (Vodacom M-Pesa)"
+        : "Encrypted Electronic Transfer"),
+    amount: amountFromUrl || (isSample ? "50,000" : undefined),
     currency: currFromUrl || "TZS",
+    transactionId: isSample ? "SEL_DEMO_0911" : undefined,
     issuedAt: new Date().toLocaleDateString("en-TZ", {
       day: "2-digit",
       month: "short",
@@ -117,11 +130,11 @@ export default function ReceiptContent() {
     }),
   });
 
-  // Pull local session data if available
+  // Pull local session data if available (only if real transaction)
   useEffect(() => {
-    if (typeof window !== "undefined" && reference) {
+    if (typeof window !== "undefined" && rawReference && !isSample) {
       try {
-        const stored = sessionStorage.getItem(`tpi_receipt_${reference}`);
+        const stored = sessionStorage.getItem(`tpi_receipt_${rawReference}`);
         if (stored) {
           const parsed = JSON.parse(stored);
           setTxDetails((prev) => ({
@@ -142,20 +155,21 @@ export default function ReceiptContent() {
         // ignore
       }
     }
-  }, [reference]);
+  }, [rawReference, isSample]);
 
-  // Query live payment status from Payme Africa
+  // Query live payment status from Payme Africa only for real references
   useEffect(() => {
-    if (!reference) {
+    if (!rawReference || isSample) {
       setLoading(false);
       setStage("complete");
+      setStatus("COMPLETED");
       return;
     }
 
     async function checkStatus() {
       try {
         const res = await fetch(
-          `/api/payme/query?reference=${encodeURIComponent(reference)}`
+          `/api/payme/query?reference=${encodeURIComponent(rawReference)}`
         );
         const data = await res.json();
         if (data.success) {
@@ -191,7 +205,7 @@ export default function ReceiptContent() {
 
       try {
         const res = await fetch(
-          `/api/payme/query?reference=${encodeURIComponent(reference)}`
+          `/api/payme/query?reference=${encodeURIComponent(rawReference)}`
         );
         const data = await res.json();
         if (data.success) {
@@ -218,10 +232,13 @@ export default function ReceiptContent() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [reference]);
+  }, [rawReference, isSample]);
 
   const isComplete =
-    status === "COMPLETED" || status === "SUCCESS" || isSimulated;
+    status === "COMPLETED" ||
+    status === "SUCCESS" ||
+    isSimulated ||
+    isSample;
 
   const clipPathStyle = useMemo(() => generateReceiptClipPath(32, 5), []);
 
@@ -232,13 +249,24 @@ export default function ReceiptContent() {
 
   const formattedAmount = useMemo(() => {
     const val = Number(txDetails.amount);
-    if (!val || isNaN(val)) return "490";
+    if (!val || isNaN(val)) return isSample ? "50,000" : "490";
     return val.toLocaleString();
-  }, [txDetails.amount]);
+  }, [txDetails.amount, isSample]);
 
   return (
     <div className="receipt-page section frame py-8 md:py-16">
       <div className="receipt-printer-root">
+        {isSample && (
+          <div className="no-print mb-4 p-2.5 rounded-xl bg-[#22281b] text-[#e4eca5] text-xs font-mono flex items-center justify-between border border-[#3e4832] shadow-sm">
+            <span className="flex items-center gap-2 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+              DEMO SAMPLE PREVIEW
+            </span>
+            <span className="text-[10.5px] text-[#a4b574]">
+              Click &quot;Print / Save PDF&quot; below to test 1-page layout
+            </span>
+          </div>
+        )}
         {/* ==============================================================================
             THE RECEIPT PRINTER MACHINE (CHASSIS & TERMINAL SCREEN)
             ============================================================================== */}
