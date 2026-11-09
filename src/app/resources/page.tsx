@@ -29,10 +29,8 @@ interface CategoryMeta {
 
 const CATEGORIES: CategoryMeta[] = [
   { label: "All", icon: Layers },
-  { label: "Annual Reports", icon: TrendingUp },
-  { label: "Strategic Plans", icon: Compass },
   { label: "Clinical Guidelines", icon: Activity },
-  { label: "Policy Briefs", icon: BookOpen },
+  { label: "Strategic Plans", icon: Compass },
   { label: "Toolkits & Manuals", icon: Wrench },
 ];
 
