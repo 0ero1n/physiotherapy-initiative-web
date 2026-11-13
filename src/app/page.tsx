@@ -27,10 +27,6 @@ export default function HomePage() {
                 priority
               />
             </div>
-            <div className="hero-emblem-tag">
-              <span className="hero-emblem-tag-dot" aria-hidden="true" />
-              <span>Official National Initiative</span>
-            </div>
           </div>
 
           <h1>Tanzania Physiotherapy Initiative</h1>

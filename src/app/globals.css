@@ -660,7 +660,7 @@ li + li {
   justify-content: center;
   cursor: default;
   user-select: none;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 }
 .hero-emblem-aura {
   position: absolute;
@@ -723,34 +723,6 @@ li + li {
   border-radius: 20px;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.hero-emblem-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 14px;
-  padding: 5px 14px;
-  background: rgba(0, 0, 0, 0.22);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 9999px;
-  font-family: var(--body);
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--lime);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
-.hero-emblem-tag-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--lime);
-  box-shadow: 0 0 8px var(--lime);
-  animation: emblem-dot-pulse 2.5s infinite;
-}
 .hero-emblem-wrapper:hover .hero-emblem-badge {
   transform: translateY(-5px) scale(1.03);
   border-color: rgba(228, 236, 165, 0.65);
@@ -772,11 +744,6 @@ li + li {
 .hero-emblem-wrapper:hover .hero-emblem-img {
   transform: scale(1.04);
 }
-.hero-emblem-wrapper:hover .hero-emblem-tag {
-  background: rgba(0, 0, 0, 0.34);
-  border-color: rgba(228, 236, 165, 0.45);
-  color: #ffffff;
-}
 
 @keyframes emblem-breathe {
   0% {
@@ -788,19 +755,8 @@ li + li {
     opacity: 1;
   }
 }
-@keyframes emblem-dot-pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.45;
-    transform: scale(0.85);
-  }
-}
 @media (prefers-reduced-motion: reduce) {
-  .hero-emblem-aura,
-  .hero-emblem-tag-dot {
+  .hero-emblem-aura {
     animation: none;
   }
   .hero-emblem-badge,
@@ -3948,14 +3904,11 @@ h3,
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(100%) contrast(1.1);
-  mix-blend-mode: multiply;
-  transition: all 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .partner-card-row:hover .partner-logo-img {
-  filter: grayscale(100%) contrast(1.25);
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
 .partner-logo-fallback {
