@@ -59,7 +59,11 @@ html {
   scroll-behavior: smooth;
   background: var(--ground);
   color: var(--ink);
-  scroll-padding-top: 96px;
+  scroll-padding-top: 100px;
+}
+:target,
+[id] {
+  scroll-margin-top: 100px;
 }
 body {
   margin: 0;
@@ -1914,7 +1918,7 @@ li + li {
   gap: 7%;
   align-items: center;
   padding-block: 65px;
-  scroll-margin-top: 20px;
+  scroll-margin-top: 100px;
 }
 .program-row:nth-child(even) > figure {
   order: 2;
@@ -2966,7 +2970,7 @@ h3,
   grid-template-columns: 1fr 1fr;
   gap: 6%;
   align-items: center;
-  scroll-margin-top: 32px;
+  scroll-margin-top: 100px;
 }
 .initiative-poster {
   background: var(--olive);
@@ -3037,7 +3041,7 @@ h3,
   grid-template-columns: 1fr 1fr;
   gap: 6%;
   padding: 64px 0 0;
-  scroll-margin-top: 32px;
+  scroll-margin-top: 100px;
 }
 .initiative-career h3 {
   font-family: var(--display);
@@ -3310,7 +3314,7 @@ h3,
   gap: 6%;
   padding: 60px 0;
   border-top: 1px solid rgba(41, 46, 32, 0.12);
-  scroll-margin-top: 40px;
+  scroll-margin-top: 100px;
 }
 .initiative-card-secondary h3 {
   font-family: var(--display);

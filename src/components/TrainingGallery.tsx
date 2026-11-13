@@ -107,7 +107,7 @@ export default function TrainingGallery({
     activeModalIndex !== null ? displayedPhotos[activeModalIndex] : null;
 
   return (
-    <section className="training-gallery-section section" aria-labelledby="gallery-heading">
+    <section className="training-gallery-section section" id="gallery" aria-labelledby="gallery-heading">
       <div className="frame">
         <div className="section-heading">
           <h2 id="gallery-heading">{title}</h2>

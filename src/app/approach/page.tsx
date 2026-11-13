@@ -32,7 +32,8 @@ export default function Approach() {
           </a>
         ))}
       </nav>
-      <div className="frame program-details" id="programs">
+      <span id="workforce" className="sr-only" />
+      <div className="frame program-details" id="programs" data-alias="workforce">
         {PROGRAMS.map((p, i) => (
           <section key={p.id} id={p.id} className="program-row">
             <figure>

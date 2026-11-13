@@ -4,6 +4,7 @@ import "./globals.css";
 import NavigationHeader from "@/components/NavigationHeader";
 import Footer from "@/components/Footer";
 import Motion from "@/components/Motion";
+import HashScrollHandler from "@/components/HashScrollHandler";
 
 const montserrat = localFont({
   src: [
@@ -107,6 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main" tabIndex={-1}>{children}</main>
         <Footer />
         <Motion />
+        <HashScrollHandler />
       </body>
     </html>
   );
