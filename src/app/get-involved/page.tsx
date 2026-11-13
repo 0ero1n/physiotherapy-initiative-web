@@ -158,8 +158,8 @@ export default function GetInvolvedPage() {
           <div className="initiatives-crosslink-text">
             <h3>Looking for our active events & photo galleries?</h3>
             <p>
-              Explore Move for Disability 2026, the SUZA Career Fair in Zanzibar, our Cycle G × Saifee
-              mobilization, and live high-resolution photo archives.
+              Explore Move for Disability 2026, the SUZA Career Fair in Zanzibar, our RR e Clinic
+              digital health platform, and live high-resolution photo archives.
             </p>
           </div>
           <Link href="/initiatives" className="button crosslink-button">

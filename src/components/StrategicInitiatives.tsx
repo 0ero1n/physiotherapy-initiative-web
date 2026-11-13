@@ -12,7 +12,7 @@ export default function StrategicInitiatives({
 }) {
   const moveInit = STRATEGIC_INITIATIVES.find((i) => i.id === "move-for-disability") || STRATEGIC_INITIATIVES[0];
   const careerInit = STRATEGIC_INITIATIVES.find((i) => i.id === "career-fair") || STRATEGIC_INITIATIVES[1];
-  const cycleInit = STRATEGIC_INITIATIVES.find((i) => i.id === "cycle-g-saifee");
+  const rrClinicInit = STRATEGIC_INITIATIVES.find((i) => i.id === "rr-e-clinic");
   const outreachInit = STRATEGIC_INITIATIVES.find((i) => i.id === "community-outreach");
 
   return (
@@ -164,54 +164,78 @@ export default function StrategicInitiatives({
           </div>
         </article>
 
-        {/* FULL MODE: 3. CYCLE G X SAIFEE & 4. CLINICAL OUTREACH */}
-        {full && cycleInit && (
-          <article className="initiative-card-secondary" id="cycle-g-saifee">
+        {/* FULL MODE: 3. RR E CLINIC & 4. CLINICAL OUTREACH */}
+        {full && rrClinicInit && (
+          <article className="initiative-card-secondary" id="rr-e-clinic">
             <div className="initiative-card-badge-col">
-              <span className="initiative-badge initiative-badge-health">Active Wellness</span>
-              <h3>{cycleInit.title}</h3>
-              <p className="initiative-theme">“{cycleInit.theme}”</p>
+              <div
+                style={{
+                  width: 84,
+                  height: 84,
+                  borderRadius: 14,
+                  overflow: "hidden",
+                  background: "#ffffff",
+                  border: "1.5px solid rgba(41, 46, 32, 0.12)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 8,
+                  marginBottom: 16,
+                  boxShadow: "0 2px 8px rgba(41, 46, 32, 0.05)",
+                }}
+              >
+                <Image
+                  src={rrClinicInit.image || "/images/initiatives/rr-e-clinic.jpg"}
+                  alt="RR e Clinic logo"
+                  width={72}
+                  height={72}
+                  style={{ objectFit: "contain", width: "auto", height: "auto", maxWidth: "100%", maxHeight: "100%" }}
+                />
+              </div>
+              <span className="initiative-badge initiative-badge-health">Digital Health Platform</span>
+              <h3>{rrClinicInit.title}</h3>
+              <p className="initiative-theme">“{rrClinicInit.theme}”</p>
               <div className="initiative-meta-block">
                 <p>
-                  <strong>Location:</strong> {cycleInit.location}
+                  <strong>Reach:</strong> {rrClinicInit.location}
                 </p>
-                {cycleInit.partner && (
+                {rrClinicInit.partner && (
                   <p>
-                    <strong>Partners:</strong> {cycleInit.partner}
+                    <strong>Partners:</strong> {rrClinicInit.partner}
                   </p>
                 )}
               </div>
             </div>
             <div className="initiative-copy">
-              <p>{cycleInit.description}</p>
-              {cycleInit.pillars && (
+              <p>{rrClinicInit.description}</p>
+              {rrClinicInit.pillars && (
                 <div className="initiative-pillars-block">
-                  <h4>Wellness Focus Areas</h4>
+                  <h4>Digital Health & Rehabilitation Focus</h4>
                   <ul className="career-focus">
-                    {cycleInit.pillars.map((pillar) => (
+                    {rrClinicInit.pillars.map((pillar) => (
                       <li key={pillar}>{pillar}</li>
                     ))}
                   </ul>
                 </div>
               )}
               <div className="initiative-actions">
-                {cycleInit.galleryUrl && (
-                  <a
-                    className="button"
-                    href={cycleInit.galleryUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Open Cycle G album on Pixieset{" "}
-                    <ExternalLink size={16} aria-hidden="true" />
-                  </a>
-                )}
-                <Link
-                  className="text-link"
-                  href={`/contact?subject=${encodeURIComponent("Cycle G Health Ride Inquiry")}`}
+                <a
+                  className="button"
+                  href="https://www.instagram.com/rreclinic"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Join community rides <ArrowUpRight size={18} aria-hidden="true" />
-                </Link>
+                  Visit RR e Clinic on Instagram{" "}
+                  <ExternalLink size={16} aria-hidden="true" />
+                </a>
+                <a
+                  className="text-link"
+                  href="https://implementome.org/fr/projectdetails/9c2c95ea0e1f4591893330bfbd8fb046"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View Implementome Profile <ArrowUpRight size={18} aria-hidden="true" />
+                </a>
               </div>
             </div>
           </article>
@@ -269,7 +293,7 @@ export default function StrategicInitiatives({
             <div>
               <h3>Explore all activities, projects & photo albums</h3>
               <p>
-                See Cycle G × Saifee rides, outreach clinics, and live Pixieset photo documentation.
+                See Move for Disability, RR e Clinic digital health, and community clinical outreach.
               </p>
             </div>
             <Link className="button" href="/get-involved">

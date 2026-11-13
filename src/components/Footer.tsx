@@ -149,7 +149,7 @@ export default function Footer() {
           <ul className="footer-links">
             <li><Link href="/initiatives#move-for-disability">Move for Disability</Link></li>
             <li><Link href="/initiatives#career-fair">Tanzania Physiotherapy Career Fair</Link></li>
-            <li><Link href="/initiatives#cycle-g">Cycle G × Saifee Ride</Link></li>
+            <li><Link href="/initiatives#rr-e-clinic">RR e Clinic</Link></li>
             <li><Link href="/initiatives#community-outreach">Clinical Community Outreach</Link></li>
             <li><Link href="/approach#workforce">Workforce Development</Link></li>
           </ul>

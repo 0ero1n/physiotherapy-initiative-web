@@ -383,24 +383,25 @@ export const STRATEGIC_INITIATIVES: StrategicInitiative[] = [
     image: "/images/initiatives/career-fair.jpg",
   },
   {
-    id: "cycle-g-saifee",
-    title: "Cycle G × Saifee Health Ride",
-    theme: "Preventative Mobility & Active Living",
-    tagline: "Community Cycling & Musculoskeletal Wellness Campaign",
-    location: "Dar es Salaam, Tanzania",
-    partner: "Cycle G & Saifee Hospital",
+    id: "rr-e-clinic",
+    title: "RR e Clinic",
+    theme: "Digital Rehabilitation & Chronic Pain Education",
+    tagline: "Empowering Chronic Musculoskeletal Pain Self-Management in Tanzania",
+    location: "National & Regional Digital Reach, Tanzania",
+    partner: "Doctor Rafiki Afrika & Innovation Peer",
     summary:
-      "An energetic community cycling initiative uniting physiotherapists, cyclists, and health advocates across Dar es Salaam.",
+      "A pioneering digital health platform in Tanzania dedicated to educating and guiding people living with chronic musculoskeletal pain conditions.",
     description:
-      "Organized in strategic partnership with Cycle G and Saifee Hospital, this community health ride promotes preventative musculoskeletal wellness, cardiovascular fitness, and active living. Physiotherapists conduct on-the-ground posture checks, bike ergonomics advice, and preventative movement education for participants of all ages.",
+      "RR e Clinic is a dedicated digital health platform in Tanzania that empowers individuals living with chronic musculoskeletal pain conditions. Operating primarily through social media and digital channels, it delivers practical, evidence-based self-management advice, guided workbooks, audio learning resources, and therapeutic exercises in Swahili to alleviate symptoms and enhance quality of life, especially in underserved and rural communities.",
     pillars: [
-      "Active preventative rehabilitation and cardiovascular mobility",
-      "Community posture screenings and cycling ergonomics coaching",
-      "Public education challenging sedentary lifestyle risks",
-      "Cross-sector partnership linking hospitals and fitness communities",
+      "Evidence-based education and practical self-management advice",
+      "Swahili digital audio guides and therapeutic exercise workbooks",
+      "Direct patient empowerment via accessible social media channels",
+      "Tele-rehabilitation reach bridging rural healthcare barriers",
     ],
-    galleryUrl: "https://lobivisuals41.pixieset.com/cyclegxsaifee/",
-    badge: "Community Health",
+    galleryUrl: "https://www.instagram.com/rreclinic",
+    badge: "Digital Health",
+    image: "/images/initiatives/rr-e-clinic.jpg",
   },
   {
     id: "community-outreach",
@@ -432,11 +433,11 @@ export interface WayToGetInvolved {
 
 export const WAYS_TO_GET_INVOLVED: WayToGetInvolved[] = [
   {
-    title: "Participate in Events",
+    title: "Participate in Initiatives",
     description:
-      "Join the 5KM Move for Disability walkathon, attend the Zanzibar Career Fair, or ride in our preventative health cycling initiatives.",
-    ctaText: "Join an event",
-    ctaHref: "#move-for-disability",
+      "Join the 5KM Move for Disability walkathon, attend the Zanzibar Career Fair, or engage with RR e Clinic digital health programs.",
+    ctaText: "Explore initiatives",
+    ctaHref: "#strategic-initiatives",
     icon: "event",
   },
   {
@@ -467,7 +468,7 @@ export const WAYS_TO_GET_INVOLVED: WayToGetInvolved[] = [
 
 export const initiativeGalleries = {
   move: "https://ibrapixcel90.pixieset.com/movefordisabilityinclusionbydesign26/",
-  cycle: "https://lobivisuals41.pixieset.com/cyclegxsaifee/",
+  rrClinic: "https://www.instagram.com/rreclinic",
 };
 
 export interface InitiativePhotoItem {
@@ -477,7 +478,7 @@ export interface InitiativePhotoItem {
   fallbackSrc: string;
   alt: string;
   title: string;
-  category: "Move for Disability 2026" | "Cycle G × Saifee" | "Career Fair SUZA" | "Community Outreach";
+  category: "Move for Disability 2026" | "RR e Clinic" | "Career Fair SUZA" | "Community Outreach";
   caption: string;
   pixiesetUrl?: string;
 }
@@ -514,14 +515,14 @@ export const INITIATIVE_PHOTOS: InitiativePhotoItem[] = [
     pixiesetUrl: "https://ibrapixcel90.pixieset.com/movefordisabilityinclusionbydesign26/",
   },
   {
-    id: "cycle-1",
-    src: "/images/initiatives/cycle-g-saifee.jpg",
-    fallbackSrc: "/images/initiatives/cycle-g-saifee.jpg",
-    alt: "Cycle G × Saifee community health cycling and mobility initiative",
-    title: "Cycle G × Saifee Health Ride",
-    category: "Cycle G × Saifee",
-    caption: "Promoting physical fitness, cardiovascular health, and preventative mobility care.",
-    pixiesetUrl: "https://lobivisuals41.pixieset.com/cyclegxsaifee/",
+    id: "rr-clinic-1",
+    src: "/images/initiatives/rr-e-clinic.jpg",
+    fallbackSrc: "/images/initiatives/rr-e-clinic.jpg",
+    alt: "RR e Clinic digital health and chronic musculoskeletal pain self-management platform",
+    title: "RR e Clinic Digital Health Platform",
+    category: "RR e Clinic",
+    caption: "Educating and guiding Tanzanians living with chronic musculoskeletal pain through digital exercises and self-management advice.",
+    pixiesetUrl: "https://www.instagram.com/rreclinic",
   },
   {
     id: "career-1",

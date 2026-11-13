@@ -15,7 +15,7 @@ export default function InitiativePhotoShowcase() {
   const categories = [
     "All",
     "Move for Disability 2026",
-    "Cycle G × Saifee",
+    "RR e Clinic",
     "Career Fair SUZA",
   ];
 
@@ -54,7 +54,7 @@ export default function InitiativePhotoShowcase() {
           movement.
         </h2>
         <p>
-          Witness the vibrant energy of Move for Disability 2026 in Dar es Salaam, our Cycle G × Saifee
+          Witness the vibrant energy of Move for Disability 2026 in Dar es Salaam, our RR e Clinic digital health
           collaboration, and the regional mobilization for inclusive rehabilitation care.
         </p>
       </div>
@@ -99,12 +99,12 @@ export default function InitiativePhotoShowcase() {
           </a>
           <span className="text-[#53594b] hidden sm:inline">•</span>
           <a
-            href={initiativeGalleries.cycle}
+            href="https://www.instagram.com/rreclinic"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 font-medium text-[#696112] hover:underline"
           >
-            <span>Cycle G × Saifee Album</span>
+            <span>RR e Clinic Instagram</span>
             <ExternalLink size={14} aria-hidden="true" />
           </a>
         </div>
@@ -179,14 +179,14 @@ export default function InitiativePhotoShowcase() {
         })}
       </div>
 
-      {/* Full Live Event Galleries on Pixieset */}
+      {/* Full Live Event Galleries & Channels */}
       <div className="mt-12 p-8 bg-[#eceee2] rounded-none text-sm flex flex-col md:flex-row md:items-center justify-between gap-6 border border-[#dfe3d3]">
         <div>
           <h3 className="text-base text-[#292e20] font-semibold mb-1">
-            Complete High-Resolution Photo Galleries
+            Complete High-Resolution Photo Galleries & Platforms
           </h3>
           <p className="text-[#53594b] m-0 max-w-2xl leading-relaxed">
-            Full event documentation from Move for Disability 2026 and the Cycle G × Saifee Health Ride is available in original high resolution on our official Pixieset albums.
+            Full event documentation from Move for Disability 2026 is available on Pixieset, and digital rehabilitation resources are accessible directly via RR e Clinic.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3 shrink-0">
@@ -199,12 +199,12 @@ export default function InitiativePhotoShowcase() {
             Move for Disability Album <ExternalLink size={14} aria-hidden="true" />
           </a>
           <a
-            href={initiativeGalleries.cycle}
+            href={initiativeGalleries.rrClinic}
             target="_blank"
             rel="noreferrer"
             className="button button-accent whitespace-nowrap text-xs"
           >
-            Cycle G Album <ExternalLink size={14} aria-hidden="true" />
+            RR e Clinic Platform <ExternalLink size={14} aria-hidden="true" />
           </a>
         </div>
       </div>
