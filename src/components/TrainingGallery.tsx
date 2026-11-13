@@ -180,7 +180,7 @@ export default function TrainingGallery({
 
         {limit && showExploreLink && (
           <div className="gallery-more-action">
-            <Link href="/approach#gallery" className="button button-outline">
+            <Link href="/approach" className="button button-outline">
               Explore full photo gallery <ArrowUpRight size={18} aria-hidden="true" />
             </Link>
           </div>

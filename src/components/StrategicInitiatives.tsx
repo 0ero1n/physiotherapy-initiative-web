@@ -94,6 +94,12 @@ export default function StrategicInitiatives({
               >
                 Sponsor assistive devices
               </Link>
+              <Link
+                className="text-link"
+                href="/initiatives/move-for-disability"
+              >
+                Initiative Details & Dossier <ArrowUpRight size={16} aria-hidden="true" />
+              </Link>
               {moveInit.galleryUrl && (
                 <a
                   className="text-link"
@@ -159,6 +165,12 @@ export default function StrategicInitiatives({
                 href={`/contact?subject=${encodeURIComponent("Career Fair Employer Partnership")}`}
               >
                 Partner as healthcare employer
+              </Link>
+              <Link
+                className="text-link"
+                href="/initiatives/career-fair"
+              >
+                Initiative Details & Dossier <ArrowUpRight size={16} aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -236,6 +248,12 @@ export default function StrategicInitiatives({
                 >
                   View Implementome Profile <ArrowUpRight size={18} aria-hidden="true" />
                 </a>
+                <Link
+                  className="text-link"
+                  href="/initiatives/rr-e-clinic"
+                >
+                  Initiative Details & Dossier <ArrowUpRight size={16} aria-hidden="true" />
+                </Link>
               </div>
             </div>
           </article>
@@ -281,6 +299,12 @@ export default function StrategicInitiatives({
                   href={`/donate?cause=community-outreach`}
                 >
                   Sponsor an outreach clinic <HeartHandshake size={18} aria-hidden="true" />
+                </Link>
+                <Link
+                  className="text-link"
+                  href="/initiatives/community-outreach"
+                >
+                  Initiative Details & Dossier <ArrowUpRight size={16} aria-hidden="true" />
                 </Link>
               </div>
             </div>

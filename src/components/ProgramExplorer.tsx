@@ -45,7 +45,7 @@ export default function ProgramExplorer() {
         </figure>
         <div aria-live="polite">
           <p>{program.shortDesc}</p>
-          <Link href={`/approach#${program.id}`} className="text-link">
+          <Link href={`/approach/${program.id}`} className="text-link">
             Explore this program <ArrowUpRight size={18} aria-hidden="true" />
           </Link>
         </div>

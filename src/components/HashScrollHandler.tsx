@@ -7,19 +7,14 @@ export default function HashScrollHandler() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const scrollToHashTarget = (smooth = true) => {
-      if (typeof window === "undefined") return false;
-      const rawHash = window.location.hash;
-      if (!rawHash) return false;
+    const scrollToTarget = (targetId: string, smooth = true) => {
+      if (typeof window === "undefined" || !targetId) return false;
 
-      const rawId = rawHash.replace(/^#/, "");
-      if (!rawId) return false;
-
-      let id = rawId;
+      let id = targetId;
       try {
-        id = decodeURIComponent(rawId);
+        id = decodeURIComponent(targetId);
       } catch {
-        // use rawId if decode fails
+        // use raw id if decode fails
       }
 
       // Find element by id, data-alias, or name attribute
@@ -29,7 +24,6 @@ export default function HashScrollHandler() {
         document.querySelector(`a[name="${CSS.escape(id)}"]`);
 
       if (element) {
-        // Compute exact header height dynamically
         const header = document.querySelector(".site-header");
         const headerHeight = header ? header.getBoundingClientRect().height : 80;
         const breathingRoom = 20;
@@ -39,7 +33,6 @@ export default function HashScrollHandler() {
         const absoluteTop = rect.top + window.pageYOffset;
         const targetY = Math.max(0, absoluteTop - totalOffset);
 
-        // Check if we are already close enough to avoid unnecessary jitter
         const currentY = window.pageYOffset;
         if (Math.abs(currentY - targetY) > 8) {
           window.scrollTo({
@@ -53,22 +46,36 @@ export default function HashScrollHandler() {
       return false;
     };
 
-    // Run immediately on route/mount
-    scrollToHashTarget(false);
+    // If page is loaded with a hash in the URL, scroll to it and clean the URL bar
+    const rawHash = typeof window !== "undefined" ? window.location.hash : "";
+    if (rawHash) {
+      const targetId = rawHash.replace(/^#/, "");
+      if (targetId) {
+        scrollToTarget(targetId, false);
 
-    // Progressive retry ladder to handle dynamic hydration, fonts, and image layout shifts
-    const timers = [60, 180, 380, 750, 1300].map((delay) =>
-      setTimeout(() => {
-        scrollToHashTarget(true);
-      }, delay)
-    );
+        // Retry progressive ladder for dynamic image hydration
+        const timers = [60, 200, 450, 800].map((delay) =>
+          setTimeout(() => {
+            scrollToTarget(targetId, true);
+          }, delay)
+        );
 
-    // Handle manual hash change events
-    const onHashChange = () => {
-      scrollToHashTarget(true);
-    };
+        // Clean the hash from the browser URL bar so the user sees a pristine canonical route
+        const cleanTimer = setTimeout(() => {
+          if (window.location.hash) {
+            window.history.replaceState(
+              null,
+              "",
+              window.location.pathname + window.location.search
+            );
+          }
+        }, 500);
 
-    // Intercept clicks on links pointing to hashes on the current page
+        timers.push(cleanTimer);
+      }
+    }
+
+    // Intercept clicks on links pointing to hashes on the current page to prevent hash from polluting URL
     const onDocumentClick = (e: MouseEvent) => {
       const link = (e.target as HTMLElement).closest("a");
       if (!link) return;
@@ -85,22 +92,18 @@ export default function HashScrollHandler() {
           url.hash
         ) {
           e.preventDefault();
-          if (window.location.hash !== url.hash) {
-            window.history.pushState(null, "", url.hash);
-          }
-          scrollToHashTarget(true);
+          const targetId = url.hash.replace(/^#/, "");
+          scrollToTarget(targetId, true);
+          // Keep URL clean: do not push hash to history!
         }
       } catch {
         // Ignore unparseable hrefs
       }
     };
 
-    window.addEventListener("hashchange", onHashChange);
     document.addEventListener("click", onDocumentClick, { capture: true });
 
     return () => {
-      timers.forEach((t) => clearTimeout(t));
-      window.removeEventListener("hashchange", onHashChange);
       document.removeEventListener("click", onDocumentClick, { capture: true });
     };
   }, [pathname]);

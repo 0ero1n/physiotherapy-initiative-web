@@ -1,19 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import Hero from "@/components/Hero";
 import TrainingGallery from "@/components/TrainingGallery";
 import GoniometerSimulator from "@/components/GoniometerSimulator";
 import JoinSection from "@/components/JoinSection";
 import { PROGRAMS } from "@/data/content";
+
 const names = [
   "Physiotherapy Academy",
   "Summer School",
   "International Exchange",
   "Innovation Incubation",
 ];
+
 export const metadata = {
   title: "Programs & Clinical Pathways",
+  description:
+    "Four comprehensive pathways connecting clinical knowledge, practical skills, and the healthcare professionals shaping physiotherapy in Tanzania.",
 };
+
 export default function Approach() {
   return (
     <>
@@ -27,9 +33,9 @@ export default function Approach() {
       />
       <nav className="frame program-jump" aria-label="Jump to a program">
         {PROGRAMS.map((p, i) => (
-          <a key={p.id} href={`#${p.id}`}>
+          <Link key={p.id} href={`/approach/${p.id}`}>
             {names[i]}
-          </a>
+          </Link>
         ))}
       </nav>
       <span id="workforce" className="sr-only" />
@@ -53,12 +59,21 @@ export default function Approach() {
                   <li key={f}>{f}</li>
                 ))}
               </ul>
-              <Link
-                className="button"
-                href={`/contact?subject=${encodeURIComponent(p.title)}`}
-              >
-                Ask about this program
-              </Link>
+              <div className="flex items-center gap-3 flex-wrap mt-5">
+                <Link
+                  className="button"
+                  href={`/contact?subject=${encodeURIComponent(p.title)}`}
+                >
+                  Ask about this program
+                </Link>
+                <Link
+                  className="button button-ghost"
+                  href={`/approach/${p.id}`}
+                >
+                  <span>Full Program Dossier</span>
+                  <ArrowRight size={14} aria-hidden="true" />
+                </Link>
+              </div>
             </div>
           </section>
         ))}
