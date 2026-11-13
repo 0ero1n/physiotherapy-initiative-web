@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import ReceiptContent from "./ReceiptContent";
 
 export const metadata: Metadata = {
-  title: "Donation Receipt | Tanzania Physiotherapy Initiative",
+  title: "Official Donation Receipt",
   description: "Official donation receipt and confirmation for Tanzania Physiotherapy Initiative.",
 };
 

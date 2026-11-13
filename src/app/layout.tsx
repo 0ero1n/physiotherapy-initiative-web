@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import NavigationHeader from "@/components/NavigationHeader";
@@ -37,29 +37,65 @@ const montserrat = localFont({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#696112",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://physioinitiativetz.org"),
-  title: "Tanzania Physiotherapy Initiative | Shaping the future workforce in physiotherapy",
-  description: "Shaping the future workforce in physiotherapy within Tanzania through practical training, shared knowledge, and professional development.",
-  authors: [{ name: "Tanzania Physiotherapy Initiative" }],
+  title: {
+    default: "Tanzania Physiotherapy Initiative | Shaping the Future Workforce",
+    template: "%s | Tanzania Physiotherapy Initiative",
+  },
+  description:
+    "A registered non-profit NGO dedicated to shaping the future physiotherapy workforce in Tanzania through clinical excellence, hands-on training, and rehabilitation advocacy.",
+  keywords: [
+    "physiotherapy Tanzania",
+    "Tanzania Physiotherapy Initiative",
+    "clinical training Dar es Salaam",
+    "rehabilitation Tanzania",
+    "assistive devices Tanzania",
+    "Move for Disability 2026",
+    "RR e Clinic",
+  ],
+  authors: [{ name: "Tanzania Physiotherapy Initiative", url: "https://physioinitiativetz.org" }],
+  creator: "Tanzania Physiotherapy Initiative",
+  publisher: "Tanzania Physiotherapy Initiative",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/images/tpi-emblem.png", sizes: "388x390", type: "image/png" },
       { url: "/icon.png", sizes: "192x192", type: "image/png" },
-      { url: "/images/Logo.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     title: "Tanzania Physiotherapy Initiative",
     description: "Shaping the future workforce in physiotherapy within Tanzania.",
     url: "https://physioinitiativetz.org",
     siteName: "Tanzania Physiotherapy Initiative",
-    images: [{ url: "/images/training/training_5.jpeg", alt: "TPI professionals learning together at a workshop" }],
+    images: [
+      {
+        url: "/images/training/training_5.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "TPI healthcare professionals in a clinical skills workshop",
+      },
+    ],
     locale: "en_TZ",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tanzania Physiotherapy Initiative",
+    description: "Shaping the future workforce in physiotherapy within Tanzania.",
+    images: ["/images/training/training_5.jpeg"],
   },
 };
 

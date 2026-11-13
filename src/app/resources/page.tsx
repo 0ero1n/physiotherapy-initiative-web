@@ -57,7 +57,7 @@ export default function ResourcesPage() {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <main className="resources-page-wrapper" id="main">
+    <div className="resources-page-wrapper">
       {/* 1. HERO */}
       <section className="page-hero-banner" aria-label="Publications and Resources">
         <div className="frame page-hero-inner">
@@ -279,6 +279,6 @@ export default function ResourcesPage() {
           </p>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

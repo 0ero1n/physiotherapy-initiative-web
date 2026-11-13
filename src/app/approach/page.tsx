@@ -12,7 +12,7 @@ const names = [
   "Innovation Incubation",
 ];
 export const metadata = {
-  title: "Our programs | Tanzania Physiotherapy Initiative",
+  title: "Programs & Clinical Pathways",
 };
 export default function Approach() {
   return (
@@ -32,7 +32,7 @@ export default function Approach() {
           </a>
         ))}
       </nav>
-      <div className="frame program-details">
+      <div className="frame program-details" id="programs">
         {PROGRAMS.map((p, i) => (
           <section key={p.id} id={p.id} className="program-row">
             <figure>

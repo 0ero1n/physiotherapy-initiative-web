@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import JoinSection from "@/components/JoinSection";
 import { APP_INFO, CORE_VALUES, LEADERSHIP_TEAM } from "@/data/content";
 export const metadata = {
-  title: "About us | Tanzania Physiotherapy Initiative",
+  title: "About Us",
 };
 export default function About() {
   return (

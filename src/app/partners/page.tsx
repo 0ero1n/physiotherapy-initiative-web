@@ -7,7 +7,7 @@ import { PARTNERS } from "@/data/content";
 import { Building2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Partners | Tanzania Physiotherapy Initiative",
+  title: "Strategic Partners",
   description:
     "Collaborating across university medical centers, international rehabilitation networks, and local health leaders to strengthen physiotherapy in Tanzania.",
 };

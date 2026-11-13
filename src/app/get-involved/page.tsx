@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Get Involved | Tanzania Physiotherapy Initiative",
+  title: "Get Involved",
   description:
     "Join Tanzania Physiotherapy Initiative as a clinical volunteer, student practitioner, institutional partner, or assistive device sponsor.",
 };

@@ -5,7 +5,7 @@ import InitiativePhotoShowcase from "@/components/InitiativePhotoShowcase";
 import JoinSection from "@/components/JoinSection";
 
 export const metadata: Metadata = {
-  title: "Activities & Initiatives | Tanzania Physiotherapy Initiative",
+  title: "Strategic Initiatives & Projects",
   description:
     "Explore Move for Disability 2026 in Dar es Salaam, the Tanzania Physiotherapy Career Fair in Zanzibar, assistive device distribution, and clinical outreach.",
 };
