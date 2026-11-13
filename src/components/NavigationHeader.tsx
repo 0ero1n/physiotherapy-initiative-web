@@ -50,10 +50,10 @@ export default function NavigationHeader() {
         >
           <div className="brand-logo-container" suppressHydrationWarning>
             <Image
-              src="/images/our-logo.jpeg"
+              src="/images/tpi-emblem.png"
               alt="Tanzania Physiotherapy Initiative"
-              width={42}
-              height={42}
+              width={44}
+              height={44}
               className="brand-logo-img"
               priority
             />

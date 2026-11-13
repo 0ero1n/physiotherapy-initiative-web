@@ -276,7 +276,7 @@ export default function ReceiptContent() {
             <div className="flex items-center gap-2.5">
               <div className="w-7 h-7 rounded-lg bg-[#2e3725] border border-[#445137] flex items-center justify-center overflow-hidden">
                 <Image
-                  src="/images/our-logo.jpeg"
+                  src="/images/tpi-emblem.png"
                   alt="TPI"
                   width={24}
                   height={24}
@@ -362,7 +362,7 @@ export default function ReceiptContent() {
             <div className="text-center pb-1">
               <div className="w-10 h-10 mx-auto mb-2 rounded-full border border-neutral-300 p-0.5 bg-white shadow-xs flex items-center justify-center">
                 <Image
-                  src="/images/our-logo.jpeg"
+                  src="/images/tpi-emblem.png"
                   alt="TPI Logo"
                   width={36}
                   height={36}

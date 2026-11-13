@@ -77,10 +77,10 @@ export default function Footer() {
           <Link href="/" className="footer-brand-lockup" aria-label="Tanzania Physiotherapy Initiative Home">
             <div className="footer-logo-container">
               <Image
-                src="/images/our-logo.jpeg"
+                src="/images/tpi-emblem.png"
                 alt="Tanzania Physiotherapy Initiative Logo"
-                width={40}
-                height={40}
+                width={44}
+                height={44}
                 className="footer-logo-img"
               />
             </div>

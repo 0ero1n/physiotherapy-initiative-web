@@ -14,15 +14,23 @@ export default function HomePage() {
       {/* 1. HERO: Authentic emblem + title + subtitle + primary actions */}
       <section className="home-hero">
         <div className="frame hero-centered-content">
-          <div className="hero-emblem-badge">
-            <Image
-              src="/images/our-logo.jpeg"
-              alt="Tanzania Physiotherapy Initiative Emblem"
-              width={80}
-              height={80}
-              className="hero-emblem-img"
-              priority
-            />
+          <div className="hero-emblem-wrapper" role="img" aria-label="Tanzania Physiotherapy Initiative Official Emblem">
+            <div className="hero-emblem-aura" aria-hidden="true" />
+            <div className="hero-emblem-badge">
+              <div className="hero-emblem-sheen" aria-hidden="true" />
+              <Image
+                src="/images/tpi-emblem.png"
+                alt="Tanzania Physiotherapy Initiative Emblem"
+                width={140}
+                height={140}
+                className="hero-emblem-img"
+                priority
+              />
+            </div>
+            <div className="hero-emblem-tag">
+              <span className="hero-emblem-tag-dot" aria-hidden="true" />
+              <span>Official National Initiative</span>
+            </div>
           </div>
 
           <h1>Tanzania Physiotherapy Initiative</h1>
