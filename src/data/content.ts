@@ -437,7 +437,7 @@ export const WAYS_TO_GET_INVOLVED: WayToGetInvolved[] = [
     description:
       "Join the 5KM Move for Disability walkathon, attend the Zanzibar Career Fair, or engage with RR e Clinic digital health programs.",
     ctaText: "Explore initiatives",
-    ctaHref: "#strategic-initiatives",
+    ctaHref: "/initiatives",
     icon: "event",
   },
   {
