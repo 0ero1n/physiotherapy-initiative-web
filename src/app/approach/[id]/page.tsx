@@ -279,8 +279,8 @@ export default async function ProgramDetailPage({ params }: PageProps) {
   return (
     <div className="program-detail-page">
       {/* 1. BREADCRUMBS */}
-      <nav className="frame pt-8 pb-4 text-xs text-[#53594b]" aria-label="Breadcrumb">
-        <ol className="flex items-center gap-2 flex-wrap">
+      <nav className="frame pt-5 sm:pt-8 pb-3 sm:pb-4 text-xs text-[#53594b]" aria-label="Breadcrumb">
+        <ol className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           <li>
             <Link href="/" className="hover:text-[#696112] transition-colors">
               Home
@@ -302,9 +302,9 @@ export default async function ProgramDetailPage({ params }: PageProps) {
       {/* 2. DEDICATED PROGRAM HERO */}
       <header className="page-hero-banner" aria-label={program.title}>
         <div className="frame page-hero-inner">
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-2 sm:gap-3 mb-3 flex-wrap justify-center">
             <span className="initiative-badge">{program.badge}</span>
-            <span className="text-xs text-[rgba(255,255,255,0.7)] flex items-center gap-1">
+            <span className="text-xs text-[rgba(255,255,255,0.85)] flex items-center gap-1">
               <Award size={13} aria-hidden="true" />
               {program.credentials}
             </span>
@@ -329,7 +329,7 @@ export default async function ProgramDetailPage({ params }: PageProps) {
 
       {/* 3. MAIN CONTENT ARTICLE */}
       <article className="frame section">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Image & Program Card */}
           <div className="lg:col-span-5 space-y-6">
             <div className="rounded-2xl overflow-hidden border border-[#d8decb] bg-[#f4f6ee] shadow-sm">
@@ -344,7 +344,7 @@ export default async function ProgramDetailPage({ params }: PageProps) {
             </div>
 
             {/* Quick Facts Card */}
-            <div className="p-6 bg-[#f8faf4] border border-[#dfe3d3] rounded-2xl space-y-4 text-sm">
+            <div className="p-5 sm:p-6 bg-[#f8faf4] border border-[#dfe3d3] rounded-2xl space-y-4 text-sm">
               <h3 className="font-bold text-[#1f241a] text-base border-b border-[#dfe3d3] pb-2 flex items-center gap-2">
                 <BookOpen size={16} className="text-[#696112]" aria-hidden="true" />
                 <span>Program Specifications</span>
@@ -415,7 +415,7 @@ export default async function ProgramDetailPage({ params }: PageProps) {
                 <GraduationCap size={20} className="text-[#696112]" aria-hidden="true" />
                 <span>Core Curriculum Modules</span>
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 {program.modules.map((m, idx) => (
                   <div
                     key={m.title}
@@ -434,7 +434,7 @@ export default async function ProgramDetailPage({ params }: PageProps) {
             </div>
 
             {/* Expected Learning Outcomes */}
-            <div className="p-6 bg-[#eceee2] rounded-2xl border border-[#dfe3d3]">
+            <div className="p-5 sm:p-6 bg-[#eceee2] rounded-2xl border border-[#dfe3d3]">
               <h3 className="font-bold text-[#1f241a] text-lg mb-3">
                 Expected Competency Outcomes
               </h3>
@@ -449,7 +449,7 @@ export default async function ProgramDetailPage({ params }: PageProps) {
             </div>
 
             {/* Bottom Call to Action Card */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#f8faf4] to-[#eceee2] border border-[#d8decb] flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-[#f8faf4] to-[#eceee2] border border-[#d8decb] flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-6">
               <div>
                 <h4 className="font-bold text-[#1f241a] text-base mb-1">
                   Interested in Participating or Partnering?
@@ -458,15 +458,15 @@ export default async function ProgramDetailPage({ params }: PageProps) {
                   Whether enrolling as a practitioner, placing student interns, or hosting a clinical cohort, we welcome your collaboration.
                 </p>
               </div>
-              <div className="flex items-center gap-3 shrink-0">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 shrink-0 w-full sm:w-auto">
                 <Link
                   href={`/contact?subject=${encodeURIComponent(`${program.title} Enrollment`)}`}
-                  className="button whitespace-nowrap text-xs"
+                  className="button whitespace-nowrap text-xs w-full sm:w-auto justify-center"
                 >
                   <HeartHandshake size={14} aria-hidden="true" />
                   <span>Enroll Today</span>
                 </Link>
-                <Link href="/approach" className="button button-ghost text-xs">
+                <Link href="/approach" className="button button-ghost text-xs w-full sm:w-auto justify-center">
                   <span>Back to All Programs</span>
                 </Link>
               </div>
@@ -477,8 +477,8 @@ export default async function ProgramDetailPage({ params }: PageProps) {
 
       {/* 4. EXPLORE OTHER PATHWAYS */}
       <section className="frame section pt-0" aria-label="Explore other pathways">
-        <div className="border-t border-[#dfe3d3] pt-12">
-          <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
+        <div className="border-t border-[#dfe3d3] pt-10 sm:pt-12">
+          <div className="flex items-center justify-between mb-6 sm:mb-8 flex-wrap gap-4">
             <div>
               <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#696112] block mb-1">
                 Clinical Ecosystem
@@ -496,7 +496,7 @@ export default async function ProgramDetailPage({ params }: PageProps) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {otherPrograms.map((p) => (
               <Link
                 key={p.id}

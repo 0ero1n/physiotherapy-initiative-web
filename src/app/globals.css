@@ -4240,6 +4240,244 @@ h3,
   text-align: center;
 }
 
+/* ==========================================================================
+   MOBILE RESPONSIVENESS & WELL-ARRANGED LAYOUT AUDIT
+   Tailored for touch screens, viewport containment, and thumb ergonomics
+   ========================================================================== */
+
+/* 1. Global Viewport Containment */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+/* 2. Responsive Hero Banners */
+@media (max-width: 640px) {
+  .home-hero {
+    min-height: auto;
+    padding: 38px var(--gutter) 48px;
+  }
+  .home-hero h1 {
+    font-size: clamp(26px, 7.5vw, 36px);
+    line-height: 1.22;
+    margin-bottom: 12px;
+  }
+  .home-hero .hero-subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  .hero-emblem-badge {
+    width: 96px !important;
+    height: 96px !important;
+    border-radius: 24px !important;
+    padding: 8px !important;
+  }
+  .hero-emblem-aura {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  .hero-emblem-wrapper {
+    margin-bottom: 20px;
+  }
+  .hero-buttons-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .hero-btn-primary,
+  .hero-btn-ghost {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+
+  .page-hero-banner {
+    padding: 36px var(--gutter) 42px;
+  }
+  .page-hero-title {
+    font-size: clamp(25px, 6.8vw, 34px);
+    line-height: 1.22;
+    margin-bottom: 10px;
+  }
+  .page-hero-desc {
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+  .page-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .page-hero-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* 3. Partner Cards Responsive Collapse */
+@media (max-width: 860px) {
+  .partner-card-row {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 28px 20px !important;
+  }
+  .partner-info-col {
+    gap: 16px;
+  }
+  .partner-logo-wrap {
+    width: 76px;
+    height: 76px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-card-row {
+    padding: 22px 14px !important;
+  }
+  .partner-info-col {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .partner-title-group h3 {
+    font-size: 20px;
+  }
+}
+
+/* 4. Strategic Initiatives & Campaign Actions */
+@media (max-width: 640px) {
+  .initiative-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+  .initiative-actions .button,
+  .initiative-actions .button-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    min-height: 46px;
+  }
+  .initiative-actions .text-link {
+    justify-content: center;
+    padding: 6px 0;
+    min-height: 38px;
+  }
+  .initiative-targets {
+    gap: 12px;
+  }
+  .initiative-targets dd {
+    font-size: 26px;
+  }
+}
+
+/* 5. Photo Gallery Category Pills & Touch UX */
+@media (max-width: 640px) {
+  .gallery-filter-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    margin-top: 18px;
+    margin-bottom: 24px;
+    scrollbar-width: none;
+  }
+  .gallery-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .gallery-filter-pill {
+    flex-shrink: 0;
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+/* 6. Goniometer Simulator Touch Experience */
+@media (max-width: 640px) {
+  .joint-options {
+    width: 100%;
+  }
+  .joint-options button {
+    width: 100%;
+    justify-content: center;
+    border-radius: 12px;
+    min-height: 46px;
+  }
+  .angle-panel {
+    padding: 20px 16px;
+    border-radius: 16px;
+    width: 100%;
+  }
+  .angle-panel input[type="range"] {
+    width: 100%;
+    height: 44px;
+    cursor: pointer;
+  }
+}
+
+/* 7. Registration Pill & Cards Ergonomics */
+@media (max-width: 640px) {
+  .registration-pill-banner {
+    display: flex;
+    border-radius: 12px;
+    font-size: 12px;
+    padding: 10px 14px;
+    line-height: 1.4;
+  }
+  .involvement-card {
+    padding: 24px 18px;
+  }
+  .involvement-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+  .initiatives-crosslink-card {
+    padding: 24px 18px;
+  }
+  .crosslink-button {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+}
+
+/* 8. Footer Touch Navigation on Mobile */
+@media (max-width: 640px) {
+  .footer-links li {
+    margin: 0;
+  }
+  .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding-block: 4px;
+    font-size: 14px;
+  }
+  .footer-contact-list li {
+    font-size: 14px;
+    min-height: 36px;
+  }
+  .footer-social-link {
+    min-height: 40px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
 /* ==============================================================================
    CRITICAL PRINT MEDIA STYLES: ZERO 2ND-PAGE SPILL, NO CHROME LEAK
    ============================================================================== */

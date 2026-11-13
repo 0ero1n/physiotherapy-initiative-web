@@ -58,8 +58,8 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
   return (
     <div className="initiative-detail-page">
       {/* 1. BREADCRUMBS & TOP NAV */}
-      <nav className="frame pt-8 pb-4 text-xs text-[#53594b]" aria-label="Breadcrumb">
-        <ol className="flex items-center gap-2 flex-wrap">
+      <nav className="frame pt-5 sm:pt-8 pb-3 sm:pb-4 text-xs text-[#53594b]" aria-label="Breadcrumb">
+        <ol className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           <li>
             <Link href="/" className="hover:text-[#696112] transition-colors">
               Home
@@ -81,11 +81,11 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
       {/* 2. DEDICATED INITIATIVE HERO */}
       <header className="page-hero-banner" aria-label={initiative.title}>
         <div className="frame page-hero-inner">
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-2 sm:gap-3 mb-3 flex-wrap justify-center">
             <span className="initiative-badge">
               {initiative.badge || "Strategic Initiative"}
             </span>
-            <span className="text-xs text-[rgba(255,255,255,0.7)] flex items-center gap-1">
+            <span className="text-xs text-[rgba(255,255,255,0.85)] flex items-center gap-1">
               <MapPin size={13} aria-hidden="true" />
               {initiative.location}
             </span>
@@ -113,7 +113,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
 
       {/* 3. MAIN DOSSIER & CONTENT SECTION */}
       <article className="frame section">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Visual Asset / Logo / Metadata */}
           <div className="lg:col-span-5 space-y-6">
             <div className="rounded-2xl overflow-hidden border border-[#d8decb] bg-[#f4f6ee] shadow-sm">
@@ -128,29 +128,29 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
             </div>
 
             {/* Quick Fact Card */}
-            <div className="p-6 bg-[#f8faf4] border border-[#dfe3d3] rounded-2xl space-y-4 text-sm">
+            <div className="p-5 sm:p-6 bg-[#f8faf4] border border-[#dfe3d3] rounded-2xl space-y-4 text-sm">
               <h3 className="font-bold text-[#1f241a] text-base border-b border-[#dfe3d3] pb-2">
                 Initiative Overview
               </h3>
-              <dl className="space-y-2.5">
+              <dl className="space-y-3">
                 <div>
                   <dt className="text-xs uppercase tracking-wider text-[#53594b] font-semibold">
                     Core Theme
                   </dt>
-                  <dd className="font-medium text-[#1f241a]">{initiative.theme}</dd>
+                  <dd className="font-medium text-[#1f241a] mt-0.5">{initiative.theme}</dd>
                 </div>
                 <div>
                   <dt className="text-xs uppercase tracking-wider text-[#53594b] font-semibold">
                     Primary Reach
                   </dt>
-                  <dd className="font-medium text-[#1f241a]">{initiative.location}</dd>
+                  <dd className="font-medium text-[#1f241a] mt-0.5">{initiative.location}</dd>
                 </div>
                 {initiative.partner && (
                   <div>
                     <dt className="text-xs uppercase tracking-wider text-[#53594b] font-semibold">
                       Key Partners
                     </dt>
-                    <dd className="font-medium text-[#1f241a]">{initiative.partner}</dd>
+                    <dd className="font-medium text-[#1f241a] mt-0.5">{initiative.partner}</dd>
                   </div>
                 )}
                 {initiative.distance && (
@@ -158,7 +158,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
                     <dt className="text-xs uppercase tracking-wider text-[#53594b] font-semibold">
                       Course Distance
                     </dt>
-                    <dd className="font-medium text-[#1f241a]">{initiative.distance} Walkathon</dd>
+                    <dd className="font-medium text-[#1f241a] mt-0.5">{initiative.distance} Walkathon</dd>
                   </div>
                 )}
               </dl>
@@ -196,11 +196,11 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
 
             {/* Target Breakdown (for Move for Disability) */}
             {initiative.targets && (
-              <div className="p-6 bg-[#eceee2] rounded-2xl border border-[#dfe3d3]">
+              <div className="p-5 sm:p-6 bg-[#eceee2] rounded-2xl border border-[#dfe3d3]">
                 <h3 className="font-bold text-[#1f241a] text-lg mb-4">
                   Assistive Device Mobilization Targets
                 </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 text-center">
                   {initiative.targets.map((tgt) => (
                     <div key={tgt.label} className="p-3 bg-white rounded-xl shadow-xs border border-[#d8decb]">
                       <div className="text-2xl font-bold text-[#696112] font-mono">{tgt.count}</div>
@@ -229,7 +229,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
             )}
 
             {/* Action Card */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#f8faf4] to-[#eceee2] border border-[#d8decb] flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-[#f8faf4] to-[#eceee2] border border-[#d8decb] flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-6">
               <div>
                 <h4 className="font-bold text-[#1f241a] text-base mb-1">
                   Ready to Support This Campaign?
@@ -238,17 +238,17 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
                   Whether providing clinical hours, assistive devices, or financial support, your contribution directly empowers communities across Tanzania.
                 </p>
               </div>
-              <div className="flex items-center gap-3 shrink-0">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 shrink-0 w-full sm:w-auto">
                 <Link
                   href={`/donate?cause=${encodeURIComponent(initiative.id)}`}
-                  className="button whitespace-nowrap text-xs"
+                  className="button whitespace-nowrap text-xs w-full sm:w-auto justify-center"
                 >
                   <HeartHandshake size={14} aria-hidden="true" />
                   <span>Sponsor Device</span>
                 </Link>
                 <Link
                   href={`/contact?subject=${encodeURIComponent(`${initiative.title} Volunteer`)}`}
-                  className="button button-ghost whitespace-nowrap text-xs"
+                  className="button button-ghost whitespace-nowrap text-xs w-full sm:w-auto justify-center"
                 >
                   <span>Volunteer</span>
                 </Link>
@@ -258,8 +258,8 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
         </div>
 
         {/* 4. OTHER INITIATIVES CAROUSEL / NAVIGATION */}
-        <section className="mt-20 pt-12 border-t border-[#dfe3d3]" aria-labelledby="other-initiatives-heading">
-          <div className="flex items-center justify-between gap-4 mb-8">
+        <section className="mt-16 sm:mt-20 pt-10 sm:pt-12 border-t border-[#dfe3d3]" aria-labelledby="other-initiatives-heading">
+          <div className="flex items-center justify-between gap-4 mb-6 sm:mb-8 flex-wrap">
             <div>
               <h2 id="other-initiatives-heading" className="text-xl sm:text-2xl font-bold text-[#1f241a]">
                 Explore Other Strategic Initiatives
@@ -274,12 +274,12 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             {otherInitiatives.map((other) => (
               <Link
                 key={other.id}
                 href={`/initiatives/${other.id}`}
-                className="group p-6 rounded-2xl bg-[#f8faf4] border border-[#dfe3d3] hover:border-[#696112] hover:shadow-md transition-all flex flex-col justify-between"
+                className="group p-5 sm:p-6 rounded-2xl bg-[#f8faf4] border border-[#dfe3d3] hover:border-[#696112] hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
                   <span className="initiative-badge text-[10px] mb-3 inline-block">
