@@ -105,9 +105,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={montserrat.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        {/* Google tag (gtag.js) - Google Ads: AW-18573734476 */}
+        {/* Google tag (gtag.js) - Google Analytics 4 (G-WJ08E6GJCJ) & Google Ads (AW-18573734476) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18573734476"
+          src="https://www.googletagmanager.com/gtag/js?id=G-WJ08E6GJCJ"
           strategy="afterInteractive"
         />
         <Script id="google-tag-init" strategy="afterInteractive">
@@ -115,6 +115,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', 'G-WJ08E6GJCJ');
             gtag('config', 'AW-18573734476');
           `}
         </Script>
