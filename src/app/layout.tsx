@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import NavigationHeader from "@/components/NavigationHeader";
 import Footer from "@/components/Footer";
@@ -103,6 +104,21 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={montserrat.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        {/* Google tag (gtag.js) - Google Ads: AW-18573734476 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18573734476"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18573734476');
+          `}
+        </Script>
+      </head>
       <body className={montserrat.className} suppressHydrationWarning>
         <NavigationHeader />
         <main id="main" tabIndex={-1}>{children}</main>
