@@ -144,7 +144,7 @@ export interface RawPaymeData {
     result?: string;
     resultcode?: string;
     message?: string;
-    data?: Array<{ payment_gateway_url?: string; [key: string]: unknown }>;
+    data?: Array<{ payment_gateway_url?: string;[key: string]: unknown }>;
     [key: string]: unknown;
   };
   [key: string]: unknown;
@@ -512,8 +512,8 @@ export async function queryTransactionStatus(
           typeof data.amount === "number"
             ? data.amount
             : data.amount
-            ? parseFloat(String(data.amount))
-            : undefined,
+              ? parseFloat(String(data.amount))
+              : undefined,
         currency: (data.currency as string) || "TZS",
         message:
           data.provider_message ||
@@ -521,8 +521,8 @@ export async function queryTransactionStatus(
           (normalizedStatus === "COMPLETED"
             ? "Payment completed successfully."
             : normalizedStatus === "PENDING"
-            ? "Awaiting authorization on handset..."
-            : `Transaction ${normalizedStatus.toLowerCase()}.`),
+              ? "Awaiting authorization on handset..."
+              : `Transaction ${normalizedStatus.toLowerCase()}.`),
         raw: data,
       };
     }

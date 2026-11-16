@@ -552,6 +552,8 @@ export type ResourceCategory =
   | "Policy Briefs"
   | "Toolkits & Manuals";
 
+export type ResourceFormat = "PDF" | "WEB" | "LINK";
+
 export interface ResourceDocument {
   id: string;
   title: string;
@@ -560,13 +562,14 @@ export interface ResourceDocument {
   date: string;
   year: string;
   fileSize: string;
-  format: "PDF";
+  format: "PDF" | "WEB" | "LINK";
   downloadUrl: string;
   previewUrl?: string;
   driveUrl?: string;
   isDriveSource?: boolean;
+  isExternalLink?: boolean;
   description: string;
-  pages: number;
+  pages?: number;
   author: string;
   featured?: boolean;
   tags?: string[];
@@ -674,6 +677,82 @@ export const PUBLICATIONS: ResourceDocument[] = [
     author: "International & Regional Pain Rehabilitation Consortium",
     featured: true,
     tags: ["Pain Management", "Clinical Science", "Neurophysiology", "Musculoskeletal"],
+  },
+  {
+    id: "basic-research-skills",
+    title: "Basic Research Skills: Searching the Literature",
+    subtitle: "Systematic Medical Database Retrieval, Search Strategy Design & Clinical Evidence",
+    category: "Toolkits & Manuals",
+    date: "Open Access",
+    year: "2026",
+    fileSize: "Online Learning Guide",
+    format: "WEB",
+    downloadUrl: "https://libguides.scu.edu.au/physiotherapy/searching-the-literature",
+    previewUrl: "https://libguides.scu.edu.au/physiotherapy/searching-the-literature",
+    isExternalLink: true,
+    description:
+      "A core research and evidence-retrieval guide by Southern Cross University Library. Guides students and practitioners through formulating structured clinical search questions, navigating databases (PubMed, PEDro, CINAHL, Cochrane), and evaluating published evidence.",
+    pages: 1,
+    author: "Southern Cross University Library",
+    featured: true,
+    tags: ["Research Skills", "Literature Search", "PubMed", "PEDro", "Evidence-Based"],
+  },
+  {
+    id: "evidence-based-practice",
+    title: "Evidence-Based Practice (EBP) in Healthcare",
+    subtitle: "The 5-Step EBP Cycle, PICO Framework & Clinical Decision-Making Foundations",
+    category: "Clinical Guidelines",
+    date: "Open Access",
+    year: "2026",
+    fileSize: "Interactive Clinical Guide",
+    format: "WEB",
+    downloadUrl: "https://libguides.scu.edu.au/ebp/what-is-ebp",
+    previewUrl: "https://libguides.scu.edu.au/ebp/what-is-ebp",
+    isExternalLink: true,
+    description:
+      "Comprehensive clinical guide detailing the foundation of Evidence-Based Practice (EBP). Explains the 5-step process (Ask, Acquire, Appraise, Apply, Assess), constructing effective PICO clinical questions, and critically evaluating quantitative and qualitative clinical trials.",
+    pages: 1,
+    author: "Health Sciences EBP Working Group",
+    featured: true,
+    tags: ["Evidence-Based Practice", "EBP", "PICO Framework", "Clinical Methodology"],
+  },
+  {
+    id: "master-ai-prompting",
+    title: "Master AI Prompting for Healthcare & Research",
+    subtitle: "Generative AI Foundations, Research Workflows & Interactive Prompt Engineering",
+    category: "Toolkits & Manuals",
+    date: "Open Access",
+    year: "2026",
+    fileSize: "Interactive Curriculum",
+    format: "WEB",
+    downloadUrl: "https://learnprompting.org/",
+    previewUrl: "https://learnprompting.org/",
+    isExternalLink: true,
+    description:
+      "An open-access global curriculum on prompt engineering and generative artificial intelligence. Provides health professionals, educators, and researchers with structured techniques for research assistance, clinical documentation synthesis, and ethical AI utilization.",
+    pages: 1,
+    author: "LearnPrompting Global Open Initiative",
+    featured: true,
+    tags: ["Artificial Intelligence", "Prompt Engineering", "Digital Health", "AI Tools"],
+  },
+  {
+    id: "innerbody-anatomy-atlas",
+    title: "3D Human Anatomy Atlas & Skeletal System",
+    subtitle: "Interactive 3D Skeletal Explorer, Musculoskeletal Landmarks & Biomechanical Models",
+    category: "Toolkits & Manuals",
+    date: "Open Access",
+    year: "2026",
+    fileSize: "3D Interactive Model",
+    format: "WEB",
+    downloadUrl: "https://www.innerbody.com/image/skelfov.html",
+    previewUrl: "https://www.innerbody.com/image/skelfov.html",
+    isExternalLink: true,
+    description:
+      "Interactive 3D anatomical reference covering the human skeletal system, bony landmarks, joint articulations, and motion axes by InnerBody. An essential visual tool for palpation anatomy, clinical biomechanics assessment, and patient education.",
+    pages: 1,
+    author: "InnerBody Research Team",
+    featured: true,
+    tags: ["Anatomy", "Skeletal System", "3D Atlas", "Biomechanics", "Interactive"],
   },
 ];
 

@@ -19,6 +19,7 @@ import {
   ArrowUpRight,
   FolderOpen,
   Cloud,
+  Globe,
 } from "lucide-react";
 import { PUBLICATIONS, GOOGLE_DRIVE_FOLDER_URL, ResourceCategory, ResourceDocument } from "../../data/content";
 
@@ -158,7 +159,11 @@ export default function ResourcesPage() {
                   <div className="pub-card-cover">
                     <div className="pub-cover-top-left">
                       <span className="pub-cover-cat-pill">
-                        <FileText size={12} aria-hidden="true" />
+                        {doc.isExternalLink ? (
+                          <Globe size={12} aria-hidden="true" />
+                        ) : (
+                          <FileText size={12} aria-hidden="true" />
+                        )}
                         <span>{doc.category}</span>
                       </span>
                     </div>
@@ -175,7 +180,11 @@ export default function ResourcesPage() {
 
                     <div className="pub-cover-center-icon">
                       <div className="pub-cover-icon-circle">
-                        <FileText size={32} strokeWidth={1.8} aria-hidden="true" />
+                        {doc.isExternalLink ? (
+                          <Globe size={32} strokeWidth={1.8} aria-hidden="true" />
+                        ) : (
+                          <FileText size={32} strokeWidth={1.8} aria-hidden="true" />
+                        )}
                       </div>
                     </div>
                   </div>
@@ -188,12 +197,25 @@ export default function ResourcesPage() {
                       <h3 className="pub-card-title">{doc.title}</h3>
 
                       <div className="pub-card-date-row">
-                        <Calendar size={13} aria-hidden="true" />
-                        <span>{doc.date}</span>
-                        <span className="pub-meta-sep">•</span>
-                        <span>{doc.pages} pages</span>
-                        <span className="pub-meta-sep">•</span>
-                        <span>{doc.fileSize}</span>
+                        {doc.isExternalLink ? (
+                          <>
+                            <Globe size={13} aria-hidden="true" />
+                            <span>Online Portal</span>
+                            <span className="pub-meta-sep">•</span>
+                            <span>Open Access</span>
+                            <span className="pub-meta-sep">•</span>
+                            <span>{doc.fileSize}</span>
+                          </>
+                        ) : (
+                          <>
+                            <Calendar size={13} aria-hidden="true" />
+                            <span>{doc.date}</span>
+                            <span className="pub-meta-sep">•</span>
+                            <span>{doc.pages} pages</span>
+                            <span className="pub-meta-sep">•</span>
+                            <span>{doc.fileSize}</span>
+                          </>
+                        )}
                       </div>
 
                       <p className="pub-card-desc">{doc.description}</p>
@@ -210,26 +232,45 @@ export default function ResourcesPage() {
                       )}
                     </div>
 
-                    {/* Action Row: [Download PDF] pill on left + [↗] pure icon on right (Exact Msichana style) */}
+                    {/* Action Row: [Download PDF] / [Open Resource] on left + [↗] pure icon on right */}
                     <div className="pub-card-actions">
-                      <a
-                        href={doc.downloadUrl}
-                        download={doc.downloadUrl.startsWith("http") ? undefined : true}
-                        target={doc.downloadUrl.startsWith("http") ? "_blank" : undefined}
-                        rel={doc.downloadUrl.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="pub-download-btn"
-                        title={`Download ${doc.title} (${doc.fileSize})`}
-                      >
-                        <Download size={15} strokeWidth={2.2} aria-hidden="true" />
-                        <span>Download PDF</span>
-                      </a>
+                      {doc.isExternalLink ? (
+                        <a
+                          href={doc.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="pub-download-btn"
+                          title={`Open ${doc.title} in new tab`}
+                        >
+                          <span>Open Resource</span>
+                          <ArrowUpRight size={15} strokeWidth={2.2} aria-hidden="true" />
+                        </a>
+                      ) : (
+                        <a
+                          href={doc.downloadUrl}
+                          download={doc.downloadUrl.startsWith("http") ? undefined : true}
+                          target={doc.downloadUrl.startsWith("http") ? "_blank" : undefined}
+                          rel={doc.downloadUrl.startsWith("http") ? "noopener noreferrer" : undefined}
+                          className="pub-download-btn"
+                          title={`Download ${doc.title} (${doc.fileSize})`}
+                        >
+                          <Download size={15} strokeWidth={2.2} aria-hidden="true" />
+                          <span>Download PDF</span>
+                        </a>
+                      )}
 
                       <a
                         href={doc.previewUrl || doc.driveUrl || doc.downloadUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="pub-preview-btn"
-                        title={doc.driveUrl ? "View document on Google Drive" : "Open document in new tab"}
+                        title={
+                          doc.isExternalLink
+                            ? `Open ${doc.title} in new tab`
+                            : doc.driveUrl
+                            ? "View document on Google Drive"
+                            : "Open document in new tab"
+                        }
                         aria-label={`Open ${doc.title} in new tab`}
                       >
                         <ExternalLink size={18} strokeWidth={2.2} aria-hidden="true" />
